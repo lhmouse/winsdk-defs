@@ -1,0 +1,7 @@
+.*
+*.rej
+*.orig
+*.lib
+*.a
+*.log
+!/.github
