@@ -158,6 +158,9 @@ for(each arch, libs -> arch_libs) {
         }
       }
 
+      // TODO: Windows SDK doesn't seem to provide import libraries in the
+      // long format. If it does, please let me know.
+
       if(sym != null) {
         var rt = (nlibs_done - 1.0 * countof(lib_data) / lib_size_total) / nlibs_total * 100;
         var rt_i = std.numeric.format(__itrunc(rt), 10);
