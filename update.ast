@@ -62,9 +62,10 @@ var re_object_header = std.string.PCRE(
 
 // [ 0](sec  0)(fl 0x00)(ty   0)(scl   0) (nx 0) 0x00000000 __imp_ADsBuildEnumerator
 var re_symbol = std.string.PCRE(
-    '^\[ *[0-9]+\]\(sec +[0-9]+\)\(fl +0x[0-9a-f]+\)\(ty +(?<type>[0-9]+)\)'
-    + '\(scl +[0-9]+\)\s+\(nx +[0-9]+\)\s+0x[0-9a-f]+\s+(?<sym>.*)$',
-    [ 'caseless' ]);
+    '\[ *[0-9]+\]\(sec +[0-9]+\)\(fl +0x[0-9a-f]+\)\(ty +(?<type>[0-9]+)\)'
+    + '\(scl +[0-9]+\)\s+\(nx +[0-9]+\)\s+0x[0-9a-f]+\s+(?<sym>[0-9a-z_.$#@!?]+)\n'
+    + '(?<remaining>.*)$',
+    [ 'caseless', 'dotall' ]);
 
 // collect LIB files.
 var arch_libs = {};
@@ -116,19 +117,21 @@ for(each arch, libs -> arch_libs) {
 
       // is import object?
       if(m.fmt == 'COFF-import-file') {
+        var obj = std.string.slice(dump, 0, countof(dump) - countof(obj_m.'&'));
         var dll = std.string.to_lower(m.dll);
         var sym;
 
-        var obj = std.string.slice(dump, 0, countof(dump) - countof(obj_m.'&'));
-        for(each line -> std.string.explode(obj, "\n")) {
-          // parse symbols.
-          m = re_symbol.named_match(line);
-          if(m == null)
-            continue;
+        // parse symbols.
+        var sym_m = re_symbol.named_match(obj);
+        while(sym_m != null) {
+          // find next symbol.
+          m = sym_m;
+          obj = sym_m.remaining;
+          sym_m = re_symbol.named_match(obj);
 
           var rt = (nlibs_done - 1.0 * countof(dump) / dump_size_total) / nlibs_total * 100;
           var rt_i = std.numeric.format(__itrunc(rt), 10);
-          var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 1e6), 10), -6);
+          var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 100000), 10), -5);
           std.io.putfln(" ($1.$2 %) found import symbol: $3", rt_i, rt_d, m.sym);
 
           // demangle it.
