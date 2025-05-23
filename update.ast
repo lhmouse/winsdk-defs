@@ -117,9 +117,11 @@ for(each arch, libs -> arch_libs) {
       // is import object?
       if(m.fmt == 'COFF-import-file') {
         var dll = std.string.to_lower(m.dll);
+        var sym;
+
         var obj = std.string.slice(dump, 0, countof(dump) - countof(obj_m.'&'));
         for(each line -> std.string.explode(obj, "\n")) {
-          // parse symbols
+          // parse symbols.
           m = re_symbol.named_match(line);
           if(m == null)
             continue;
@@ -127,13 +129,19 @@ for(each arch, libs -> arch_libs) {
           var rt = (nlibs_done - 1.0 * countof(dump) / dump_size_total) / nlibs_total * 100;
           var rt_i = std.numeric.format(__itrunc(rt), 10);
           var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 1e6), 10), -6);
-          std.io.putfln(" ($1.$2%) found import symbol: $3", rt_i, rt_d, m.sym);
+          std.io.putfln(" ($1.$2 %) found import symbol: $3", rt_i, rt_d, m.sym);
 
-          var sym = m.sym;
-          if((arch == 'arm64') && (m.type == '20') && std.string.starts_with(m.sym, '__imp_aux_'))
-            sym = std.string.replace_slice(m.sym, 0, 10, '#');
+          // demangle it.
+          if((arch == 'arm64') && std.string.starts_with(m.sym, '__imp_aux_')) {
+            if(m.type == '20')
+              sym = std.string.replace_slice(m.sym, 0, 10, '#');
+            else
+              sym = std.string.slice(m.sym, 10);
+          }
           else if((m.type == '0') && std.string.starts_with(m.sym, '__imp_'))
             sym = std.string.slice(m.sym, 6);
+          else
+            sym = m.sym;
 
           if((arch == 'x86') && std.string.starts_with(sym, '_'))
             sym = std.string.slice(sym, 1);
