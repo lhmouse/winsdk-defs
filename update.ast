@@ -66,118 +66,139 @@ var re_symbol = std.string.PCRE(
     + '\(scl +[0-9]+\)\s+\(nx +[0-9]+\)\s+0x[0-9a-f]+\s+(?<sym>.*)$',
     [ 'caseless' ]);
 
-// replace filename extensions.
-var re_file_ext = std.string.PCRE(
-    '\.[a-z0-9_]{1,3}$',
-    [ 'caseless' ]);
+// collect LIB files.
+var arch_libs = {};
+var nlibs_total = 0;
+var nlibs_done = 0;
 
-for(each um, _ -> std.filesystem.list(SDK_LIB_ROOT)) {
-  for(each arch, _ -> std.filesystem.list(SDK_LIB_ROOT / um)) {
-    std.filesystem.create_directory(arch);
+for(each um, um_props -> std.filesystem.list(SDK_LIB_ROOT)) {
+  if!(um_props.is_directory)
+    continue;
 
-    var dll_syms = {};
-    for(each lib, _ -> std.filesystem.list(SDK_LIB_ROOT / um / arch)) {
-      // filter out TLB files.
-      if!(std.string.ends_with(std.string.to_lower(lib), '.lib'))
+  for(each arch, arch_props -> std.filesystem.list(SDK_LIB_ROOT / um)) {
+    if!(arch_props.is_directory)
+      continue;
+
+    for(each lib, lib_props -> std.filesystem.list(SDK_LIB_ROOT / um / arch)) {
+      if(lib_props.is_directory)
+        continue;
+      else if!(std.string.ends_with(std.string.to_lower(lib), '.lib'))
         continue;
 
-      // dump symbols.
-      var dump = std.system.pipe('llvm-objdump',
-                                 [ '--syms', SDK_LIB_ROOT / um / arch / lib ],
-                                 [ 'LC_ALL=C' ]);
-      if(dump == null)
-        continue;
+      arch_libs[arch][$] = SDK_LIB_ROOT / um / arch / lib;
+      nlibs_total ++;
+    }
+  }
+}
 
-      std.io.putfln("Processing: $1", SDK_LIB_ROOT / um / arch / lib);
-      dump = std.string.replace(dump, "\r\n", "\n");
+for(each arch, libs -> arch_libs) {
+  var dll_syms = {};
 
-      // parse object files.
-      var obj_m = re_object_header.named_match(dump);
-      while(obj_m != null) {
-        // find next object.
-        var m = obj_m;
-        dump = obj_m.remaining;
-        obj_m = re_object_header.named_match(dump);
+  for(each lib -> libs) {
+    nlibs_done ++;
+    std.io.putfln("Processing $1/$2: $3", nlibs_done, nlibs_total, lib);
 
-        // is import object?
-        if(m.fmt == 'COFF-import-file') {
-          var dll = std.string.to_lower(m.dll);
-          var obj = std.string.slice(dump, 0, countof(dump) - countof(obj_m.'&'));
-          for(each line -> std.string.explode(obj, "\n")) {
-            // parse symbols
-            m = re_symbol.named_match(line);
-            if(m == null)
-              continue;
+    // dump symbols.
+    var dump = std.system.pipe('llvm-objdump', [ '--syms', lib ], [ 'LC_ALL=C' ]);
+    if(dump == null)
+      continue;
 
-            std.io.putfln(" - found symbol: $1", m.sym);
+    dump = std.string.replace(dump, "\r\n", "\n");
+    var dump_size_total = countof(dump);
 
-            var sym = m.sym;
-            if((arch == 'arm64') && (m.type == '20') && std.string.starts_with(m.sym, '__imp_aux_'))
-              sym = std.string.replace_slice(m.sym, 0, 10, '#');
-            else if((m.type == '0') && std.string.starts_with(m.sym, '__imp_'))
-              sym = std.string.slice(m.sym, 6);
+    // parse object files.
+    var obj_m = re_object_header.named_match(dump);
+    while(obj_m != null) {
+      // find next object.
+      var m = obj_m;
+      dump = obj_m.remaining;
+      obj_m = re_object_header.named_match(dump);
 
-            if((arch == 'x86') && std.string.starts_with(sym, '_'))
-              sym = std.string.slice(sym, 1);
+      // is import object?
+      if(m.fmt == 'COFF-import-file') {
+        var dll = std.string.to_lower(m.dll);
+        var obj = std.string.slice(dump, 0, countof(dump) - countof(obj_m.'&'));
+        for(each line -> std.string.explode(obj, "\n")) {
+          // parse symbols
+          m = re_symbol.named_match(line);
+          if(m == null)
+            continue;
 
-            for(each priv -> PRIVATE_EXPORTS)
-              if((sym == priv)
-                 || ((arch == 'x86') && std.string.starts_with(sym, priv + '@'))
-                 || ((arch == 'arm64') && (sym == '#' + priv)))
-                dll_syms[dll][sym].private = true;
+          var rt = (nlibs_done - 1.0 * countof(dump) / dump_size_total) / nlibs_total * 100;
+          var rt_i = std.numeric.format(__itrunc(rt), 10);
+          var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 1e6), 10), -6);
+          std.io.putfln(" ($1.$2%) found symbol: $3", rt_i, rt_d, m.sym);
 
-            if(std.string.starts_with(m.sym, '__imp_'))
-              dll_syms[dll][sym].imp = true;
+          var sym = m.sym;
+          if((arch == 'arm64') && (m.type == '20') && std.string.starts_with(m.sym, '__imp_aux_'))
+            sym = std.string.replace_slice(m.sym, 0, 10, '#');
+          else if((m.type == '0') && std.string.starts_with(m.sym, '__imp_'))
+            sym = std.string.slice(m.sym, 6);
 
-            if((m.type == '20') && !std.string.starts_with(m.sym, '__imp_'))
-              dll_syms[dll][sym].thunk = true;
-          }
+          if((arch == 'x86') && std.string.starts_with(sym, '_'))
+            sym = std.string.slice(sym, 1);
+
+          for(each priv -> PRIVATE_EXPORTS)
+            if((sym == priv)
+               || ((arch == 'x86') && std.string.starts_with(sym, priv + '@'))
+               || ((arch == 'arm64') && (sym == '#' + priv)))
+              dll_syms[dll][sym].private = true;
+
+          if(std.string.starts_with(m.sym, '__imp_'))
+            dll_syms[dll][sym].imp = true;
+
+          if((m.type == '20') && !std.string.starts_with(m.sym, '__imp_'))
+            dll_syms[dll][sym].thunk = true;
         }
       }
     }
+  }
 
-    for(each dll, syms -> dll_syms) {
-      var def = re_file_ext.replace(dll, '.def');
+  std.filesystem.create_directory(arch);
 
-      // sort symbols in alphabetic order.
-      var sorted_syms = [];
-      for(each sym, props -> syms)
-        if(props.private)
-          sorted_syms[$] = sym + " PRIVATE";
-        else if(!props.thunk)
-          sorted_syms[$] = sym + " DATA";
-        else if(props.imp)
-          sorted_syms[$] = sym;
+  for(each dll, syms -> dll_syms) {
+    // sort symbols in alphabetic order.
+    var sorted_syms = [];
+    for(each sym, props -> syms)
+      if(props.private)
+        sorted_syms[$] = sym + " PRIVATE";
+      else if(!props.thunk)
+        sorted_syms[$] = sym + " DATA";
+      else if(props.imp)
+        sorted_syms[$] = sym;
 
-      sorted_syms = std.array.sort(sorted_syms,
-          func(x, y) = std.string.to_lower(x) <=> std.string.to_lower(y));
+    sorted_syms = std.array.sort(sorted_syms,
+        func(x, y) = std.string.to_lower(x) <=> std.string.to_lower(y));
 
-      // compose DEF data.
-      var st = "";
-      for(each line -> DEF_COPYRIGHT) {
-        st += ";";
-        if(line != "") {
-          st += " ";
-          st += line;
-        }
-        st += "\n";
-      }
-      st += "\n";
-
-      st += "LIBRARY \"";
-      st += dll;
-      st += "\"\n";
-
-      st += "EXPORTS\n";
-      for(each sym -> sorted_syms)  {
-        st += "  ";
-        st += sym;
-        st += "\n";
+    // compose DEF data.
+    var def_data = "";
+    for(each line -> DEF_COPYRIGHT)
+      if(line == "")
+        def_data += ";\n";
+      else {
+        def_data += "; ";
+        def_data += line;
+        def_data += "\n";
       }
 
-      // write DEF file.
-      std.io.putfln("Writing: $1", arch / def);
-      std.filesystem.write(arch / def, st);
+    def_data += "\n";
+
+    def_data += "LIBRARY \"";
+    def_data += dll;
+    def_data += "\"\n";
+
+    def_data += "EXPORTS\n";
+    for(each sym -> sorted_syms)  {
+      def_data += "  ";
+      def_data += sym;
+      def_data += "\n";
     }
+
+    // guess name of DEF file.
+    var ext = std.string.pcre_find(dll, '\.[a-z0-9]{1,3}$');
+    var def = std.string.replace_slice(dll, ext[0] ?? countof(dll), '.def');
+
+    std.io.putfln("Writing: $1", arch / def);
+    std.filesystem.write(arch / def, def_data);
   }
 }
