@@ -4555,8 +4555,6 @@ EXPORTS
   atoi
   atol
   atoll
-  aux__mbcasemap DATA
-  aux__wctype DATA
   bsearch
   bsearch_s
   btowc

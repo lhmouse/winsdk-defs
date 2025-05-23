@@ -415,4 +415,3 @@ EXPORTS
   _mbsupr_s
   _mbsupr_s_l
   _mbtowc_l
-  aux__mbcasemap DATA

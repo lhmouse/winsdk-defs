@@ -2242,12 +2242,6 @@ EXPORTS
   AlpcRundownCompletionList
   AlpcUnregisterCompletionList
   AlpcUnregisterCompletionListWorkerThread
-  aux___arm64ec_syscall_ffs DATA
-  aux___arm64ec_syscall_ffs_size DATA
-  aux_NlsAnsiCodePage DATA
-  aux_NlsMbCodePageTag DATA
-  aux_NlsMbOemCodePageTag DATA
-  aux_RtlNtdllName DATA
   CpuSetCriticalLockHeld
   CsrAllocateCaptureBuffer
   CsrAllocateMessagePointer
