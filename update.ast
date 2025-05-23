@@ -129,11 +129,6 @@ for(each arch, libs -> arch_libs) {
           obj = sym_m.remaining;
           sym_m = re_symbol.named_match(obj);
 
-          var rt = (nlibs_done - 1.0 * countof(dump) / dump_size_total) / nlibs_total * 100;
-          var rt_i = std.numeric.format(__itrunc(rt), 10);
-          var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 100000), 10), -5);
-          std.io.putfln(" ($1.$2 %) found import symbol: $3", rt_i, rt_d, m.sym);
-
           // demangle it.
           if((arch == 'arm64') && std.string.starts_with(m.sym, '__imp_aux_')) {
             if(m.type == '20')
@@ -160,6 +155,13 @@ for(each arch, libs -> arch_libs) {
 
           if((m.type == '20') && !std.string.starts_with(m.sym, '__imp_'))
             dll_syms[dll][sym].thunk = true;
+        }
+
+        if(sym != null) {
+          var rt = (nlibs_done - 1.0 * countof(dump) / dump_size_total) / nlibs_total * 100;
+          var rt_i = std.numeric.format(__itrunc(rt), 10);
+          var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 100000), 10), -5);
+          std.io.putfln(" ($1.$2 %) found import symbol: $3", rt_i, rt_d, m.sym);
         }
       }
     }
