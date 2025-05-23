@@ -56,7 +56,7 @@ const PRIVATE_EXPORTS = [
 
 // C:\Program Files\.../x64/ActiveDS.Lib(ACTIVEDS.dll):      file format COFF-import-file
 var re_object_header = std.string.PCRE(
-    '([-_.0-9a-z ():\\/]*\.lib)\((?<objname>[-_.0-9a-z]+)\):\s+file format (?<fmt>[-_.0-9a-z]+)\n'
+    '([-_.0-9a-z ():\\/]*\.lib)\((?<name>[-_.0-9a-z]+)\):\s+file format (?<fmt>[-_.0-9a-z]+)\n'
     + '(?<remaining>.*)$',
     [ 'caseless', 'dotall' ]);
 
@@ -100,34 +100,34 @@ for(each arch, libs -> arch_libs) {
     std.io.putfln("Processing $1/$2: $3", nlibs_done, nlibs_total, lib);
 
     // dump symbols.
-    var dump = std.system.pipe('llvm-objdump',
-                               [ '--wide', '--syms', lib ],
-                               [ 'LC_ALL=C' ]);
-    if(dump == null)
+    var lib_data = std.system.pipe('llvm-objdump',
+                                   [ '--wide', '--syms', lib ],
+                                   [ 'LC_ALL=C' ]);
+    if(lib_data == null)
       continue;
 
-    dump = std.string.replace(dump, "\r\n", "\n");
-    var dump_size_total = countof(dump);
+    lib_data = std.string.replace(lib_data, "\r\n", "\n");
+    var lib_size_total = countof(lib_data);
 
     // parse object files.
-    var obj_m = re_object_header.named_match(dump);
+    var obj_m = re_object_header.named_match(lib_data);
     while(obj_m != null) {
       // find next object.
       var m = obj_m;
-      dump = obj_m.remaining;
-      obj_m = re_object_header.named_match(dump);
+      lib_data = obj_m.remaining;
+      obj_m = re_object_header.named_match(lib_data);
 
       var dll, sym;
       if(std.string.starts_with(m.fmt, 'COFF-import-file')) {
         // parse short import object.
-        dll = std.string.to_lower(m.objname);
-        var obj = std.string.slice(dump, 0, countof(dump) - countof(obj_m.'&'));
-        var sym_m = re_symbol.named_match(obj);
+        dll = std.string.to_lower(m.name);
+        var obj_data = std.string.slice(lib_data, 0, countof(lib_data) - countof(obj_m.'&'));
+        var sym_m = re_symbol.named_match(obj_data);
         while(sym_m != null) {
           // find next symbol.
           m = sym_m;
-          obj = sym_m.remaining;
-          sym_m = re_symbol.named_match(obj);
+          obj_data = sym_m.remaining;
+          sym_m = re_symbol.named_match(obj_data);
 
           // demangle it.
           if((arch == 'arm64') && std.string.starts_with(m.sym, '__imp_aux_')) {
@@ -159,9 +159,9 @@ for(each arch, libs -> arch_libs) {
       }
 
       if(sym != null) {
-        var rt = (nlibs_done - 1.0 * countof(dump) / dump_size_total) / nlibs_total * 100;
+        var rt = (nlibs_done - 1.0 * countof(lib_data) / lib_size_total) / nlibs_total * 100;
         var rt_i = std.numeric.format(__itrunc(rt), 10);
-        var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 100000), 10), -5);
+        var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 10000), 10), -4);
         std.io.putfln(" ($1.$2 %) found short import: $3", rt_i, rt_d, m.sym);
       }
     }
