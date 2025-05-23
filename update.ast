@@ -127,7 +127,7 @@ for(each arch, libs -> arch_libs) {
           var rt = (nlibs_done - 1.0 * countof(dump) / dump_size_total) / nlibs_total * 100;
           var rt_i = std.numeric.format(__itrunc(rt), 10);
           var rt_d = std.string.slice(std.numeric.format(__itrunc((1 + rt) * 1e6), 10), -6);
-          std.io.putfln(" ($1.$2%) found symbol: $3", rt_i, rt_d, m.sym);
+          std.io.putfln(" ($1.$2%) found import symbol: $3", rt_i, rt_d, m.sym);
 
           var sym = m.sym;
           if((arch == 'arm64') && (m.type == '20') && std.string.starts_with(m.sym, '__imp_aux_'))
