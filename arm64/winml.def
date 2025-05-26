@@ -16,6 +16,5 @@
 
 LIBRARY "winml.dll"
 EXPORTS
-  #MLCreateOperatorRegistry
   MLCreateOperatorRegistry
   WinMLCreateRuntime

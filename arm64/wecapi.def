@@ -16,23 +16,6 @@
 
 LIBRARY "wecapi.dll"
 EXPORTS
-  #?EcIsConfigRequired@@YAHPEAH@Z DATA
-  #?EcQuickConfig@@YAHXZ DATA
-  #EcClose
-  #EcDeleteSubscription
-  #EcEnumNextSubscription
-  #EcGetObjectArrayProperty
-  #EcGetObjectArraySize
-  #EcGetSubscriptionProperty
-  #EcGetSubscriptionRunTimeStatus
-  #EcInsertObjectArrayElement
-  #EcOpenSubscription
-  #EcOpenSubscriptionEnum
-  #EcRemoveObjectArrayElement
-  #EcRetrySubscription
-  #EcSaveSubscription
-  #EcSetObjectArrayProperty
-  #EcSetSubscriptionProperty
   ?EcIsConfigRequired@@YAHPEAH@Z
   ?EcQuickConfig@@YAHXZ
   EcClose

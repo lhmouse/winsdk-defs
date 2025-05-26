@@ -16,25 +16,6 @@
 
 LIBRARY "dsprop.dll"
 EXPORTS
-  #?CheckADsError@@YAHPEAJHPEBDHPEAUHWND__@@@Z DATA
-  #?CrackName@@YAJPEBGPEAPEAGW4CRACK_NAME_OPR@@PEAUHWND__@@@Z DATA
-  #?DSPROP_GetGCSearchOnDomain@@YAJPEBGAEBU_GUID@@PEAPEAX@Z DATA
-  #?ErrMsg@@YAXIPEAUHWND__@@@Z DATA
-  #?ErrMsgParam@@YAXI_JPEAUHWND__@@@Z DATA
-  #?FindSheet@@YAHPEBG@Z DATA
-  #?MsgBox@@YAXIPEAUHWND__@@@Z DATA
-  #?ReportError@@YAXJHPEAUHWND__@@@Z DATA
-  #?Smart_PADS_ATTR_INFO__Empty@@YAXPEAPEAU_ads_attr_info@@@Z DATA
-  #ADsPropCheckIfWritable
-  #ADsPropCreateNotifyObj
-  #ADsPropGetInitInfo
-  #ADsPropSendErrorMessage
-  #ADsPropSetHwnd
-  #ADsPropSetHwndWithTitle
-  #ADsPropShowErrorDialog
-  #BringSheetToForeground
-  #IsSheetAlreadyUp
-  #PostADsPropSheet
   ?CheckADsError@@YAHPEAJHPEBDHPEAUHWND__@@@Z
   ?CrackName@@YAJPEBGPEAPEAGW4CRACK_NAME_OPR@@PEAUHWND__@@@Z
   ?DSPROP_GetGCSearchOnDomain@@YAJPEBGAEBU_GUID@@PEAPEAX@Z

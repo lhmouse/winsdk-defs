@@ -16,22 +16,6 @@
 
 LIBRARY "faultrep.dll"
 EXPORTS
-  #?BasepReportFault@@YA?AW4tagEFaultRepRetVal@@PEAU_EXCEPTION_POINTERS@@K@Z DATA
-  #?CheckForReadOnlyResourceFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z DATA
-  #?CheckPerUserCrossProcessThrottle@@YAJPEAH@Z DATA
-  #?UpdatePerUserLastCrossProcessCollectionTime@@YAJXZ DATA
-  #AddERExcludedApplicationA
-  #AddERExcludedApplicationW
-  #CancelHangReporting
-  #ReportActivationHang
-  #ReportCoreHang
-  #ReportFault
-  #ReportHang
-  #ReportNavigationHang
-  #WerpGetDebugger
-  #WerpInitiateCrashReporting
-  #WerpLaunchAeDebug
-  #WerReportHang
   ?BasepReportFault@@YA?AW4tagEFaultRepRetVal@@PEAU_EXCEPTION_POINTERS@@K@Z
   ?CheckForReadOnlyResourceFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z
   ?CheckPerUserCrossProcessThrottle@@YAJPEAH@Z

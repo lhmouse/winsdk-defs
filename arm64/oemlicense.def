@@ -16,12 +16,6 @@
 
 LIBRARY "oemlicense.dll"
 EXPORTS
-  #?HrAddAppxLicense@@YAJPEBG0H@Z DATA
-  #?HrInstallClipLicense@@YAJIPEBE@Z DATA
-  #?HrNotifyPhoneLicenseReady@@YAJPEBG@Z DATA
-  #?HrRemoveAppxLicense@@YAJPEBG0H@Z DATA
-  #AddDemoAppLicense
-  #RemoveDemoAppLicense
   ?HrAddAppxLicense@@YAJPEBG0H@Z
   ?HrInstallClipLicense@@YAJIPEBE@Z
   ?HrNotifyPhoneLicenseReady@@YAJPEBG@Z

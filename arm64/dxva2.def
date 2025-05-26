@@ -16,45 +16,6 @@
 
 LIBRARY "dxva2.dll"
 EXPORTS
-  #?GetPhysicalMonitorFromTarget@@YAJU_LUID@@KPEAU_PHYSICAL_MONITOR@@@Z DATA
-  #CapabilitiesRequestAndCapabilitiesReply
-  #DegaussMonitor
-  #DestroyPhysicalMonitor
-  #DestroyPhysicalMonitors
-  #DXVA2CreateDirect3DDeviceManager9
-  #DXVA2CreateVideoService
-  #DXVAHD_CreateDevice
-  #GetCapabilitiesStringLength
-  #GetMonitorBrightness
-  #GetMonitorCapabilities
-  #GetMonitorColorTemperature
-  #GetMonitorContrast
-  #GetMonitorDisplayAreaPosition
-  #GetMonitorDisplayAreaSize
-  #GetMonitorRedGreenOrBlueDrive
-  #GetMonitorRedGreenOrBlueGain
-  #GetMonitorTechnologyType
-  #GetNumberOfPhysicalMonitorsFromHMONITOR
-  #GetNumberOfPhysicalMonitorsFromIDirect3DDevice9
-  #GetPhysicalMonitorsFromHMONITOR
-  #GetPhysicalMonitorsFromIDirect3DDevice9
-  #GetTimingReport
-  #GetVCPFeatureAndVCPFeatureReply
-  #OPMGetVideoOutputForTarget
-  #OPMGetVideoOutputsFromHMONITOR
-  #OPMGetVideoOutputsFromIDirect3DDevice9Object
-  #RestoreMonitorFactoryColorDefaults
-  #RestoreMonitorFactoryDefaults
-  #SaveCurrentMonitorSettings
-  #SaveCurrentSettings
-  #SetMonitorBrightness
-  #SetMonitorColorTemperature
-  #SetMonitorContrast
-  #SetMonitorDisplayAreaPosition
-  #SetMonitorDisplayAreaSize
-  #SetMonitorRedGreenOrBlueDrive
-  #SetMonitorRedGreenOrBlueGain
-  #SetVCPFeature
   ?GetPhysicalMonitorFromTarget@@YAJU_LUID@@KPEAU_PHYSICAL_MONITOR@@@Z
   CapabilitiesRequestAndCapabilitiesReply
   DegaussMonitor

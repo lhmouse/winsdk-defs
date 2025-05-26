@@ -16,22 +16,6 @@
 
 LIBRARY "mdmregistration.dll"
 EXPORTS
-  #?FindDiscoveryService@@YAJPEBGPEAPEBGPEAH@Z DATA
-  #DiscoverManagementService
-  #DiscoverManagementServiceEx
-  #GetDeviceManagementConfigInfo
-  #GetDeviceRegistrationInfo
-  #GetManagementAppHyperlink
-  #IsDeviceRegisteredWithManagement
-  #IsManagementRegistrationAllowed
-  #IsMdmUxWithoutAadAllowed
-  #RegisterDeviceWithManagement
-  #RegisterDeviceWithManagementUsingAADCredentials
-  #RegisterDeviceWithManagementUsingAADDeviceCredentials
-  #RegisterDeviceWithManagementUsingAADDeviceCredentials2
-  #SetDeviceManagementConfigInfo
-  #SetManagedExternally
-  #UnregisterDeviceWithManagement
   ?FindDiscoveryService@@YAJPEBGPEAPEBGPEAH@Z
   DiscoverManagementService
   DiscoverManagementServiceEx

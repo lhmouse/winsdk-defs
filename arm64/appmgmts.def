@@ -16,23 +16,6 @@
 
 LIBRARY "appmgmts.dll"
 EXPORTS
-  #?CsSetOptions@@YAXK@Z DATA
-  #CsCreateClassStore
-  #CsEnumApps
-  #CsGetAppCategories
-  #CsGetClassAccess
-  #CsGetClassStore
-  #CsGetClassStorePath
-  #CsRegisterAppCategory
-  #CsServerGetClassStore
-  #CsUnregisterAppCategory
-  #GenerateGroupPolicy
-  #IID_IClassAdmin
-  #ProcessGroupPolicyObjectsEx
-  #ReleaseAppCategoryInfoList
-  #ReleasePackageDetail
-  #ReleasePackageInfo
-  #ServiceMain
   ?CsSetOptions@@YAXK@Z
   CsCreateClassStore
   CsEnumApps

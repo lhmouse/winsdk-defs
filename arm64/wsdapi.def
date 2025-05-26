@@ -16,51 +16,6 @@
 
 LIBRARY "wsdapi.dll"
 EXPORTS
-  #?WSDAddFirewallCheck@@YAJPEBGPEAPEAX@Z DATA
-  #?WSDCancelNetworkChangeNotify@@YAJPEAX@Z DATA
-  #?WSDCopyNameList@@YAJPEAPEAU_WSD_NAME_LIST@@PEBU1@@Z DATA
-  #?WSDNotifyNetworkChange@@YAJP6AKPEAX@Z0PEAPEAX@Z DATA
-  #?WSDRemoveFirewallCheck@@YAJPEAX@Z DATA
-  #?WSDXMLCompareNames@@YAJPEBU_WSDXML_NAME@@0@Z DATA
-  #WSDAllocateLinkedMemory
-  #WSDAttachLinkedMemory
-  #WSDCompareEndpoints
-  #WSDCopyEndpoint
-  #WSDCreateDeviceHost
-  #WSDCreateDeviceHost2
-  #WSDCreateDeviceHostAdvanced
-  #WSDCreateDeviceProxy
-  #WSDCreateDeviceProxy2
-  #WSDCreateDeviceProxyAdvanced
-  #WSDCreateDiscoveryProvider
-  #WSDCreateDiscoveryProvider2
-  #WSDCreateDiscoveryPublisher
-  #WSDCreateDiscoveryPublisher2
-  #WSDCreateHttpAddress
-  #WSDCreateHttpMessageParameters
-  #WSDCreateHttpTransport
-  #WSDCreateMetadataAgent
-  #WSDCreateOutboundAttachment
-  #WSDCreateUdpAddress
-  #WSDCreateUdpMessageParameters
-  #WSDCreateUdpTransport
-  #WSDDetachLinkedMemory
-  #WSDFreeLinkedMemory
-  #WSDGenerateFault
-  #WSDGenerateFaultEx
-  #WSDGenerateRandomDelay
-  #WSDGetConfigurationOption
-  #WSDProcessFault
-  #WSDSetConfigurationOption
-  #WSDUriDecode
-  #WSDUriEncode
-  #WSDXMLAddChild
-  #WSDXMLAddSibling
-  #WSDXMLBuildAnyForSingleElement
-  #WSDXMLCleanupElement
-  #WSDXMLCreateContext
-  #WSDXMLGetNameFromBuiltinNamespace
-  #WSDXMLGetValueFromAny
   ?WSDAddFirewallCheck@@YAJPEBGPEAPEAX@Z
   ?WSDCancelNetworkChangeNotify@@YAJPEAX@Z
   ?WSDCopyNameList@@YAJPEAPEAU_WSD_NAME_LIST@@PEBU1@@Z

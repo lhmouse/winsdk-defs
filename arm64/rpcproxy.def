@@ -16,11 +16,6 @@
 
 LIBRARY "rpcproxy.dll"
 EXPORTS
-  #?RegisterModule@@YAJKPEAVIHttpModuleRegistrationInfo@@PEAVIHttpServer@@@Z DATA
-  #GetExtensionVersion
-  #GetFilterVersion
-  #HttpExtensionProc
-  #HttpFilterProc
   ?RegisterModule@@YAJKPEAVIHttpModuleRegistrationInfo@@PEAVIHttpServer@@@Z
   GetExtensionVersion
   GetFilterVersion

@@ -16,12 +16,6 @@
 
 LIBRARY "query.dll"
 EXPORTS
-  #?LoadBinaryFilter@@YAJPEB_WPEAPEAUIFilter@@@Z DATA
-  #?LoadTextFilter@@YAJPEB_WPEAPEAUIFilter@@@Z DATA
-  #BindIFilterFromStorage
-  #BindIFilterFromStream
-  #LoadIFilter
-  #LoadIFilterEx
   ?LoadBinaryFilter@@YAJPEB_WPEAPEAUIFilter@@@Z
   ?LoadTextFilter@@YAJPEB_WPEAPEAUIFilter@@@Z
   BindIFilterFromStorage

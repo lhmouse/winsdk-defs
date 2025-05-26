@@ -16,50 +16,6 @@
 
 LIBRARY "ntmarta.dll"
 EXPORTS
-  #?AccProvHandleGrantAccessRights@@YAKPEAXW4_SE_OBJECT_TYPE@@PEAU_ACTRL_ALISTW@@2PEAU_ACTRL_OVERLAPPED@@@Z DATA
-  #?GetMartaExtensionInterface@@YAPEAU_ACC_MARTA_FUNCTIONS@@XZ DATA
-  #AccConvertAccessMaskToActrlAccess
-  #AccConvertAccessToSD
-  #AccConvertAccessToSecurityDescriptor
-  #AccConvertAclToAccess
-  #AccConvertSDToAccess
-  #AccFreeIndexArray
-  #AccGetAccessForTrustee
-  #AccGetExplicitEntries
-  #AccGetInheritanceSource
-  #AccLookupAccountName
-  #AccLookupAccountSid
-  #AccLookupAccountTrustee
-  #AccProvCancelOperation
-  #AccProvGetAccessInfoPerObjectType
-  #AccProvGetAllRights
-  #AccProvGetCapabilities
-  #AccProvGetOperationResults
-  #AccProvGetTrusteesAccess
-  #AccProvGrantAccessRights
-  #AccProvHandleGetAccessInfoPerObjectType
-  #AccProvHandleGetAllRights
-  #AccProvHandleGetTrusteesAccess
-  #AccProvHandleIsAccessAudited
-  #AccProvHandleIsObjectAccessible
-  #AccProvHandleRevokeAccessRights
-  #AccProvHandleRevokeAuditRights
-  #AccProvHandleSetAccessRights
-  #AccProvIsAccessAudited
-  #AccProvIsObjectAccessible
-  #AccProvRevokeAccessRights
-  #AccProvRevokeAuditRights
-  #AccProvSetAccessRights
-  #AccRewriteGetExplicitEntriesFromAcl
-  #AccRewriteGetHandleRights
-  #AccRewriteGetNamedRights
-  #AccRewriteSetEntriesInAcl
-  #AccRewriteSetHandleRights
-  #AccRewriteSetNamedRights
-  #AccSetEntriesInAList
-  #AccTreeResetNamedSecurityInfo
-  #EventGuidToName
-  #EventNameFree
   ?AccProvHandleGrantAccessRights@@YAKPEAXW4_SE_OBJECT_TYPE@@PEAU_ACTRL_ALISTW@@2PEAU_ACTRL_OVERLAPPED@@@Z
   ?GetMartaExtensionInterface@@YAPEAU_ACC_MARTA_FUNCTIONS@@XZ
   AccConvertAccessMaskToActrlAccess

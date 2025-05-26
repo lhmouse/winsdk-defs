@@ -16,22 +16,6 @@
 
 LIBRARY "dxgi.dll"
 EXPORTS
-  #?DXGIDumpJournal@@YAXP6AXPEBD@Z@Z DATA
-  #?PIXBeginCapture@@YAJIPEAX@Z DATA
-  #?PIXEndCapture@@YAJH@Z DATA
-  #?PIXGetCaptureState@@YAIXZ DATA
-  #?UpdateHMDEmulationStatus@@YAJ_N@Z DATA
-  #CreateDXGIFactory
-  #CreateDXGIFactory1
-  #CreateDXGIFactory2
-  #DXGID3D10CreateDevice
-  #DXGID3D10CreateLayeredDevice
-  #DXGID3D10GetLayeredDeviceSize
-  #DXGID3D10RegisterLayers
-  #DXGIDeclareAdapterRemovalSupport
-  #DXGIDisableVBlankVirtualization
-  #DXGIGetDebugInterface1
-  #DXGIReportAdapterConfiguration
   ?DXGIDumpJournal@@YAXP6AXPEBD@Z@Z
   ?PIXBeginCapture@@YAJIPEAX@Z
   ?PIXEndCapture@@YAJH@Z

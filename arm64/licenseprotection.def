@@ -16,9 +16,6 @@
 
 LIBRARY "licenseprotection.dll"
 EXPORTS
-  #?LicenseProtectionPbrReset@@YAJW4ResetScopeType@@PEBG1@Z DATA
-  #RegisterLicenseKeyWithExpiration
-  #ValidateLicenseKeyProtection
   ?LicenseProtectionPbrReset@@YAJW4ResetScopeType@@PEBG1@Z
   RegisterLicenseKeyWithExpiration
   ValidateLicenseKeyProtection

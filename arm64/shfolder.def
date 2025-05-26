@@ -16,7 +16,5 @@
 
 LIBRARY "shfolder.dll"
 EXPORTS
-  #SHGetFolderPathA
-  #SHGetFolderPathW DATA
   SHGetFolderPathA
   SHGetFolderPathW

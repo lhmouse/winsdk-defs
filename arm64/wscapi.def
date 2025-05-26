@@ -16,45 +16,6 @@
 
 LIBRARY "wscapi.dll"
 EXPORTS
-  #?wscLaunchAdminMakeDefaultUI@@YAJPEBG@Z DATA
-  #?wscShowAMSCN@@YAJKPEAK@Z DATA
-  #CLSID_WSCDefaultProduct
-  #CLSID_WSCProductList
-  #IID_IWSCDefaultProduct
-  #IID_IWscProduct
-  #IID_IWSCProductList
-  #LIBID_wscAPILib
-  #wscAntiSpywareGetStatus
-  #wscAntiVirusExpiredBeyondThreshold
-  #wscAntiVirusGetStatus
-  #wscAutoUpdatesEnableScheduledMode
-  #wscAutoUpdatesGetStatus
-  #wscFirewallGetStatus
-  #wscGeneralSecurityGetStatus
-  #wscGetAlertStatus
-  #WscGetAntiMalwareUri
-  #WscGetSecurityProviderHealth
-  #wscIcfEnable
-  #wscIeSettingsFix
-  #wscInitiateOfflineCleaning
-  #wscIsDefenderAntivirusSupported
-  #wscLuaSettingsFix
-  #wscMakeDefaultProductRequest
-  #wscNotifyUserForNearExpiration
-  #wscOverrideComponentStatus
-  #wscPing
-  #wscProductInfoFree
-  #WscQueryAntiMalwareUri
-  #wscRegisterChangeNotification
-  #WscRegisterForChanges
-  #WscRegisterForUserNotifications
-  #wscRegisterSecurityProduct
-  #wscSetDefaultProduct
-  #wscUnRegisterChangeNotification
-  #WscUnRegisterChanges
-  #wscUnregisterSecurityProduct
-  #wscUpdateProductStatus
-  #wscUpdateProductSubStatus
   ?wscLaunchAdminMakeDefaultUI@@YAJPEBG@Z
   ?wscShowAMSCN@@YAJKPEAK@Z
   CLSID_WSCDefaultProduct

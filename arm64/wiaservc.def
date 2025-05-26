@@ -16,61 +16,6 @@
 
 LIBRARY "wiaservc.dll"
 EXPORTS
-  #?ServiceMain@@YAXIPEAPEAG@Z DATA
-  #wiasCreateChildAppItem
-  #wiasCreateDrvItem
-  #wiasCreateLogInstance
-  #wiasCreatePropContext
-  #wiasDebugError
-  #wiasDebugTrace
-  #wiasDownSampleBuffer
-  #wiasFormatArgs
-  #wiasFreePropContext
-  #wiasGetChangedValueFloat
-  #wiasGetChangedValueGuid
-  #wiasGetChangedValueLong
-  #wiasGetChangedValueStr
-  #wiasGetChildrenContexts
-  #wiasGetContextFromName
-  #wiasGetDrvItem
-  #wiasGetImageInformation
-  #wiasGetItemType
-  #wiasGetPropertyAttributes
-  #wiasGetRootItem
-  #wiasIsPropChanged
-  #wiasParseEndorserString
-  #wiasPrintDebugHResult
-  #wiasQueueEvent
-  #wiasReadMultiple
-  #wiasReadPropBin
-  #wiasReadPropFloat
-  #wiasReadPropGuid
-  #wiasReadPropLong
-  #wiasReadPropStr
-  #wiasSendEndOfPage
-  #wiasSetItemPropAttribs
-  #wiasSetItemPropNames
-  #wiasSetPropChanged
-  #wiasSetPropertyAttributes
-  #wiasSetValidFlag
-  #wiasSetValidListFloat
-  #wiasSetValidListGuid
-  #wiasSetValidListLong
-  #wiasSetValidListStr
-  #wiasSetValidRangeFloat
-  #wiasSetValidRangeLong
-  #wiasUpdateScanRect
-  #wiasUpdateValidFormat
-  #wiasValidateItemProperties
-  #wiasWriteBufToFile
-  #wiasWriteMultiple
-  #wiasWritePageBufToFile
-  #wiasWritePageBufToStream
-  #wiasWritePropBin
-  #wiasWritePropFloat
-  #wiasWritePropGuid
-  #wiasWritePropLong
-  #wiasWritePropStr
   ?ServiceMain@@YAXIPEAPEAG@Z
   wiasCreateChildAppItem
   wiasCreateDrvItem

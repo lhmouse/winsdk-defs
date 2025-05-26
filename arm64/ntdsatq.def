@@ -16,54 +16,6 @@
 
 LIBRARY "ntdsatq.dll"
 EXPORTS
-  #?SchedulerInitialize@@YAHXZ DATA
-  #?SchedulerTerminate@@YAXXZ DATA
-  #AllocCacheDumpStatsToHtml
-  #AtqCloseEndpoint
-  #AtqCloseQosClass
-  #AtqCloseSession
-  #AtqCloseSocket
-  #AtqContextGetInfo
-  #AtqContextSetInfo
-  #AtqContextSetInfo2
-  #AtqCreateEndpoint
-  #AtqCreateEndpointEx
-  #AtqCreateQosClass
-  #AtqEndpointGetInfo
-  #AtqEndpointSetInfo
-  #AtqEndpointSetInfo2
-  #AtqFreeContext
-  #AtqGetAcceptExAddrs
-  #AtqGetAcceptExAddrsEx
-  #AtqGetAddressFamilies
-  #AtqGetDatagramAddrs
-  #AtqGetInfo
-  #AtqGetMaxDatagramSendSize
-  #AtqInitialize
-  #AtqInitializeEx
-  #AtqOpenSession
-  #AtqQosClassGetId
-  #AtqQosClassGetInfo
-  #AtqQosClassGetInstance
-  #AtqQosContextEnd
-  #AtqQosContextExtendTime
-  #AtqQosContextStart
-  #AtqReadFile
-  #AtqReadSocket
-  #AtqRegisterAddressChangeCallback
-  #ATQReleaseTCPPortReservation
-  #ATQReserveTCPPorts
-  #AtqSetInfo
-  #AtqSetInfo2
-  #AtqSetSockOpt
-  #AtqStartEndpoint
-  #AtqStopEndpoint
-  #AtqSyncWsaSend
-  #AtqTerminate
-  #AtqUpdateQosClass
-  #AtqWriteDatagramSocket
-  #AtqWriteFile
-  #AtqWriteSocket
   ?SchedulerInitialize@@YAHXZ
   ?SchedulerTerminate@@YAXXZ
   AllocCacheDumpStatsToHtml

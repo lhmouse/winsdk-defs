@@ -16,26 +16,6 @@
 
 LIBRARY "wmvcore.dll"
 EXPORTS
-  #?WMCheckURLExtension@@YAJPEBG@Z DATA
-  #?WMCheckURLScheme@@YAJPEBG@Z DATA
-  #?WMCreateBackupRestorerPrivate@@YAJPEAUIUnknown@@PEAPEAUIWMLicenseBackup@@@Z DATA
-  #?WMCreateLicenseRevocationAgentPrivate@@YAJPEAPEAUIWMLicenseRevocationAgent@@@Z DATA
-  #?WMCreateSyncReaderPriv@@YAJPEAPEAUIWMSyncReader@@@Z DATA
-  #?WMIsAvailableOffline@@YAJPEBG0PEAH@Z DATA
-  #?WMValidateData@@YAJPEAEPEAK@Z DATA
-  #WMCreateBackupRestorer
-  #WMCreateEditor
-  #WMCreateIndexer
-  #WMCreateProfileManager
-  #WMCreateReader
-  #WMCreateReaderPriv
-  #WMCreateSyncReader
-  #WMCreateWriter
-  #WMCreateWriterFileSink
-  #WMCreateWriterNetworkSink
-  #WMCreateWriterPriv
-  #WMCreateWriterPushSink
-  #WMIsContentProtected
   ?WMCheckURLExtension@@YAJPEBG@Z
   ?WMCheckURLScheme@@YAJPEBG@Z
   ?WMCreateBackupRestorerPrivate@@YAJPEAUIUnknown@@PEAPEAUIWMLicenseBackup@@@Z

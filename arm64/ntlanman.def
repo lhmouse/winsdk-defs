@@ -16,33 +16,6 @@
 
 LIBRARY "ntlanman.dll"
 EXPORTS
-  #?NPEnumResource@@YAKPEAXPEAI01@Z DATA
-  #?NPGetConnection@@YAKPEAG0PEAI@Z DATA
-  #?NPOpenEnum@@YAKIIIPEAU_NETRESOURCEW@@PEAPEAX@Z DATA
-  #DllMain PRIVATE
-  #I_SystemFocusDialog
-  #NPAddConnection
-  #NPAddConnection3
-  #NPAddConnection4
-  #NPCancelConnection
-  #NPCancelConnection2
-  #NPCloseEnum
-  #NPFormatNetworkName
-  #NPGetCaps
-  #NPGetConnection3
-  #NPGetConnectionPerformance
-  #NPGetPersistentUseOptionsForConnection
-  #NPGetPersistentUseOptionsForConnection2
-  #NPGetReconnectFlags
-  #NPGetResourceInformation
-  #NPGetResourceParent
-  #NPGetUniversalName
-  #NPGetUser
-  #QueryAppInstanceVersion
-  #RegisterAppInstance
-  #RegisterAppInstanceVersion
-  #ResetAllAppInstanceVersions
-  #SetAppInstanceCsvFlags
   ?NPEnumResource@@YAKPEAXPEAI01@Z
   ?NPGetConnection@@YAKPEAG0PEAI@Z
   ?NPOpenEnum@@YAKIIIPEAU_NETRESOURCEW@@PEAPEAX@Z

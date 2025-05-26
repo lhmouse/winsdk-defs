@@ -16,30 +16,6 @@
 
 LIBRARY "ndfapi.dll"
 EXPORTS
-  #?NdfRunDllDiagnoseIncident@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z DATA
-  #?NdfRunDllDiagnoseNetConnectionIncident@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z DATA
-  #?NdfRunDllDiagnoseWithAnswerFile@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z DATA
-  #?NdfRunDllDuplicateIPDefendingSystem@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z DATA
-  #?NdfRunDllDuplicateIPOffendingSystem@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z DATA
-  #?NdfRunDllHelpTopic@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z DATA
-  #NdfCancelIncident
-  #NdfCloseIncident
-  #NdfCreateConnectivityIncident
-  #NdfCreateDNSIncident
-  #NdfCreateGroupingIncident
-  #NdfCreateInboundIncident
-  #NdfCreateIncident
-  #NdfCreateNetConnectionIncident
-  #NdfCreatePnrpIncident
-  #NdfCreateSharingIncident
-  #NdfCreateWebIncident
-  #NdfCreateWebIncidentEx
-  #NdfCreateWinSockIncident
-  #NdfDiagnoseIncident
-  #NdfExecuteDiagnosis
-  #NdfGetTraceFile
-  #NdfRepairIncident
-  #NdfRepairIncidentEx
   ?NdfRunDllDiagnoseIncident@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z
   ?NdfRunDllDiagnoseNetConnectionIncident@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z
   ?NdfRunDllDiagnoseWithAnswerFile@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z

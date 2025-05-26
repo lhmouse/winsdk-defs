@@ -16,36 +16,6 @@
 
 LIBRARY "wsclient.dll"
 EXPORTS
-  #?WSpTLRW@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBGI@Z DATA
-  #AcquireDeveloperLicense
-  #CheckDeveloperLicense
-  #GetApplicationURL
-  #RefreshBannedAppsList
-  #RemoveDeveloperLicense
-  #WSCallServer
-  #WSCheckForConsumable
-  #WSEvaluatePackage
-  #WSGetEvaluatePackageAttempted
-  #WSLicenseCleanUpState
-  #WSLicenseClose
-  #WSLicenseFilterValidAppCategoryIds
-  #WSLicenseGetAllUserTokens
-  #WSLicenseGetAllValidAppCategoryIds
-  #WSLicenseGetDevInstalledApps
-  #WSLicenseGetExtendedUserInfo
-  #WSLicenseGetFeatureLicenseResults
-  #WSLicenseGetLicensesForProducts
-  #WSLicenseGetOAuthServiceTicket
-  #WSLicenseGetProductLicenseResults
-  #WSLicenseInstallLicense
-  #WSLicenseOpen
-  #WSLicenseRefreshLicense
-  #WSLicenseRetrieveMachineID
-  #WSLicenseRevokeLicenses
-  #WSLicenseUninstallLicense
-  #WSNotifyOOBECompletion
-  #WSNotifyPackageInstalled
-  #WSTriggerOOBEFileValidation
   ?WSpTLRW@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBGI@Z
   AcquireDeveloperLicense
   CheckDeveloperLicense

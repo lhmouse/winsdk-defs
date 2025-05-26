@@ -16,10 +16,6 @@
 
 LIBRARY "xpsprint.dll"
 EXPORTS
-  #?StartXpsPrintJobInternal1@@YAJPEB_W00PEAX1PEAPEAUIXpsPrintJob@@PEAPEAUIXpsOMPackageTarget@@_NP6AXPEAUIStream@@W4EPrintTicketScope@@HH@Z@Z DATA
-  #?StartXpsPrintJobInternal@@YAJPEB_W00PEAX1PEAEIPEAPEAUIXpsPrintJob@@PEAPEAUIXpsPrintJobStream@@4P6AXPEAUIStream@@W4EPrintTicketScope@@HH@Z@Z DATA
-  #StartXpsPrintJob
-  #StartXpsPrintJob1
   ?StartXpsPrintJobInternal1@@YAJPEB_W00PEAX1PEAPEAUIXpsPrintJob@@PEAPEAUIXpsOMPackageTarget@@_NP6AXPEAUIStream@@W4EPrintTicketScope@@HH@Z@Z
   ?StartXpsPrintJobInternal@@YAJPEB_W00PEAX1PEAEIPEAPEAUIXpsPrintJob@@PEAPEAUIXpsPrintJobStream@@4P6AXPEAUIStream@@W4EPrintTicketScope@@HH@Z@Z
   StartXpsPrintJob

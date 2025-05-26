@@ -16,55 +16,6 @@
 
 LIBRARY "mqrt.dll"
 EXPORTS
-  #?MQACCloseCursor@@YAJPEAX@Z DATA
-  #?MQDeleteCursorMemory@@YAJPEAX@Z DATA
-  #?MQLogHR@@YAXJPEB_WG@Z DATA
-  #MQADsPathToFormatName
-  #MQAllocateMemory
-  #MQBeginTransaction
-  #MQCloseCursor
-  #MQCloseQueue
-  #MQCreateCursor
-  #MQCreateQueue
-  #MQDeleteQueue
-  #MQFreeMemory
-  #MQFreeSecurityContext
-  #MQGetMachineProperties
-  #MQGetOverlappedResult
-  #MQGetPrivateComputerInformation
-  #MQGetQueueProperties
-  #MQGetQueueSecurity
-  #MQGetSecurityContext
-  #MQGetSecurityContextEx
-  #MQHandleToFormatName
-  #MQInstanceToFormatName
-  #MQLocateBegin
-  #MQLocateEnd
-  #MQLocateNext
-  #MQMarkMessageRejected
-  #MQMgmtAction
-  #MQMgmtGetInfo
-  #MQMoveMessage
-  #MQOpenQueue
-  #MQPathNameToFormatName
-  #MQPurgeQueue
-  #MQReceiveMessage
-  #MQReceiveMessageByLookupId
-  #MQRegisterCertificate
-  #MQSendMessage
-  #MQSetQueueProperties
-  #MQSetQueueSecurity
-  #RTCreateInternalCertificate
-  #RTDeleteInternalCert
-  #RTGetInternalCert
-  #RTGetUserCerts
-  #RTIsDependentClient
-  #RTLogOnRegisterCert
-  #RTOpenInternalCertStore
-  #RTRegisterUserCert
-  #RTRemoveUserCert
-  #RTRemoveUserCertSid
-  #RTXactGetDTC
   ?MQACCloseCursor@@YAJPEAX@Z
   ?MQDeleteCursorMemory@@YAJPEAX@Z
   ?MQLogHR@@YAXJPEB_WG@Z

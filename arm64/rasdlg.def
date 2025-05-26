@@ -16,31 +16,6 @@
 
 LIBRARY "rasdlg.dll"
 EXPORTS
-  #?RasHandleDiagnostics@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z DATA
-  #DwTerminalDlg
-  #GetRasDialOutProtocols
-  #RasAutodialQueryDlgA
-  #RasAutodialQueryDlgW
-  #RasDialDlgA
-  #RasDialDlgW
-  #RasEntryDlgA
-  #RasEntryDlgW
-  #RasPhonebookDlgA
-  #RasPhonebookDlgW
-  #RasSrvAddPropPages
-  #RasSrvAllowConnectionsConfig
-  #RasSrvCleanupService
-  #RasSrvEnumConnections
-  #RasSrvHangupConnection
-  #RasSrvInitializeService
-  #RasSrvIsConnectionConnected
-  #RasSrvIsICConfigured
-  #RasSrvIsServiceRunning
-  #RasUserEnableManualDial
-  #RasUserGetManualDial
-  #RasUserPrefsDlg
-  #RouterEntryDlgA
-  #RouterEntryDlgW
   ?RasHandleDiagnostics@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z
   DwTerminalDlg
   GetRasDialOutProtocols

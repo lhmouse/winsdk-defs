@@ -16,27 +16,6 @@
 
 LIBRARY "magnification.dll"
 EXPORTS
-  #?MagSetFullscreenUseBitmapSmoothing@@YAHH@Z DATA
-  #?MagSetLensUseBitmapSmoothing@@YAHPEAUHWND__@@H@Z DATA
-  #MagGetColorEffect
-  #MagGetFullscreenColorEffect
-  #MagGetFullscreenTransform
-  #MagGetImageScalingCallback
-  #MagGetInputTransform
-  #MagGetWindowFilterList
-  #MagGetWindowSource
-  #MagGetWindowTransform
-  #MagInitialize
-  #MagSetColorEffect
-  #MagSetFullscreenColorEffect
-  #MagSetFullscreenTransform
-  #MagSetImageScalingCallback
-  #MagSetInputTransform
-  #MagSetWindowFilterList
-  #MagSetWindowSource
-  #MagSetWindowTransform
-  #MagShowSystemCursor
-  #MagUninitialize
   ?MagSetFullscreenUseBitmapSmoothing@@YAHH@Z
   ?MagSetLensUseBitmapSmoothing@@YAHPEAUHWND__@@H@Z
   MagGetColorEffect
