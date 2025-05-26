@@ -68,6 +68,7 @@ const re_symbol = std.string.PCRE(
     [ 'caseless', 'dotall' ]);
 
 // collect LIB files.
+var arch_dll_syms = {};
 var arch_libs = {};
 var nlibs_total = 0;
 var nlibs_done = 0;
@@ -93,8 +94,6 @@ for(each um, um_props -> std.filesystem.list(SDK_LIB_ROOT)) {
 }
 
 for(each arch, libs -> arch_libs) {
-  var dll_syms = {};
-
   for(each lib -> libs) {
     nlibs_done ++;
     std.io.putfln("Processing $1/$2: $3", nlibs_done, nlibs_total, lib);
@@ -148,13 +147,13 @@ for(each arch, libs -> arch_libs) {
             if((sym == priv)
                || ((arch == 'x86') && std.string.starts_with(sym, priv + '@'))
                || ((arch == 'arm64') && (sym == '#' + priv)))
-              dll_syms[dll][sym].private = true;
+              arch_dll_syms[arch][dll][sym].private = true;
 
           if(std.string.starts_with(m.sym, '__imp_'))
-            dll_syms[dll][sym].imp = true;
+            arch_dll_syms[arch][dll][sym].imp = true;
 
           if((m.type == '20') && !std.string.starts_with(m.sym, '__imp_'))
-            dll_syms[dll][sym].thunk = true;
+            arch_dll_syms[arch][dll][sym].thunk = true;
         }
       }
 
@@ -169,7 +168,9 @@ for(each arch, libs -> arch_libs) {
       }
     }
   }
+}
 
+for(each arch, dll_syms -> arch_dll_syms) {
   std.filesystem.create_directory(arch);
 
   for(each dll, syms -> dll_syms) {
