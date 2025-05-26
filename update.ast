@@ -55,13 +55,13 @@ const PRIVATE_EXPORTS = [
 /////////////////////////////////////////////////////////////////////////////
 
 // C:\Program Files\.../x64/ActiveDS.Lib(ACTIVEDS.dll):      file format COFF-import-file
-var re_object_header = std.string.PCRE(
+const re_object_header = std.string.PCRE(
     '([-_.0-9a-z ():\\/]*\.lib)\((?<name>[-_.0-9a-z]+)\):\s+file format (?<fmt>[-_.0-9a-z]+)\n'
     + '(?<remaining>.*)$',
     [ 'caseless', 'dotall' ]);
 
 // [ 0](sec  0)(fl 0x00)(ty   0)(scl   0) (nx 0) 0x00000000 __imp_ADsBuildEnumerator
-var re_symbol = std.string.PCRE(
+const re_symbol = std.string.PCRE(
     '\[ *[0-9]+\]\(sec +[0-9]+\)\(fl +0x[0-9a-f]+\)\(ty +(?<type>[0-9]+)\)\(scl +[0-9]+\)\s+'
     + '\(nx +[0-9]+\)\s+0x[0-9a-f]+\s+(?<sym>[0-9a-z_.$#@!?]+)\n'
     + '(?<remaining>.*)$',
@@ -107,7 +107,7 @@ for(each arch, libs -> arch_libs) {
       continue;
 
     lib_data = std.string.replace(lib_data, "\r\n", "\n");
-    var lib_size_total = countof lib_data;
+    var lib_size_total = #lib_data;
 
     // parse object files.
     var obj_m = re_object_header.named_match(lib_data);
@@ -121,7 +121,7 @@ for(each arch, libs -> arch_libs) {
       if(std.string.starts_with(m.fmt, 'COFF-import-file')) {
         // parse short import object.
         dll = std.string.to_lower(m.name);
-        var obj_data = std.string.slice(lib_data, 0, countof lib_data - countof obj_m.'&');
+        var obj_data = std.string.slice(lib_data, 0, #lib_data - #(obj_m.'&'));
         var sym_m = re_symbol.named_match(obj_data);
         while(sym_m != null) {
           // find next symbol.
@@ -162,7 +162,7 @@ for(each arch, libs -> arch_libs) {
       // long format. If it does, please let me know.
 
       if(sym != null) {
-        var rt = (nlibs_done - 1.0 * countof lib_data / lib_size_total) / nlibs_total * 100;
+        var rt = (nlibs_done - 1.0 * #lib_data / lib_size_total) / nlibs_total * 100;
         var rt_i = std.numeric.format(__itrunc rt, 10);
         var rt_d = std.string.slice(std.numeric.format(__itrunc(1e9 + rt * 1e4), 10), -4);
         std.io.putfln(" ($1.$2 %) found short import: $3", rt_i, rt_d, m.sym);
@@ -212,7 +212,7 @@ for(each arch, libs -> arch_libs) {
 
     // guess name of DEF file.
     var ext = std.string.pcre_find(dll, '\.[a-z0-9]{1,3}$');
-    var def = std.string.replace_slice(dll, ext[0] ?? countof dll, '.def');
+    var def = std.string.replace_slice(dll, ext[0] ?? #dll, '.def');
 
     std.io.putfln("Writing: $1", arch / def);
     std.filesystem.write(arch / def, def_data);
