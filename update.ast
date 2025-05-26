@@ -93,7 +93,7 @@ for(each um, um_props -> std.filesystem.list(SDK_LIB_ROOT)) {
   }
 }
 
-for(each arch, libs -> arch_libs) {
+for(each lib_arch, libs -> arch_libs) {
   for(each lib -> libs) {
     nlibs_done ++;
     std.io.putfln("Processing $1/$2: $3", nlibs_done, nlibs_total, lib);
@@ -116,7 +116,7 @@ for(each arch, libs -> arch_libs) {
       lib_data = obj_m.remaining;
       obj_m = re_object_header.named_match(lib_data);
 
-      var dll, sym;
+      var dll, arch, sym;
       if(std.string.starts_with(m.fmt, 'COFF-import-file')) {
         // parse short import object.
         dll = std.string.to_lower(m.name);
@@ -129,31 +129,44 @@ for(each arch, libs -> arch_libs) {
           sym_m = re_symbol.named_match(obj_data);
 
           // demangle it.
-          if((arch == 'arm64') && std.string.starts_with(m.sym, '__imp_aux_')) {
-            if(m.type == '20')
-              sym = std.string.replace_slice(m.sym, 0, 10, '#');
-            else
-              sym = std.string.slice(m.sym, 10);
+          arch = lib_arch;
+          sym = m.sym;
+
+          if(lib_arch == 'arm64') {
+            if(std.string.starts_with(sym, '__imp_aux_')) {
+              arch = 'arm64ec';
+              sym = std.string.slice(sym, 10);
+            }
+            else if(std.string.starts_with(sym, '#')) {
+              arch = 'arm64ec';
+              sym = std.string.slice(sym, 1);
+            }
           }
-          else if((m.type == '0') && std.string.starts_with(m.sym, '__imp_'))
-            sym = std.string.slice(m.sym, 6);
-          else
-            sym = m.sym;
+
+          if(std.string.starts_with(sym, '__imp_'))
+            sym = std.string.slice(sym, 6);
 
           if((arch == 'x86') && std.string.starts_with(sym, '_'))
             sym = std.string.slice(sym, 1);
 
           for(each priv -> PRIVATE_EXPORTS)
             if((sym == priv)
-               || ((arch == 'x86') && std.string.starts_with(sym, priv + '@'))
-               || ((arch == 'arm64') && (sym == '#' + priv)))
+               || ((arch == 'x86') && std.string.starts_with(sym, priv + '@')))
               arch_dll_syms[arch][dll][sym].private = true;
 
-          if(std.string.starts_with(m.sym, '__imp_'))
+          if(std.string.starts_with(m.sym, '__imp_')) {
+            // `__imp_` or `__imp_aux`
             arch_dll_syms[arch][dll][sym].imp = true;
-
-          if((m.type == '20') && !std.string.starts_with(m.sym, '__imp_'))
+          }
+          else if(m.type == '0') {
+            // `DATA` or `CONSTANT`
+            arch_dll_syms[lib_arch][dll][sym].data = true;
+            arch_dll_syms[arch][dll][sym].data = true;
+          }
+          else if(m.type == '20') {
+            // function; thunk exists
             arch_dll_syms[arch][dll][sym].thunk = true;
+          }
         }
       }
 
@@ -177,12 +190,14 @@ for(each arch, dll_syms -> arch_dll_syms) {
     // sort symbols in alphabetic order.
     var sorted_syms = [];
     for(each sym, props -> syms)
-      if(props.private)
+      if(!props.imp)
+        continue;
+      else if(props.private)
         sorted_syms[$] = sym + " PRIVATE";
-      else if(!props.thunk)
-        sorted_syms[$] = sym + " DATA";
-      else if(props.imp)
+      else if(props.thunk)
         sorted_syms[$] = sym;
+      else
+        sorted_syms[$] = sym + " DATA";
 
     sorted_syms = std.array.sort(sorted_syms,
         func(x, y) = std.string.to_lower(x) <=> std.string.to_lower(y));
