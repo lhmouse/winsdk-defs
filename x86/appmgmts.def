@@ -27,7 +27,7 @@ EXPORTS
   CsServerGetClassStore@12
   CsUnregisterAppCategory@4
   GenerateGroupPolicy@20
-  IID_IClassAdmin
+  IID_IClassAdmin DATA PRIVATE
   ProcessGroupPolicyObjectsEx@40
   ReleaseAppCategoryInfoList@4
   ReleasePackageDetail@4

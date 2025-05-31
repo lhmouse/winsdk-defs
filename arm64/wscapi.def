@@ -20,10 +20,10 @@ EXPORTS
   ?wscShowAMSCN@@YAJKPEAK@Z
   CLSID_WSCDefaultProduct
   CLSID_WSCProductList
-  IID_IWSCDefaultProduct
-  IID_IWscProduct
-  IID_IWSCProductList
-  LIBID_wscAPILib
+  IID_IWSCDefaultProduct DATA PRIVATE
+  IID_IWscProduct DATA PRIVATE
+  IID_IWSCProductList DATA PRIVATE
+  LIBID_wscAPILib DATA PRIVATE
   wscAntiSpywareGetStatus
   wscAntiVirusExpiredBeyondThreshold
   wscAntiVirusGetStatus

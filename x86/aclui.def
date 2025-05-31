@@ -21,4 +21,4 @@ EXPORTS
   EditResourceCondition@20
   EditSecurity@8
   EditSecurityAdvanced@12
-  IID_ISecurityInformation
+  IID_ISecurityInformation DATA PRIVATE
