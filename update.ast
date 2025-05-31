@@ -36,7 +36,15 @@ const PRIVATE_FUNCTIONS = [
   'DllGetClassObject',
   'DllGetClassObjectWOW',
   'DllCanUnloadNow',
+  'DllGetClassFactoryFromClassString',
+  'DllGetDocumentation',
+  'DllInitialize',
+  'DllUnload',
+  'DllInstall',
   'DllRegisterServer',
+  'DllRegisterServerEx',
+  'DllRegisterServerExA',
+  'DllRegisterServerExW',
   'DllRegisterProxy',
   'DllRegisterWindowClasses',
   'DllUnregisterServer',
@@ -50,6 +58,10 @@ const PRIVATE_FUNCTIONS = [
   'DllMainCRTStartup',  // MinGW entry point
   'DllGetVersion',
   'DllDebugObjectRPCHook',
+  'RasCustomDeleteEntryNotify',
+  'RasCustomDial',
+  'RasCustomDialDlg',
+  'RasCustomEntryDlg',
 ];
 
 /////////////////////////////////////////////////////////////////////////////
