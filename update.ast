@@ -32,7 +32,7 @@ const DEF_COPYRIGHT = [
   'OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.',
 ];
 
-const PRIVATE_EXPORTS = [
+const PRIVATE_FUNCTIONS = [
   'DllGetClassObject',
   'DllGetClassObjectWOW',
   'DllCanUnloadNow',
@@ -149,11 +149,6 @@ for(each lib_arch, libs -> arch_libs) {
           if((arch == 'x86') && std.string.starts_with(sym, '_'))
             sym = std.string.slice(sym, 1);
 
-          for(each priv -> PRIVATE_EXPORTS)
-            if((sym == priv)
-               || ((arch == 'x86') && std.string.starts_with(sym, priv + '@')))
-              arch_dll_syms[arch][dll][sym].private = true;
-
           if(std.string.starts_with(m.sym, '__imp_')) {
             // `__imp_` or `__imp_aux`
             arch_dll_syms[arch][dll][sym].imp = true;
@@ -189,15 +184,24 @@ for(each arch, dll_syms -> arch_dll_syms) {
   for(each dll, syms -> dll_syms) {
     // sort symbols in alphabetic order.
     var sorted_syms = [];
-    for(each sym, props -> syms)
+    for(each sym, props -> syms) {
       if(!props.imp)
         continue;
-      else if(props.private)
-        sorted_syms[$] = sym + " PRIVATE";
-      else if(props.thunk)
-        sorted_syms[$] = sym;
+
+      var attrs = "";
+      if(std.string.starts_with(sym, 'IID_') || std.string.starts_with(sym, 'LIBID_'))
+        attrs = " DATA PRIVATE";
       else
-        sorted_syms[$] = sym + " DATA";
+        for(each priv -> PRIVATE_FUNCTIONS)
+          if((sym == priv)
+             || ((arch == 'x86') && std.string.starts_with(sym, priv + '@')))
+            attrs = " PRIVATE";
+
+      if((attrs == "") && !props.thunk)
+        attrs = " DATA";
+
+      sorted_syms[$] = sym + attrs;
+    }
 
     sorted_syms = std.array.sort(sorted_syms,
         func(x, y) = std.string.to_lower(x) <=> std.string.to_lower(y));
