@@ -18,8 +18,8 @@ LIBRARY "wscapi.dll"
 EXPORTS
   ?wscLaunchAdminMakeDefaultUI@@YAJPEBG@Z
   ?wscShowAMSCN@@YAJKPEAK@Z
-  CLSID_WSCDefaultProduct
-  CLSID_WSCProductList
+  CLSID_WSCDefaultProduct DATA PRIVATE
+  CLSID_WSCProductList DATA PRIVATE
   IID_IWSCDefaultProduct DATA PRIVATE
   IID_IWscProduct DATA PRIVATE
   IID_IWSCProductList DATA PRIVATE
