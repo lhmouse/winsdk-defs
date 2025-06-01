@@ -64,6 +64,12 @@ const PRIVATE_FUNCTIONS = [
   'RasCustomEntryDlg',
 ];
 
+const PRIVATE_DATA_PREFIXES = [
+  'IID_',
+  'LIBID_',
+  'CLSID_',
+];
+
 /////////////////////////////////////////////////////////////////////////////
 
 // C:\Program Files\.../x64/ActiveDS.Lib(ACTIVEDS.dll):      file format COFF-import-file
@@ -201,16 +207,19 @@ for(each arch, dll_syms -> arch_dll_syms) {
         continue;
 
       var attrs = "";
-      if(std.string.starts_with(sym, 'IID_') || std.string.starts_with(sym, 'LIBID_'))
-        attrs = " DATA PRIVATE";
-      else
-        for(each priv -> PRIVATE_FUNCTIONS)
-          if((sym == priv)
-             || ((arch == 'x86') && std.string.starts_with(sym, priv + '@')))
-            attrs = " PRIVATE";
+      for(each priv -> PRIVATE_FUNCTIONS)
+        if((sym == priv)
+           || ((arch == 'x86') && std.string.starts_with(sym, priv + '@')))
+          attrs = " PRIVATE";
 
-      if((attrs == "") && !props.thunk)
-        attrs = " DATA";
+      if(attrs == "") {
+        if(!props.thunk)
+          attrs = " DATA";
+
+        for(each priv -> PRIVATE_DATA_PREFIXES)
+          if(std.string.starts_with(sym, priv))
+            attrs = " DATA PRIVATE";
+      }
 
       sorted_syms[$] = sym + attrs;
     }
