@@ -29,3 +29,14 @@ EXPORTS
   WebAuthNGetPlatformCredentialList@8
   WebAuthNGetW3CExceptionDOMError@4
   WebAuthNIsUserVerifyingPlatformAuthenticatorAvailable@4
+  WebAuthNWriteEventCleanedupLocalStore@0
+  WebAuthNWriteEventCloudStoreOperationFailure@20
+  WebAuthNWriteEventCloudStoreOperationSuccess@16
+  WebAuthNWriteEventCreatedUserStorage@8
+  WebAuthNWriteEventDeletedTrustGroup@0
+  WebAuthNWriteEventKeyRotationFailure@4
+  WebAuthNWriteEventKeyRotationSuccess@4
+  WebAuthNWriteEventLocalStoreOperationFailure@20
+  WebAuthNWriteEventLocalStoreOperationSuccess@16
+  WebAuthNWriteEventSyncState@4
+  WebAuthNWriteEventSyncTrustedGroupDeletion@0

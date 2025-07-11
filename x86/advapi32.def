@@ -454,12 +454,15 @@ EXPORTS
   LsaOpenTrustedDomain@16
   LsaOpenTrustedDomainByName@16
   LsaProfileDeleted@4
+  LsaPurgeLocalSystemAccessTable@0
   LsaQueryCAPs@16
   LsaQueryDomainInformationPolicy@12
   LsaQueryForestTrustInformation2@16
   LsaQueryForestTrustInformation@12
   LsaQueryInformationPolicy@12
   LsaQueryInfoTrustedDomain@12
+  LsaQueryLocalSystemAccess@8
+  LsaQueryLocalSystemAccessAll@4
   LsaQuerySecret@20
   LsaQuerySecurityObject@12
   LsaQueryTrustedDomainInfo@16
@@ -473,6 +476,7 @@ EXPORTS
   LsaSetForestTrustInformation@20
   LsaSetInformationPolicy@12
   LsaSetInformationTrustedDomain@12
+  LsaSetLocalSystemAccess@4
   LsaSetQuotasForAccount@8
   LsaSetSecret@12
   LsaSetSecurityObject@12

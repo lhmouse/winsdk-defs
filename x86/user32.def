@@ -27,6 +27,7 @@ EXPORTS
   AnyPopup@0
   AppendMenuA@16
   AppendMenuW@16
+  ApplyWindowAction@8
   AreDpiAwarenessContextsEqual@8
   ArrangeIconicWindows@4
   AttachThreadInput@12
@@ -90,6 +91,7 @@ EXPORTS
   CloseTouchInputHandle@4
   CloseWindow@4
   CloseWindowStation@4
+  ConvertToInterceptWindow@4
   CopyAcceleratorTableA@12
   CopyAcceleratorTableW@12
   CopyIcon@4
@@ -225,6 +227,7 @@ EXPORTS
   EndMenu@0
   EndPaint@8
   EndTask@12
+  EnterMoveSizeLoop@16
   EnumChildWindows@12
   EnumClipboardFormats@4
   EnumDesktopsA@12
@@ -516,6 +519,7 @@ EXPORTS
   IsIconic@4
   IsImmersiveProcess@4
   IsInDesktopWindowBand@4
+  IsInterceptWindow@8
   IsMenu@4
   IsMouseInPointerEnabled@0
   IsProcessDPIAware@0
@@ -626,6 +630,7 @@ EXPORTS
   RegisterClassW@4
   RegisterClipboardFormatA@4
   RegisterClipboardFormatW@4
+  RegisterCloakedNotification@8
   RegisterDeviceNotificationA@12
   RegisterDeviceNotificationW@12
   RegisterForTooltipDismissNotification@8

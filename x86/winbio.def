@@ -16,6 +16,7 @@
 
 LIBRARY "winbio.dll"
 EXPORTS
+  EXPERIMENTAL_WinBioGetEssState@4
   WinBioAcquireFocus@0
   WinBioAsyncEnumBiometricUnits@8
   WinBioAsyncEnumDatabases@8
