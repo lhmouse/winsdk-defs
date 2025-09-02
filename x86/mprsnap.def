@@ -18,6 +18,8 @@ LIBRARY "mprsnap.dll"
 EXPORTS
   ?SetupWithCYS@@YGJKPAPAX@Z
   AddIpPerInterfaceBlocks@8
+  CheckedGetBlock@20
+  CheckedGetData@20
   ConnectInterface@16
   ConnectInterfaceEx@20
   ConnectRegistry@8
