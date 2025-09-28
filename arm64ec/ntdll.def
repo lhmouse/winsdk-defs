@@ -18,6 +18,87 @@ LIBRARY "ntdll.dll"
 EXPORTS
   __arm64ec_syscall_ffs DATA
   __arm64ec_syscall_ffs_size DATA
+  __C_specific_handler
+  __chkstk DATA
+  __chkstk_arm64ec
+  __isascii
+  __iscsym
+  __iscsymf
+  __misaligned_access
+  __toascii
+  _atoi64
+  _errno
+  _i64toa
+  _i64toa_s
+  _i64tow
+  _i64tow_s
+  _itoa
+  _itoa_s
+  _itow
+  _itow_s
+  _lfind
+  _local_unwind
+  _ltoa
+  _ltoa_s
+  _ltow
+  _ltow_s
+  _makepath_s
+  _memccpy
+  _memicmp
+  _setjmp
+  _setjmpex
+  _snprintf
+  _snprintf_s
+  _snscanf_s
+  _snwprintf
+  _snwprintf_s
+  _snwscanf_s
+  _splitpath
+  _splitpath_s
+  _strcmpi
+  _stricmp
+  _strlwr
+  _strlwr_s
+  _strnicmp
+  _strnset_s
+  _strset_s
+  _strupr
+  _strupr_s
+  _swprintf
+  _ui64toa
+  _ui64toa_s
+  _ui64tow
+  _ui64tow_s
+  _ultoa
+  _ultoa_s
+  _ultow
+  _ultow_s
+  _vscprintf
+  _vscwprintf
+  _vsnprintf
+  _vsnprintf_s
+  _vsnwprintf
+  _vsnwprintf_s
+  _vswprintf
+  _wcsicmp
+  _wcslwr
+  _wcslwr_s
+  _wcsnicmp
+  _wcsnset_s
+  _wcsset_s
+  _wcstoi64
+  _wcstoui64
+  _wcsupr
+  _wcsupr_s
+  _wmakepath_s
+  _wsplitpath_s
+  _wtoi
+  _wtoi64
+  _wtol
+  A_SHAFinal
+  A_SHAInit
+  A_SHAUpdate
+  abs
   AlpcAdjustCompletionListConcurrencyCount
   AlpcFreeCompletionListMessage
   AlpcGetCompletionListLastMessageInformation
@@ -33,6 +114,14 @@ EXPORTS
   AlpcRundownCompletionList
   AlpcUnregisterCompletionList
   AlpcUnregisterCompletionListWorkerThread
+  atan
+  atan2
+  atoi
+  atol
+  bsearch
+  bsearch_s
+  ceil
+  cos
   CpuSetCriticalLockHeld
   CsrAllocateCaptureBuffer
   CsrAllocateMessagePointer
@@ -98,6 +187,7 @@ EXPORTS
   EtwRegisterTraceGuidsW
   EtwReplyNotification
   EtwSendNotification
+  EtwSetMark
   EtwTraceEventInstance
   EtwTraceMessage
   EtwTraceMessageVa
@@ -105,13 +195,38 @@ EXPORTS
   EtwWriteUMSecurityEvent
   EvtIntReportAuthzEventAndSourceAsync
   EvtIntReportEventAndSourceAsync
+  fabs
+  floor
+  isalnum
+  isalpha
+  iscntrl
+  isdigit
+  isgraph
+  islower
+  isprint
+  ispunct
+  isspace
+  isupper
+  iswalnum
+  iswalpha
+  iswascii
+  iswctype
+  iswdigit
+  iswgraph
+  iswlower
+  iswprint
+  iswspace
+  iswxdigit
+  isxdigit
   KiUserInvertedFunctionTable
+  labs
   LdrAccessResource
   LdrAddDllDirectory
   LdrAddLoadAsDataTable
   LdrAddRefDll
   LdrAppxHandleIntegrityFailure
   LdrCallEnclave
+  LdrControlFlowGuardEnforced
   LdrCreateEnclave
   LdrDeleteEnclave
   LdrDisableThreadCalloutsForDll
@@ -160,17 +275,21 @@ EXPORTS
   LdrRemoveLoadAsDataTable
   LdrResFindResource
   LdrResFindResourceDirectory
+  LdrResGetRCConfig
   LdrResolveDelayLoadedAPI
   LdrResolveDelayLoadsFromDll
   LdrResRelease
   LdrResSearchResource
+  LdrRscIsTypeExist
   LdrSetAppCompatDllRedirectionCallback
   LdrSetDefaultDllDirectories
   LdrSetDllDirectory
   LdrSetDllManifestProber
+  LdrSetImplicitPathOptions
   LdrSetMUICacheType
   LdrShutdownProcess
   LdrShutdownThread
+  LdrStandardizeSystemPath
   LdrUnloadAlternateResourceModule
   LdrUnloadAlternateResourceModuleEx
   LdrUnloadDll
@@ -178,6 +297,22 @@ EXPORTS
   LdrUpdatePackageSearchPath
   LdrVerifyImageMatchesChecksum
   LdrVerifyImageMatchesChecksumEx
+  log
+  longjmp
+  mbstowcs
+  MD4Final
+  MD4Init
+  MD4Update
+  MD5Final
+  MD5Init
+  MD5Update
+  memchr
+  memcmp
+  memcpy
+  memcpy_s
+  memmove
+  memmove_s
+  memset
   MicrosoftTelemetryAssertTriggeredUM
   NlsAnsiCodePage DATA
   NlsMbCodePageTag DATA
@@ -335,6 +470,10 @@ EXPORTS
   NtDirectGraphicsCall
   NtDisableLastKnownGood
   NtDisplayString
+  NtdllDefWindowProc_A
+  NtdllDefWindowProc_W
+  NtdllDialogWndProc_A
+  NtdllDialogWndProc_W
   NtDrawText
   NtDuplicateObject
   NtDuplicateToken
@@ -676,6 +815,7 @@ EXPORTS
   PfxInitialize
   PfxInsertPrefix
   PfxRemovePrefix
+  pow
   ProcessPendingCrossProcessEmulatorWork
   PssNtCaptureSnapshot
   PssNtDuplicateSnapshot
@@ -685,6 +825,8 @@ EXPORTS
   PssNtQuerySnapshot
   PssNtValidateDescriptor
   PssNtWalkSnapshot
+  qsort
+  qsort_s
   RtlAbortRXact
   RtlAbsoluteToSelfRelativeSD
   RtlAcquirePebLock
@@ -711,6 +853,7 @@ EXPORTS
   RtlAddAuditAccessAce
   RtlAddAuditAccessAceEx
   RtlAddAuditAccessObjectAce
+  RtlAddCompoundAce
   RtlAddFunctionTable
   RtlAddGrowableFunctionTable
   RtlAddIntegrityLabelToBoundaryDescriptor
@@ -743,14 +886,18 @@ EXPORTS
   RtlApplicationVerifierStop
   RtlApplyRXact
   RtlApplyRXactNoFlush
+  RtlAppxIsFileOwnedByTrustedInstaller
   RtlAreAllAccessesGranted
   RtlAreAnyAccessesGranted
   RtlAreBitsClear
   RtlAreBitsClearEx
   RtlAreBitsSet
+  RtlAreLongPathsEnabled
   RtlAssert
   RtlAvlInsertNodeEx
   RtlAvlRemoveNode
+  RtlBarrier
+  RtlBarrierForDelete
   RtlCancelTimer
   RtlCanonicalizeDomainName
   RtlCapabilityCheck
@@ -801,6 +948,7 @@ EXPORTS
   RtlContractHashTable
   RtlConvertDeviceFamilyInfoToString
   RtlConvertExclusiveToShared
+  RtlConvertHostPerfCounterToPerfCounter
   RtlConvertLCIDToString
   RtlConvertSharedToExclusive
   RtlConvertSidToUnicodeString
@@ -874,6 +1022,7 @@ EXPORTS
   RtlDelete
   RtlDeleteAce
   RtlDeleteAtomFromAtomTable
+  RtlDeleteBarrier
   RtlDeleteBoundaryDescriptor
   RtlDeleteCriticalSection
   RtlDeleteElementGenericTable
@@ -909,6 +1058,7 @@ EXPORTS
   RtlDetermineDosPathNameType_U
   RtlDisableThreadProfiling
   RtlDisownModuleHeapAllocation
+  RtlDispatchAPC
   RtlDllShutdownInProgress
   RtlDnsHostNameToComputerName
   RtlDoesFileExists_U
@@ -998,10 +1148,12 @@ EXPORTS
   RtlFirstEntrySList
   RtlFirstFreeAce
   RtlFlsAlloc
+  RtlFlsAllocEx
   RtlFlsFree
   RtlFlsGetValue
   RtlFlsGetValue2
   RtlFlsSetValue
+  RtlFlushHeaps
   RtlFlushNonVolatileMemory
   RtlFlushNonVolatileMemoryRanges
   RtlFlushSecureMemoryCache
@@ -1068,6 +1220,7 @@ EXPORTS
   RtlGetLengthWithoutTrailingPathSeperators
   RtlGetLocaleFileMappingAddress
   RtlGetLongestNtPathLength
+  RtlGetMultiTimePrecise
   RtlGetNativeSystemInformation
   RtlGetNextEntryHashTable
   RtlGetNextUmsListItem
@@ -1077,8 +1230,10 @@ EXPORTS
   RtlGetNtSystemRoot
   RtlGetNtVersionNumbers
   RtlGetOwnerSecurityDescriptor
+  RtlGetParentLocaleName
   RtlGetPersistedStateLocation
   RtlGetProcessHeaps
+  RtlGetProcessPreferredUILanguages
   RtlGetProductInfo
   RtlGetReturnAddressHijackTarget
   RtlGetSaclSecurityDescriptor
@@ -1124,6 +1279,7 @@ EXPORTS
   RtlIncrementCorrelationVector
   RtlInitAnsiString
   RtlInitAnsiStringEx
+  RtlInitBarrier
   RtlInitCodePageTable
   RtlInitEnumerationHashTable
   RtlInitializeAtomPackage
@@ -1139,6 +1295,7 @@ EXPORTS
   RtlInitializeGenericTable
   RtlInitializeGenericTableAvl
   RtlInitializeHandleTable
+  RtlInitializeNtUserPfn
   RtlInitializeResource
   RtlInitializeRXact
   RtlInitializeSid
@@ -1201,6 +1358,7 @@ EXPORTS
   RtlIsEcCode
   RtlIsElevatedRid
   RtlIsEnclaveFeaturePresent
+  RtlIsFeatureEnabledForEnterprise
   RtlIsGenericTableEmpty
   RtlIsGenericTableEmptyAvl
   RtlIsMultiSessionSku
@@ -1235,6 +1393,8 @@ EXPORTS
   RtlLengthRequiredSid
   RtlLengthSecurityDescriptor
   RtlLengthSid
+  RtlLengthSidAsUnicodeString
+  RtlLoadString
   RtlLocaleNameToLcid
   RtlLocalTimeToSystemTime
   RtlLocateExtendedFeature
@@ -1307,6 +1467,7 @@ EXPORTS
   RtlpCreateProcessRegistryInfo
   RtlPcToFileHeader
   RtlpEnsureBufferSize
+  RtlpGetDeviceFamilyInfoEnum
   RtlpGetLCIDFromLangInfoNode
   RtlpGetNameFromLangInfoNode
   RtlpGetSystemDefaultUILanguage
@@ -1337,6 +1498,7 @@ EXPORTS
   RtlpRefreshCachedUILanguage
   RtlPrepareForProcessCloning
   RtlProcessFlsData
+  RtlProtectHeap
   RtlpSetInstallLanguage
   RtlpSetPreferredUILanguages
   RtlpSetUserPreferredUILanguages
@@ -1347,10 +1509,15 @@ EXPORTS
   RtlPushFrame
   RtlpVerifyAndCommitUILanguageSettings
   RtlpWaitForCriticalSection
+  RtlpWow64CtxFromAmd64
+  RtlpWow64GetContextOnAmd64
+  RtlpWow64SetContextOnAmd64
   RtlQueryActivationContextApplicationSettings
   RtlQueryAllFeatureConfigurations
   RtlQueryAllInternalFeatureConfigurations
+  RtlQueryAllInternalRuntimeFeatureConfigurations
   RtlQueryAtomInAtomTable
+  RtlQueryCriticalSectionOwner
   RtlQueryDepthSList
   RtlQueryDynamicTimeZoneInformation
   RtlQueryElevationFlags
@@ -1373,6 +1540,7 @@ EXPORTS
   RtlQueryPointerMapping
   RtlQueryProcessBackTraceInformation
   RtlQueryProcessDebugInformation
+  RtlQueryProcessHeapInformation
   RtlQueryProcessLockInformation
   RtlQueryProcessPlaceholderCompatibilityMode
   RtlQueryPropertyStore
@@ -1380,7 +1548,9 @@ EXPORTS
   RtlQueryRegistryValues
   RtlQueryRegistryValuesEx
   RtlQueryRegistryValueWithFallback
+  RtlQueryResourcePolicy
   RtlQuerySecurityObject
+  RtlQueryTagHeap
   RtlQueryThreadPlaceholderCompatibilityMode
   RtlQueryThreadProfiling
   RtlQueryTimeZoneInformation
@@ -1436,12 +1606,15 @@ EXPORTS
   RtlReportSilentProcessExit
   RtlReportSqmEscalation
   RtlResetMemoryBlockLookaside
+  RtlResetMemoryZone
+  RtlResetNtUserPfn
   RtlResetRtlTranslations
   RtlRestoreBootStatusDefaults
   RtlRestoreContext
   RtlRestoreLastWin32Error
   RtlRestoreSystemBootStatusDefaults
   RtlRestoreThreadPreferredUILanguages
+  RtlRetrieveNtUserPfn
   RtlRunDecodeUnicodeString
   RtlRunEncodeUnicodeString
   RtlRunOnceBeginInitialize
@@ -1455,6 +1628,7 @@ EXPORTS
   RtlSendMsgToSm
   RtlSetAllBits
   RtlSetAllBitsEx
+  RtlSetAttributesSecurityDescriptor
   RtlSetBit
   RtlSetBitEx
   RtlSetBits
@@ -1483,6 +1657,7 @@ EXPORTS
   RtlSetProcessDebugInformation
   RtlSetProcessIsCritical
   RtlSetProcessPlaceholderCompatibilityMode
+  RtlSetProcessPreferredUILanguages
   RtlSetProtectedPolicy
   RtlSetProxiedProcessId
   RtlSetSaclSecurityDescriptor
@@ -1553,6 +1728,7 @@ EXPORTS
   RtlTryAcquireSRWLockShared
   RtlTryConvertSRWLockSharedToExclusiveOrRelease
   RtlTryEnterCriticalSection
+  RtlUdiv128
   RtlUmsThreadYield
   RtlUnhandledExceptionFilter
   RtlUnhandledExceptionFilter2
@@ -1584,6 +1760,7 @@ EXPORTS
   RtlUnwindEx
   RtlUpcaseUnicodeChar
   RtlUpcaseUnicodeString
+  RtlUpcaseUnicodeStringToAnsiString
   RtlUpcaseUnicodeStringToCountedOemString
   RtlUpcaseUnicodeStringToOemString
   RtlUpcaseUnicodeToCustomCPN
@@ -1594,6 +1771,8 @@ EXPORTS
   RtlUpdateTimer
   RtlUpperChar
   RtlUpperString
+  RtlUserFiberStart
+  RtlUserThreadStart
   RtlUTF8StringToUnicodeString
   RtlUTF8ToUnicodeN
   RtlValidAcl
@@ -1601,6 +1780,7 @@ EXPORTS
   RtlValidateHeap
   RtlValidateProcessHeaps
   RtlValidateUnicodeString
+  RtlValidateUserCallTarget
   RtlValidProcessProtection
   RtlValidRelativeSecurityDescriptor
   RtlValidSecurityDescriptor
@@ -1653,13 +1833,52 @@ EXPORTS
   RtlXSave
   RtlxUnicodeStringToAnsiSize
   RtlxUnicodeStringToOemSize
+  RtlZeroHeap
   RtlZeroMemory
   RtlZombifyActivationContext
+  SbExecuteProcedure
+  SbSelectProcedure
   ShipAssert
   ShipAssertGetBufferInfo
   ShipAssertMsgA
   ShipAssertMsgW
+  sin
+  sprintf
+  sprintf_s
+  sqrt
+  sscanf
+  sscanf_s
+  strcat
+  strcat_s
+  strchr
+  strcmp
+  strcpy
+  strcpy_s
+  strcspn
+  strlen
+  strncat
+  strncat_s
+  strncmp
+  strncpy
+  strncpy_s
+  strnlen
+  strpbrk
+  strrchr
+  strspn
+  strstr
+  strtok_s
+  strtol
+  strtoul
+  swprintf
+  swprintf_s
+  swscanf_s
+  tan
+  tolower
+  toupper
+  towlower
+  towupper
   TpAllocAlpcCompletion
+  TpAllocAlpcCompletionEx
   TpAllocCleanupGroup
   TpAllocIoCompletion
   TpAllocJobNotification
@@ -1667,16 +1886,24 @@ EXPORTS
   TpAllocTimer
   TpAllocWait
   TpAllocWork
+  TpAlpcRegisterCompletionList
+  TpAlpcUnregisterCompletionList
   TpCallbackDetectedUnrecoverableError
+  TpCallbackIndependent
   TpCallbackLeaveCriticalSectionOnCompletion
   TpCallbackMayRunLong
   TpCallbackReleaseMutexOnCompletion
   TpCallbackReleaseSemaphoreOnCompletion
+  TpCallbackSendAlpcMessageOnCompletion
+  TpCallbackSendPendingAlpcMessage
   TpCallbackSetEventOnCompletion
   TpCallbackUnloadDllOnCompletion
   TpCancelAsyncIoOperation
   TpCaptureCaller
   TpCheckTerminateWorker
+  TpDbgDumpHeapUsage
+  TpDbgSetLogRoutine
+  TpDisablePoolCallbackChecks
   TpDisassociateCallback
   TpIsTimerSet
   TpPostWork
@@ -1690,10 +1917,14 @@ EXPORTS
   TpReleaseTimer
   TpReleaseWait
   TpReleaseWork
+  TpSetDefaultPoolMaxThreads
+  TpSetDefaultPoolStackInformation
   TpSetPoolMaxThreads
   TpSetPoolMaxThreadsSoftLimit
   TpSetPoolMinThreads
   TpSetPoolStackInformation
+  TpSetPoolThreadBasePriority
+  TpSetPoolThreadCpuSets
   TpSetPoolWorkerThreadIdleTimeout
   TpSetTimer
   TpSetTimerEx
@@ -1701,6 +1932,7 @@ EXPORTS
   TpSetWaitEx
   TpSimpleTryPost
   TpStartAsyncIoOperation
+  TpTimerOutstandingCallbackCount
   TpTrimPools
   TpWaitForAlpcCompletion
   TpWaitForIoCompletion
@@ -1708,9 +1940,36 @@ EXPORTS
   TpWaitForTimer
   TpWaitForWait
   TpWaitForWork
+  TpWorkOnBehalfClearTicket
+  TpWorkOnBehalfSetTicket
   vDbgPrintEx
   vDbgPrintExWithPrefix
   VerSetConditionMask
+  vsprintf
+  vsprintf_s
+  vswprintf_s
+  wcscat
+  wcscat_s
+  wcschr
+  wcscmp
+  wcscpy
+  wcscpy_s
+  wcscspn
+  wcslen
+  wcsncat
+  wcsncat_s
+  wcsncmp
+  wcsncpy
+  wcsncpy_s
+  wcsnlen
+  wcspbrk
+  wcsrchr
+  wcsspn
+  wcsstr
+  wcstok_s
+  wcstol
+  wcstombs
+  wcstoul
   WerReportExceptionWorker
   WerReportSQMEvent
   WinSqmAddToAverageDWORD
@@ -1742,6 +2001,7 @@ EXPORTS
   WinSqmSetString
   WinSqmStartSession
   WinSqmStartSessionForPartner
+  WinSqmStartSqmOptinListener
   ZwAcceptConnectPort
   ZwAccessCheck
   ZwAccessCheckAndAuditAlarm

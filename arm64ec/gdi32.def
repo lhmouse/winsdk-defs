@@ -34,7 +34,7 @@ EXPORTS
   BRUSHOBJ_pvAllocRbrush
   BRUSHOBJ_pvGetRbrush
   BRUSHOBJ_ulGetBrushColor
-  CancelDC DATA
+  CancelDC
   CheckColorsInGamut DATA
   ChoosePixelFormat
   Chord DATA
@@ -428,28 +428,31 @@ EXPORTS
   GdiAlphaBlend
   GdiArtificialDecrementDriver DATA
   GdiComment
-  GdiDeleteSpoolFileHandle DATA
-  GdiEndDocEMF DATA
-  GdiEndPageEMF DATA
+  GdiDeleteSpoolFileHandle
+  GdiEndDocEMF
+  GdiEndPageEMF
   GdiFlush
   GdiGetBatchLimit DATA
-  GdiGetDC DATA
-  GdiGetDevmodeForPage DATA
-  GdiGetPageCount DATA
-  GdiGetPageHandle DATA
-  GdiGetSpoolFileHandle DATA
+  GdiGetDC
+  GdiGetDevmodeForPage
+  GdiGetPageCount
+  GdiGetPageHandle
+  GdiGetSpoolFileHandle
+  GdiGetSpoolMessage
   GdiGradientFill
+  GdiInitSpool
   GdiPlayDCScript DATA
-  GdiPlayEMF DATA
+  GdiPlayEMF
   GdiPlayJournal DATA
-  GdiPlayPageEMF DATA
-  GdiPlayPrivatePageEMF DATA
+  GdiPlayPageEMF
+  GdiPlayPrivatePageEMF
   GdiPlayScript DATA
   gdiPlaySpoolStream DATA
-  GdiResetDCEMF DATA
+  GdiQueryFonts
+  GdiResetDCEMF
   GdiSetBatchLimit DATA
-  GdiStartDocEMF DATA
-  GdiStartPageEMF DATA
+  GdiStartDocEMF
+  GdiStartPageEMF
   GdiTransparentBlt
   GetArcDirection DATA
   GetAspectRatioFilterEx DATA
@@ -472,6 +475,7 @@ EXPORTS
   GetCharWidthFloatA DATA
   GetCharWidthFloatW DATA
   GetCharWidthI DATA
+  GetCharWidthInfo
   GetCharWidthW
   GetClipBox
   GetClipRgn
@@ -580,7 +584,7 @@ EXPORTS
   ModerncoreCreateICW DATA
   ModerncoreDeleteDC DATA
   ModerncoreGdiInit DATA
-  ModifyWorldTransform DATA
+  ModifyWorldTransform
   MoveToEx
   OffsetClipRgn DATA
   OffsetRgn
@@ -621,7 +625,7 @@ EXPORTS
   RemoveFontResourceExA DATA
   RemoveFontResourceExW DATA
   RemoveFontResourceW
-  ResetDCA DATA
+  ResetDCA
   ResetDCW
   ResizePalette
   RestoreDC

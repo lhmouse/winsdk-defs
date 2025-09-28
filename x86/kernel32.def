@@ -84,22 +84,6 @@ EXPORTS
   BuildIoRingRegisterFileHandles@16
   BuildIoRingWriteFile@48
   BuildIoRingWriteFileGather@44
-  Callback12@12
-  Callback16@16
-  Callback20@20
-  Callback24@24
-  Callback28@28
-  Callback32@32
-  Callback36@36
-  Callback40@40
-  Callback44@44
-  Callback48@48
-  Callback4@4
-  Callback52@52
-  Callback56@56
-  Callback60@60
-  Callback64@64
-  Callback8@8
   CallbackMayRunLong@4
   CallNamedPipeA@28
   CallNamedPipeW@28
@@ -414,23 +398,6 @@ EXPORTS
   FreeMemoryJobObject@4
   FreeResource@4
   FreeUserPhysicalPages@12
-  FT_Exit0
-  FT_Exit12
-  FT_Exit16
-  FT_Exit20
-  FT_Exit24
-  FT_Exit28
-  FT_Exit32
-  FT_Exit36
-  FT_Exit4
-  FT_Exit40
-  FT_Exit44
-  FT_Exit48
-  FT_Exit52
-  FT_Exit56
-  FT_Exit8
-  FT_Prolog
-  FT_Thunk
   GenerateConsoleCtrlEvent@8
   GetACP@0
   GetActiveProcessorCount@4
@@ -919,8 +886,6 @@ EXPORTS
   K32InitializeProcessForWsWatch@4
   K32QueryWorkingSet@12
   K32QueryWorkingSetEx@12
-  K32Thk1632Epilog@0
-  K32Thk1632Prolog@0
   LCIDToLocaleName@16
   LCMapStringA@24
   LCMapStringEx@36
@@ -986,13 +951,6 @@ EXPORTS
   LZRead@12
   LZSeek@12
   LZStart@0
-  MapHInstLS
-  MapHInstLS_PN
-  MapHInstSL
-  MapHInstSL_PN
-  MapLS@4
-  MapSL@4
-  MapSLFix@4
   MapUserPhysicalPages@12
   MapUserPhysicalPagesScatter@12
   MapViewOfFile@20
@@ -1080,7 +1038,6 @@ EXPORTS
   PssWalkSnapshot@20
   PulseEvent@4
   PurgeComm@8
-  QT_Thunk
   QueryActCtxSettingsW@28
   QueryActCtxW@28
   QueryDepthSList@4
@@ -1336,29 +1293,9 @@ EXPORTS
   SleepConditionVariableCS@12
   SleepConditionVariableSRW@16
   SleepEx@8
-  SMapLS
-  SMapLS_IP_EBP_12
-  SMapLS_IP_EBP_16
-  SMapLS_IP_EBP_20
-  SMapLS_IP_EBP_24
-  SMapLS_IP_EBP_28
-  SMapLS_IP_EBP_32
-  SMapLS_IP_EBP_36
-  SMapLS_IP_EBP_40
-  SMapLS_IP_EBP_8
   StartThreadpoolIo@4
   SubmitIoRing@16
   SubmitThreadpoolWork@4
-  SUnMapLS
-  SUnMapLS_IP_EBP_12
-  SUnMapLS_IP_EBP_16
-  SUnMapLS_IP_EBP_20
-  SUnMapLS_IP_EBP_24
-  SUnMapLS_IP_EBP_28
-  SUnMapLS_IP_EBP_32
-  SUnMapLS_IP_EBP_36
-  SUnMapLS_IP_EBP_40
-  SUnMapLS_IP_EBP_8
   SuspendThread@4
   SwitchToFiber@4
   SwitchToThread@0
@@ -1370,7 +1307,6 @@ EXPORTS
   TerminateThread@8
   Thread32First@8
   Thread32Next@8
-  ThunkConnect32@24
   TlsAlloc@0
   TlsFree@4
   TlsGetValue2@4
@@ -1388,8 +1324,6 @@ EXPORTS
   UnhandledExceptionFilter@4
   UnlockFile@20
   UnlockFileEx@20
-  UnMapLS@4
-  UnMapSLFixArray@8
   UnmapViewOfFile@4
   UnmapViewOfFileEx@8
   UnregisterApplicationRecoveryCallback@0

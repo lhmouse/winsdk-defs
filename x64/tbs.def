@@ -14,24 +14,16 @@
 ; AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
 ; OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-LIBRARY "tbs.dll"
+LIBRARY "tbs.sys"
 EXPORTS
-  ?Tbsi_Create_Attestation_From_Log@@YAJPEAEIPEAGPEAPEAG00IPEAII@Z
-  ?Tbsi_Get_TCG_Logs@@YAIIPEAIPEAEI0I@Z
-  GetDeviceID
-  GetDeviceIDString
-  GetDeviceIDWithTimeout
   Tbsi_Context_Create
   Tbsi_Create_Windows_Key
-  Tbsi_FilterLog
   Tbsi_Get_OwnerAuth
   Tbsi_Get_TCG_Log
-  Tbsi_Get_TCG_Log_Ex
   Tbsi_GetDeviceInfo
   Tbsi_Is_Tpm_Present
   Tbsi_Physical_Presence_Command
   Tbsi_Revoke_Attestation
-  Tbsi_ShaHash
   Tbsi_Tpm_Vendor_Maintenance_Mode
   Tbsip_Cancel_Commands
   Tbsip_Context_Close
