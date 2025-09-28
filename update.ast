@@ -32,6 +32,10 @@ const DEF_COPYRIGHT = [
   'OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.',
 ];
 
+const IGNORED_LIBS = [
+  'thunk32.lib',
+];
+
 const PRIVATE_FUNCTIONS = [
   'DllGetClassObject',
   'DllGetClassObjectWOW',
@@ -96,13 +100,13 @@ for(each um, um_props -> std.filesystem.list(SDK_LIB_ROOT)) {
     continue;
 
   for(each arch, arch_props -> std.filesystem.list(SDK_LIB_ROOT / um)) {
-    if!(arch_props.is_directory)
+    if(!arch_props.is_directory)
       continue;
 
     for(each lib, lib_props -> std.filesystem.list(SDK_LIB_ROOT / um / arch)) {
-      if(lib_props.is_directory)
-        continue;
-      else if!(std.string.ends_with(std.string.to_lower(lib), '.lib'))
+      if(lib_props.is_directory
+          || !std.string.ends_with(std.string.to_lower(lib), '.lib')
+          || (std.array.find(IGNORED_LIBS, std.string.to_lower(lib)) != null))
         continue;
 
       arch_libs[arch][$] = SDK_LIB_ROOT / um / arch / lib;
