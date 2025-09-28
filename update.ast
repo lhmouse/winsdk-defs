@@ -34,6 +34,7 @@ const DEF_COPYRIGHT = [
 
 const IGNORED_LIBS = [
   'thunk32.lib',
+  'ntdllp.lib',
 ];
 
 const PRIVATE_FUNCTIONS = [
