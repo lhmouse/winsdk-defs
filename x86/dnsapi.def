@@ -122,6 +122,7 @@ EXPORTS
   DnsDeleteSettings@8
   DnsDeleteWellKnownServerProperty@8
   DnsDeleteZtRules@16
+  DnsDeleteZtRules@20
   DnsDeRegisterLocal@8
   DnsDhcpRegisterAddrs@4
   DnsDhcpRegisterHostAddrs@40
@@ -191,11 +192,16 @@ EXPORTS
   DnsGetWellKnownServerProperty@12
   DnsGetWellKnownServers@16
   DnsGetZtClientCertConfig@12
+  DnsGetZtClientCertConfig@16
+  DnsGetZtConfig@12
   DnsGetZtConfig@8
   DnsGetZtFilterIds@8
   DnsGetZtRules@20
+  DnsGetZtRules@24
   DnsGetZtTrustedCa@16
+  DnsGetZtTrustedCa@20
   DnsGetZtTrustedServers@20
+  DnsGetZtTrustedServers@24
   DnsGlobals DATA
   DnsIp6AddressToReverseNameW@20
   DnsIp6ReverseNameToAddressW@8
@@ -276,11 +282,16 @@ EXPORTS
   DnsSetSettings@4
   DnsSetWellKnownServerProperty@12
   DnsSetZtClientCertConfig@12
+  DnsSetZtClientCertConfig@16
   DnsSetZtConfig@4
+  DnsSetZtConfig@8
   DnsSetZtRules@16
+  DnsSetZtRules@20
   DnsSetZtSettings@12
   DnsSetZtTrustedCa@12
+  DnsSetZtTrustedCa@16
   DnsSetZtTrustedServers@16
+  DnsSetZtTrustedServers@20
   DnsSplitDotHost@12
   DnsStartMulticastQuery@8
   DnsStopMulticastQuery@4
@@ -308,7 +319,10 @@ EXPORTS
   DnsWriteReverseNameStringForIpAddress@8
   DnsWriteReverseNameStringForIpAddressW@8
   DnsZtHelperGetSettings@20
+  DnsZtHelperGetSettings@24
   DnsZtHelperProcessClientCerts@4
+  DnsZtHelperProcessClientCerts@8
+  DnsZtNotifyDnscache@12
   DnsZtNotifyDnscache@8
   ExtraInfo_Init@8
   Faz_AreServerListsInSameNameSpace@12

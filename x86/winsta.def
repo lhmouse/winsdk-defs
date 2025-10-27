@@ -63,6 +63,7 @@ EXPORTS
   ServerQueryInetConnectorInformationW@16
   ServerSetInternetConnectorStatus@12
   WinStationActivateLicense@16
+  WinStationActiveSessionExists@4
   WinStationAutoReconnect@4
   WinStationBroadcastSystemMessage@40
   WinStationCheckAccess@12

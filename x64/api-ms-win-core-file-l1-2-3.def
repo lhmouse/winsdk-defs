@@ -18,3 +18,5 @@ LIBRARY "api-ms-win-core-file-l1-2-3.dll"
 EXPORTS
   GetDiskSpaceInformationA
   GetDiskSpaceInformationW
+  GetTempPath2A
+  GetTempPath2W

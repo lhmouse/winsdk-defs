@@ -16,7 +16,14 @@
 
 LIBRARY "wtsapi32.dll"
 EXPORTS
+  WTSActiveSessionExists
   WTSCloseServer
+  WTSCloudAuthClose
+  WTSCloudAuthConvertAssertionToSerializedUserCredential
+  WTSCloudAuthDuplicateSerializedUserCredential
+  WTSCloudAuthGetServerNonce
+  WTSCloudAuthNetworkLogonWithSerializedCredential
+  WTSCloudAuthOpen
   WTSConnectSessionA
   WTSConnectSessionW
   WTSCreateListenerA
