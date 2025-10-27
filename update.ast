@@ -131,6 +131,9 @@ for(each um, arch_libs -> um_arch_libs) {
       if(lib_data == null)
         continue;
 
+      if(std.string.find(lib_data, '__imp_') == null)
+        continue;
+
       lib_data = std.string.replace(lib_data, "\r\n", "\n");
       var lib_size_total = #lib_data;
 
