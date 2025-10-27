@@ -442,9 +442,7 @@ EXPORTS
   GdiGetPageCount
   GdiGetPageHandle
   GdiGetSpoolFileHandle
-  GdiGetSpoolMessage
   GdiGradientFill
-  GdiInitSpool
   GdiPlayDCScript
   GdiPlayEMF
   GdiPlayJournal
@@ -452,7 +450,6 @@ EXPORTS
   GdiPlayPrivatePageEMF
   GdiPlayScript
   gdiPlaySpoolStream
-  GdiQueryFonts
   GdiResetDCEMF
   GdiSetBatchLimit
   GdiStartDocEMF
@@ -479,7 +476,6 @@ EXPORTS
   GetCharWidthFloatA
   GetCharWidthFloatW
   GetCharWidthI
-  GetCharWidthInfo
   GetCharWidthW
   GetClipBox
   GetClipRgn
