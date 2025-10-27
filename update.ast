@@ -103,7 +103,7 @@ for(each um, um_props -> std.filesystem.list(SDK_LIB_ROOT)) {
     continue;
 
   for(each arch, arch_props -> std.filesystem.list(SDK_LIB_ROOT / um)) {
-    if(!arch_props.is_directory)
+    if!(arch_props.is_directory)
       continue;
 
     for(each lib, lib_props -> std.filesystem.list(SDK_LIB_ROOT / um / arch)) {
@@ -214,7 +214,7 @@ for(each um, arch_dll_syms -> um_arch_dll_syms) {
       // sort symbols in alphabetic order.
       var sorted_syms = [];
       for(each sym, props -> syms) {
-        if(!props.imp)
+        if!(props.imp)
           continue;
 
         var attrs = "";
@@ -224,7 +224,7 @@ for(each um, arch_dll_syms -> um_arch_dll_syms) {
             attrs = " PRIVATE";
 
         if(attrs == "") {
-          if(!props.thunk)
+          if!(props.thunk)
             attrs = " DATA";
 
           for(each priv -> PRIVATE_DATA_PREFIXES)
