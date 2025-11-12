@@ -21,9 +21,11 @@ EXPORTS
   WebAuthNCancelCurrentOperation
   WebAuthNDeletePlatformCredential
   WebAuthNFreeAssertion
+  WebAuthNFreeAuthenticatorList
   WebAuthNFreeCredentialAttestation
   WebAuthNFreePlatformCredentialList
   WebAuthNGetApiVersionNumber
+  WebAuthNGetAuthenticatorList
   WebAuthNGetCancellationId
   WebAuthNGetErrorName
   WebAuthNGetPlatformCredentialList
