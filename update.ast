@@ -146,10 +146,9 @@ for(each um, arch_libs -> um_arch_libs) {
         lib_data = obj_m.remaining;
         obj_m = re_object_header.named_match(lib_data);
 
-        var dll, arch, sym;
+        var dll = std.string.to_lower(m.name);
         if(std.string.starts_with(m.fmt, 'COFF-import-file')) {
           // parse short import object.
-          dll = std.string.to_lower(m.name);
           var obj_data = std.string.slice(lib_data, 0, #lib_data - #(obj_m.'&'));
           var sym_m = re_symbol.named_match(obj_data);
           while(sym_m != null) {
@@ -159,8 +158,8 @@ for(each um, arch_libs -> um_arch_libs) {
             sym_m = re_symbol.named_match(obj_data);
 
             // demangle it.
-            arch = lib_arch;
-            sym = m.sym;
+            var arch = lib_arch;
+            var sym = m.sym;
 
             if(lib_arch == 'arm64') {
               if(std.string.starts_with(sym, '__imp_aux_')) {
