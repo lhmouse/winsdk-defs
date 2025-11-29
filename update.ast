@@ -197,13 +197,6 @@ for(each um, arch_libs -> um_arch_libs) {
 
         // TODO: Windows SDK doesn't seem to provide import libraries in the
         // long format. If it does, please let me know.
-
-        if(sym != null) {
-          var rt = (nlibs_done - 1.0 * #lib_data / lib_size_total) / nlibs_total * 100;
-          var rt_i = std.numeric.format(__itrunc rt, 10);
-          var rt_d = std.string.slice(std.numeric.format(__itrunc(1e9 + rt * 1e4), 10), -4);
-          std.io.putfln(" ($1.$2 %) found short import: $3", rt_i, rt_d, m.sym);
-        }
       }
     }
   }
