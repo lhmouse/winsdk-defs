@@ -33,6 +33,7 @@ const DEF_COPYRIGHT = [
 ];
 
 const IGNORED_LIBS = [
+  'uuid.lib',
   'thunk32.lib',
   'ntdllp.lib',
   'libucrt.lib',
