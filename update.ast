@@ -35,7 +35,6 @@ const DEF_COPYRIGHT = [
 const IGNORED_LIBS = [
   'uuid.lib',
   'thunk32.lib',
-  'ntdllp.lib',
   'libucrt.lib',
   'libucrtd.lib',
 ];
@@ -147,6 +146,9 @@ for(each um, arch_libs -> um_arch_libs) {
         obj_m = re_object_header.named_match(lib_data);
 
         var dll = std.string.to_lower(m.name);
+        if((dll == 'ntdll.dll') && std.string.ends_with(std.string.to_lower(lib), 'ntdllp.lib'))
+          dll = 'ntdllp.xxx';
+
         if(std.string.starts_with(m.fmt, 'COFF-import-file')) {
           // parse short import object.
           var obj_data = std.string.slice(lib_data, 0, #lib_data - #(obj_m.'&'));
@@ -243,11 +245,14 @@ for(each um, arch_dll_syms -> um_arch_dll_syms) {
         }
 
       def_data += "\n";
-
       def_data += "LIBRARY \"";
-      def_data += dll;
-      def_data += "\"\n";
 
+      if(dll == 'ntdllp.xxx')
+        def_data += 'ntdll.dll';
+      else
+        def_data += dll;
+
+      def_data += "\"\n";
       def_data += "EXPORTS\n";
       for(each sym -> sorted_syms)  {
         def_data += "  ";
