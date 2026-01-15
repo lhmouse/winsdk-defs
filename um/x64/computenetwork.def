@@ -62,6 +62,7 @@ EXPORTS
   HcnQueryEndpointAddresses
   HcnQueryEndpointProperties
   HcnQueryEndpointStats
+  HcnQueryFeatures
   HcnQueryLoadBalancerProperties
   HcnQueryNamespaceProperties
   HcnQueryNetworkProperties

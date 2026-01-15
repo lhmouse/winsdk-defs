@@ -322,6 +322,7 @@ EXPORTS
   DnsZtHelperGetSettings@24
   DnsZtHelperProcessClientCerts@4
   DnsZtHelperProcessClientCerts@8
+  DnsZtHelperPromoteConfig@4
   DnsZtNotifyDnscache@12
   DnsZtNotifyDnscache@8
   ExtraInfo_Init@8

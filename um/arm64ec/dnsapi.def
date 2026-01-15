@@ -308,6 +308,7 @@ EXPORTS
   DnsWriteReverseNameStringForIpAddressW
   DnsZtHelperGetSettings
   DnsZtHelperProcessClientCerts
+  DnsZtHelperPromoteConfig
   DnsZtNotifyDnscache
   ExtraInfo_Init
   Faz_AreServerListsInSameNameSpace

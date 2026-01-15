@@ -23,6 +23,7 @@ EXPORTS
   BCryptCreateContext@12
   BCryptCreateHash@28
   BCryptCreateMultiHash@32
+  BCryptDecapsulate@28
   BCryptDecrypt@40
   BCryptDeleteContext@8
   BCryptDeriveKey@28
@@ -33,6 +34,7 @@ EXPORTS
   BCryptDestroySecret@4
   BCryptDuplicateHash@20
   BCryptDuplicateKey@20
+  BCryptEncapsulate@32
   BCryptEncrypt@40
   BCryptEnumAlgorithms@16
   BCryptEnumContextFunctionProviders@24

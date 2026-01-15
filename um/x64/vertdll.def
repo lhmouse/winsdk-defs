@@ -84,6 +84,7 @@ EXPORTS
   ReleaseSRWLockExclusive
   ReleaseSRWLockShared
   RtlCaptureContext
+  RtlDllShutdownInProgress
   RtlGetLastNtStatus
   RtlGetSystemGlobalData
   RtlLookupFunctionEntry

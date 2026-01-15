@@ -49,7 +49,6 @@ EXPORTS
   WTSGetListenerSecurityA
   WTSGetListenerSecurityW
   WTSIsChildSessionsEnabled
-  WTSIsIsolationSession
   WTSLogoffSession
   WTSOpenServerA
   WTSOpenServerExA

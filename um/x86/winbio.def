@@ -16,13 +16,6 @@
 
 LIBRARY "winbio.dll"
 EXPORTS
-  EXPERIMENTAL_WinBioAreEnhancedSignInSecurityRequirementsMet@4
-  EXPERIMENTAL_WinBioGetConnectedSensors@8
-  EXPERIMENTAL_WinBioGetEnhancedSignInSecurityEnrolledFactors@8
-  EXPERIMENTAL_WinBioGetEnhancedSignInSecurityStateSource@4
-  EXPERIMENTAL_WinBioGetEssState@4
-  EXPERIMENTAL_WinBioIsDeviceEnhancedSignInSecurityCapable@4
-  EXPERIMENTAL_WinBioIsDeviceEnhancedSignInSecurityEnabled@4
   WinBioAcquireFocus@0
   WinBioAsyncEnumBiometricUnits@8
   WinBioAsyncEnumDatabases@8
