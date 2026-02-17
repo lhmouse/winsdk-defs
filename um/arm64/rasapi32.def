@@ -156,6 +156,7 @@ EXPORTS
   RasIsSharedConnection
   RasMobileCore
   RasNQMStateEnteredNotification
+  RasParserSetThreadHandle
   RasQueryRedialOnLinkFailure
   RasQuerySharedAutoDial
   RasQuerySharedConnection

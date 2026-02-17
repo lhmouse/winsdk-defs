@@ -106,6 +106,7 @@ EXPORTS
   sqlite3_db_readonly
   sqlite3_db_release_memory
   sqlite3_db_status
+  sqlite3_db_status64
   sqlite3_declare_vtab
   sqlite3_deserialize
   sqlite3_drop_modules
@@ -131,6 +132,7 @@ EXPORTS
   sqlite3_free_table
   sqlite3_get_autocommit
   sqlite3_get_auxdata
+  sqlite3_get_clientdata
   sqlite3_get_table
   sqlite3_global_recover
   sqlite3_hard_heap_limit64
@@ -206,7 +208,10 @@ EXPORTS
   sqlite3_serialize
   sqlite3_set_authorizer
   sqlite3_set_auxdata
+  sqlite3_set_clientdata
+  sqlite3_set_errmsg
   sqlite3_set_last_insert_rowid
+  sqlite3_setlk_timeout
   sqlite3_shutdown
   sqlite3_sleep
   sqlite3_snprintf

@@ -122,7 +122,6 @@ EXPORTS
   DnsDeleteSettings@8
   DnsDeleteWellKnownServerProperty@8
   DnsDeleteZtRules@16
-  DnsDeleteZtRules@20
   DnsDeRegisterLocal@8
   DnsDhcpRegisterAddrs@4
   DnsDhcpRegisterHostAddrs@40
@@ -282,16 +281,11 @@ EXPORTS
   DnsSetSettings@4
   DnsSetWellKnownServerProperty@12
   DnsSetZtClientCertConfig@12
-  DnsSetZtClientCertConfig@16
   DnsSetZtConfig@4
-  DnsSetZtConfig@8
   DnsSetZtRules@16
-  DnsSetZtRules@20
   DnsSetZtSettings@12
   DnsSetZtTrustedCa@12
-  DnsSetZtTrustedCa@16
   DnsSetZtTrustedServers@16
-  DnsSetZtTrustedServers@20
   DnsSplitDotHost@12
   DnsStartMulticastQuery@8
   DnsStopMulticastQuery@4

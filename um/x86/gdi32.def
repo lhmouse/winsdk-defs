@@ -136,6 +136,7 @@ EXPORTS
   D3DKMTCreateSwapChain@4
   D3DKMTCreateSynchronizationObject2@4
   D3DKMTCreateSynchronizationObject@4
+  D3DKMTDDisplayEnum2@4
   D3DKMTDDisplayEnum@4
   D3DKMTDestroyAllocation2@4
   D3DKMTDestroyAllocation@4

@@ -23,6 +23,7 @@ EXPORTS
   Dhcpv6EnableDhcp@8
   Dhcpv6EnableTracing@4
   Dhcpv6FreeCachedParamsData@8
+  Dhcpv6FreeCachedParamsDataEx@4
   Dhcpv6FreeLeaseInfo@4
   Dhcpv6FreeLeaseInfoArray@8
   Dhcpv6GetTraceArray@4
@@ -36,6 +37,7 @@ EXPORTS
   Dhcpv6RenewPrefix@20
   Dhcpv6RenewPrefixEx@24
   Dhcpv6RequestCachedParams@20
+  Dhcpv6RequestCachedParamsEx@20
   Dhcpv6RequestParams@32
   Dhcpv6RequestPrefix@16
   Dhcpv6RequestPrefixEx@20

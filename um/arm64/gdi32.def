@@ -137,6 +137,7 @@ EXPORTS
   D3DKMTCreateSynchronizationObject
   D3DKMTCreateSynchronizationObject2
   D3DKMTDDisplayEnum
+  D3DKMTDDisplayEnum2
   D3DKMTDestroyAllocation
   D3DKMTDestroyAllocation2
   D3DKMTDestroyContext

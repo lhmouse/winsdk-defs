@@ -91,6 +91,7 @@ EXPORTS
   CloseTouchInputHandle
   CloseWindow
   CloseWindowStation
+  ConvertPrimaryPointerToMouseDrag
   ConvertToInterceptWindow
   CopyAcceleratorTableA
   CopyAcceleratorTableW

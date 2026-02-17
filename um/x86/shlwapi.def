@@ -48,8 +48,13 @@ EXPORTS
   HashData@16
   IntlStrEqWorkerA@16
   IntlStrEqWorkerW@16
+  IsCharBlankW@4
+  IsCharCntrlW@4
+  IsCharDigitW@4
+  IsCharPunctW@4
   IsCharSpaceA@4
   IsCharSpaceW@4
+  IsCharXDigitW@4
   IShellFolder_GetDisplayNameOf@20
   IShellFolder_ParseDisplayName@28
   IsInternetESCEnabled@0
@@ -160,6 +165,8 @@ EXPORTS
   PathIsUNCW@4
   PathIsURLA@4
   PathIsURLW@4
+  PathIsValidCharA@8
+  PathIsValidCharW@8
   PathMakePrettyA@4
   PathMakePrettyW@4
   PathMakeSystemFolderA@4
@@ -239,8 +246,10 @@ EXPORTS
   SHEnumKeyExW@16
   SHEnumValueA@28
   SHEnumValueW@28
+  SHExpandEnvironmentStringsA@12
   SHExpandEnvironmentStringsAlloc@8
   SHExpandEnvironmentStringsForUserW@16
+  SHExpandEnvironmentStringsW@12
   SHFillRectClr@12
   SHFindDataBlock@8
   SHFormatDateTimeA@16
@@ -347,6 +356,7 @@ EXPORTS
   SHStringFromGUIDW@12
   SHStripMneumonicA@4
   SHStripMneumonicW@4
+  SHTruncateString@8
   SHUnicodeToAnsi@12
   SHUnicodeToAnsiCP@16
   SHUnicodeToUnicode@12
