@@ -126,6 +126,7 @@ EXPORTS
   D3DKMTCreateDoorbell@4
   D3DKMTCreateHwContext@4
   D3DKMTCreateHwQueue@4
+  D3DKMTCreateHwQueueForUserModeSubmission@4
   D3DKMTCreateKeyedMutex2@4
   D3DKMTCreateKeyedMutex@4
   D3DKMTCreateNativeFence@4
@@ -269,6 +270,7 @@ EXPORTS
   D3DKMTRemoveSurfaceFromSwapChain@4
   D3DKMTRender@4
   D3DKMTReserveGpuVirtualAddress@4
+  D3DKMTResizeRingBuffer@4
   D3DKMTSetAllocationPriority@4
   D3DKMTSetContextInProcessSchedulingPriority@4
   D3DKMTSetContextSchedulingPriority@4

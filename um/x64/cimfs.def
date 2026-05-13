@@ -17,6 +17,8 @@
 LIBRARY "cimfs.dll"
 EXPORTS
   CimAddFsToMergedImage
+  CimAddFsToMergedImage2
+  CimAddSignature
   CimCloseImage
   CimCloseStream
   CimCommitImage
@@ -28,12 +30,21 @@ EXPORTS
   CimCreateImage2
   CimCreateMergedFile
   CimCreateMergedFile2
+  CimCreateMergedFile3
+  CimCreateMergeLink
   CimDeletePath
   CimDismountImage
   CimGetFileStatBasicInformation
+  CimGetFileStatBasicInformation2
+  CimGetVerificationInformation
   CimKmMergeMountImage
   CimLookupFile
   CimMergeMountImage
+  CimMergeMountVerifiedImage
   CimMountImage
+  CimMountVerifiedImage
   CimReadFile
+  CimReadFile2
+  CimSealImage
+  CimTombstoneFile
   CimWriteStream

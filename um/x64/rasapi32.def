@@ -200,6 +200,8 @@ EXPORTS
   RasShowToastNotificationEx
   RasTriggerConnection
   RasTriggerConnectionEx
+  RasTriggerConnectionWithDetails
+  RasTriggerConnectionWithDetailsEx
   RasTriggerDisconnection
   RasTriggerDisconnectionEx
   RasUnregisterEntryChangeNotification

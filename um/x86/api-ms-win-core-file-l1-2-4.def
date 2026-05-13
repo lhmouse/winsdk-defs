@@ -17,5 +17,3 @@
 LIBRARY "api-ms-win-core-file-l1-2-4.dll"
 EXPORTS
   AreShortNamesEnabled@8
-  GetTempPath2A@8
-  GetTempPath2W@8

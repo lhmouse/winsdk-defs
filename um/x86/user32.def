@@ -836,7 +836,6 @@ EXPORTS
   UpdateLayeredWindowIndirect@8
   UpdatePerUserSystemParameters@4
   UpdateWindow@4
-  UpdateWindowInputSinkHints@8
   UpdateWindowTrackingInfo@12
   UserHandleGrantAccess@12
   ValidateRect@8

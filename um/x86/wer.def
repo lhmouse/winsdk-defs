@@ -105,6 +105,7 @@ EXPORTS
   WerpOpenMachineQueue@4
   WerpPromptUser@16
   WerpPruneStore@4
+  WerpReinitializeKernelCrashDump@0
   WerpReportCancel@4
   WerpReportSetMaxProcessHoldMilliseconds@8
   WerpReportSprintfParameter
@@ -129,9 +130,8 @@ EXPORTS
   WerpSetReportTime@8
   WerpSetReportUploadContextToken@8
   WerpSetTelemetryAppParams@8
-  WerpSetTelemetryKernelParams@8
+  WerpSetTelemetryKernelParams@12
   WerpSetTelemetryServiceParams@16
-  WerpSetTtdStatus@8
   WerpShowUpsellUI@8
   WerpSubmitReportFromStore@28
   WerpTraceAuxMemDumpStatistics@20

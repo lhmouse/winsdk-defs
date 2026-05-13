@@ -113,7 +113,6 @@ EXPORTS
   DnsCreateStringCopy
   DnsDeleteSettings
   DnsDeleteWellKnownServerProperty
-  DnsDeleteZtRules
   DnsDeRegisterLocal
   DnsDhcpRegisterAddrs
   DnsDhcpRegisterHostAddrs
@@ -199,6 +198,7 @@ EXPORTS
   DnsIsNSECType
   DnsIsStatusRcode
   DnsIsStringCountValidForTextType
+  DnsIsZtEnabled
   DnsLogEvent
   DnsMapRcodeToStatus
   DnsModifyRecordsInSet_A
@@ -272,12 +272,7 @@ EXPORTS
   DnsSetQueryRetryTimeouts
   DnsSetSettings
   DnsSetWellKnownServerProperty
-  DnsSetZtClientCertConfig
-  DnsSetZtConfig
-  DnsSetZtRules
   DnsSetZtSettings
-  DnsSetZtTrustedCa
-  DnsSetZtTrustedServers
   DnsSplitDotHost
   DnsStartMulticastQuery
   DnsStatusString

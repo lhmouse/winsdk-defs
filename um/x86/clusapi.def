@@ -351,6 +351,7 @@ EXPORTS
   OnlineClusterResourceEx@16
   OpenCluster@4
   OpenClusterEx2@16
+  OpenClusterEx3@20
   OpenClusterEx@12
   OpenClusterGroup@8
   OpenClusterGroupEx@16

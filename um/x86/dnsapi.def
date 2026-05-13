@@ -121,7 +121,6 @@ EXPORTS
   DnsCreateStringCopy@8
   DnsDeleteSettings@8
   DnsDeleteWellKnownServerProperty@8
-  DnsDeleteZtRules@16
   DnsDeRegisterLocal@8
   DnsDhcpRegisterAddrs@4
   DnsDhcpRegisterHostAddrs@40
@@ -190,16 +189,11 @@ EXPORTS
   DnsGetSettings@4
   DnsGetWellKnownServerProperty@12
   DnsGetWellKnownServers@16
-  DnsGetZtClientCertConfig@12
   DnsGetZtClientCertConfig@16
   DnsGetZtConfig@12
-  DnsGetZtConfig@8
   DnsGetZtFilterIds@8
-  DnsGetZtRules@20
   DnsGetZtRules@24
-  DnsGetZtTrustedCa@16
   DnsGetZtTrustedCa@20
-  DnsGetZtTrustedServers@20
   DnsGetZtTrustedServers@24
   DnsGlobals DATA
   DnsIp6AddressToReverseNameW@20
@@ -208,6 +202,7 @@ EXPORTS
   DnsIpv6StringToAddress@12
   DnsIsFlatRecord@16
   DnsIsStringCountValidForTextType@8
+  DnsIsZtEnabled@0
   DnsLogEvent@16
   DnsModifyRecordsInSet_A@24
   DnsModifyRecordsInSet_UTF8@24
@@ -280,12 +275,7 @@ EXPORTS
   DnsSetQueryRetryTimeouts@24
   DnsSetSettings@4
   DnsSetWellKnownServerProperty@12
-  DnsSetZtClientCertConfig@12
-  DnsSetZtConfig@4
-  DnsSetZtRules@16
   DnsSetZtSettings@12
-  DnsSetZtTrustedCa@12
-  DnsSetZtTrustedServers@16
   DnsSplitDotHost@12
   DnsStartMulticastQuery@8
   DnsStopMulticastQuery@4
@@ -312,13 +302,10 @@ EXPORTS
   DnsWriteQuestionToBuffer_W@24
   DnsWriteReverseNameStringForIpAddress@8
   DnsWriteReverseNameStringForIpAddressW@8
-  DnsZtHelperGetSettings@20
   DnsZtHelperGetSettings@24
-  DnsZtHelperProcessClientCerts@4
   DnsZtHelperProcessClientCerts@8
-  DnsZtHelperPromoteConfig@4
+  DnsZtHelperPromoteConfig@8
   DnsZtNotifyDnscache@12
-  DnsZtNotifyDnscache@8
   ExtraInfo_Init@8
   Faz_AreServerListsInSameNameSpace@12
   FlushDnsPolicyUnreachableStatus@0

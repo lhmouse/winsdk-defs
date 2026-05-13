@@ -124,7 +124,6 @@ EXPORTS
   SampAddAccountsAndApplyMemberships@16
   SampAddAccountToGroupMembers@20
   SampAddDeltaTime@16
-  SampAddNonLocalDomainRelativeMemberships@16
   SampAddSameDomainMemberToGlobalOrUniversalGroup@24
   SampAddUserToGroup@12
   SampAlInvalidateAliasInformation@4
@@ -217,7 +216,6 @@ EXPORTS
   SampGetFixedAttributes@12
   SampGetHasNeverTime@0
   SampGetIgnoreGCFailures@0
-  SampGetLogLevel@0
   SampGetNewAccountSecurityNt4@32
   SampGetNextUnmodifiedRidFromIndex@4
   SampGetNoGcLogonEnforceKerberosIpCheck@0
@@ -249,8 +247,6 @@ EXPORTS
   SampIsDomainHosted@4
   SampIsInternetAccount@8
   SampIsServiceRunning@0
-  SampIsSetupInProgress@4
-  SampLogPrint
   SampLookupContext@16
   SampMarkPerAttributeInvalidFromWhichFields@8
   SampNeedUserAccountSettingsDuringQuery@12
@@ -296,8 +292,6 @@ EXPORTS
   SampSetFixedAttributes@8
   SampSetGlobalDsSids@12
   SampSetPassword@16
-  SampSetPasswordInfoOnPdcByHandle@12
-  SampSetPasswordInfoOnPdcByIndex@12
   SampSetSerialNumberDomain2@20
   SampSetTransactionDomain@4
   SampSetTransactionWithinDomain@4
@@ -305,7 +299,6 @@ EXPORTS
   SampSetUserAccountControl@32
   SampSplitSid@12
   SampStoreObjectAttributes@8
-  SampStringFromGuid@8
   SampTraceEvent@12
   SampUpdateAccountDisabledFlag@8
   SampUpdateComputedUserAccountControlBits@16

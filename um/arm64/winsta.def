@@ -48,7 +48,6 @@ EXPORTS
   ServerLicensingClose
   ServerLicensingDeactivateCurrentPolicy
   ServerLicensingFreePolicyInformation
-  ServerLicensingGetAadInfo
   ServerLicensingGetAvailablePolicyIds
   ServerLicensingGetPolicy
   ServerLicensingGetPolicyInformationA
@@ -56,7 +55,6 @@ EXPORTS
   ServerLicensingLoadPolicy
   ServerLicensingOpenA
   ServerLicensingOpenW
-  ServerLicensingSetAadInfo
   ServerLicensingSetPolicy
   ServerLicensingUnloadPolicy
   ServerQueryInetConnectorInformationA

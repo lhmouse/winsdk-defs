@@ -17,6 +17,7 @@
 LIBRARY "wcmapi.dll"
 EXPORTS
   WcmAcquirePowerIfSupported@12
+  WcmAcquirePowerIfSupportedEx@8
   WcmAddAppBasedRoutePolicy@4
   WcmAddRoutePolicy@16
   WcmCancelOnDemandRequest@4

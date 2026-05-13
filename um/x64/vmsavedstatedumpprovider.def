@@ -51,6 +51,7 @@ EXPORTS
   LoadSavedStateModuleSymbols
   LoadSavedStateModuleSymbolsEx
   LoadSavedStateSymbolProvider
+  LocateEfiSystemTable
   LocateKernelImage
   LocateSavedStateFiles
   ReadGuestPhysicalAddress

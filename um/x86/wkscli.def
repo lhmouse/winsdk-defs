@@ -26,6 +26,7 @@ EXPORTS
   NetpWkstaClientCertificateMappingGet@28
   NetpWkstaClientCertificateMappingModify@12
   NetpWkstaClientCertificateMappingRemove@12
+  NetpWkstaClientGetSmbClientCapabilities@8
   NetpWkstaClientSmbDirectModuleControl@8
   NetRemoveAlternateComputerName@20
   NetRenameMachineInDomain@20

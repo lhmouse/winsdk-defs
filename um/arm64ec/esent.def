@@ -378,6 +378,7 @@ EXPORTS
   JetSetTableInfoA
   JetSetTableInfoW
   JetSetTableSequential
+  JetSetupPassiveMonitoringCallback
   JetSnapshotStart
   JetSnapshotStartA
   JetSnapshotStartW

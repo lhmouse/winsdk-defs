@@ -118,6 +118,7 @@ EXPORTS
   NCryptVerifyClaim
   NCryptVerifySignature
   SslChangeNotify
+  SslCombineKeys
   SslComputeClientAuthHash
   SslComputeEapKeyBlock
   SslComputeFinishedHash
@@ -133,6 +134,7 @@ EXPORTS
   SslEnumCipherSuites
   SslEnumCipherSuitesEx
   SslEnumEccCurves
+  SslEnumKeyExchangeParameters
   SslEnumProtocolProviders
   SslExpandBinderKey
   SslExpandExporterMasterKey

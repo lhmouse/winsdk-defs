@@ -16,5 +16,8 @@
 
 LIBRARY "api-ms-win-core-memory-l1-1-9.dll"
 EXPORTS
-  GetMemoryNumaClosestInitiatorNode
-  GetMemoryNumaPerformanceInformation
+  GetNumaNodeMemoryClosestInitiatorNode
+  GetNumaNodeMemoryReadBandwidth
+  GetNumaNodeMemoryReadLatency
+  GetNumaNodeMemoryWriteBandwidth
+  GetNumaNodeMemoryWriteLatency

@@ -1152,6 +1152,7 @@ EXPORTS
   RtlUnwindEx
   RtlVirtualUnwind
   RtlVirtualUnwind2
+  RtlVirtualUnwind3
   RtlZeroMemory
   ScrollConsoleScreenBufferA
   ScrollConsoleScreenBufferW
