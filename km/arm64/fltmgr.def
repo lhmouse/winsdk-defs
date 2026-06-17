@@ -57,6 +57,7 @@ EXPORTS
   FltClearCallbackDataDirty
   FltClearCancelCompletion
   FltClose
+  FltClose2
   FltCloseClientPort
   FltCloseCommunicationPort
   FltCloseSectionForDataScan
@@ -217,6 +218,7 @@ EXPORTS
   FltQueryDirectoryFileEx
   FltQueryEaFile
   FltQueryInformationByName
+  FltQueryInformationByName2
   FltQueryInformationFile
   FltQueryQuotaInformationFile
   FltQuerySecurityObject

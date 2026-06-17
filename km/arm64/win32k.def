@@ -38,6 +38,7 @@ EXPORTS
   __win32kstub_NtDCompositionCreateBufferCollection
   __win32kstub_NtDCompositionCreateChannel
   __win32kstub_NtDCompositionCreateConnection
+  __win32kstub_NtDCompositionCreateRemoteTexture
   __win32kstub_NtDCompositionCreateSharedResourceHandle
   __win32kstub_NtDCompositionCreateSynchronizationObject
   __win32kstub_NtDCompositionDestroyChannel
@@ -57,10 +58,12 @@ EXPORTS
   __win32kstub_NtDCompositionGetStatistics
   __win32kstub_NtDCompositionGetTargetStatistics
   __win32kstub_NtDCompositionNotifySuperWetInkWork
+  __win32kstub_NtDCompositionOpenRemoteTexture
   __win32kstub_NtDCompositionProcessChannelBatchBuffer
   __win32kstub_NtDCompositionRegisterThumbnailVisual
   __win32kstub_NtDCompositionRegisterVirtualDesktopVisual
   __win32kstub_NtDCompositionReleaseAllResources
+  __win32kstub_NtDCompositionReleaseRemoteTexture
   __win32kstub_NtDCompositionRemoveCrossDeviceVisualChild
   __win32kstub_NtDCompositionSendDwmLpcMessage
   __win32kstub_NtDCompositionSetBlurredWallpaperSurface
@@ -81,8 +84,10 @@ EXPORTS
   __win32kstub_NtDxgkCheckSinglePlaneForMultiPlaneOverlaySupport
   __win32kstub_NtDxgkConnectDoorbell
   __win32kstub_NtDxgkCreateDoorbell
+  __win32kstub_NtDxgkCreateHwQueueForUserModeSubmission
   __win32kstub_NtDxgkCreateNativeFence
   __win32kstub_NtDxgkCreateTrackedWorkload
+  __win32kstub_NtDxgkDDisplayEnum2
   __win32kstub_NtDxgkDestroyDoorbell
   __win32kstub_NtDxgkDestroyTrackedWorkload
   __win32kstub_NtDxgkDisplayMuxSwitchExecute
@@ -105,6 +110,7 @@ EXPORTS
   __win32kstub_NtDxgkPinResources
   __win32kstub_NtDxgkRegisterVailProcess
   __win32kstub_NtDxgkResetTrackedWorkloadStatistics
+  __win32kstub_NtDxgkResizeRingBuffer
   __win32kstub_NtDxgkSetProperties
   __win32kstub_NtDxgkSubmitPresentBltToHwQueue
   __win32kstub_NtDxgkSubmitPresentToHwQueue
@@ -567,6 +573,7 @@ EXPORTS
   __win32kstub_NtGdiInitSpool
   __win32kstub_NtGdiIntersectClipRect
   __win32kstub_NtGdiInvertRgn
+  __win32kstub_NtGdiIsDcInXfer
   __win32kstub_NtGdiLineTo
   __win32kstub_NtGdiMakeFontDir
   __win32kstub_NtGdiMakeInfoDC
@@ -764,20 +771,15 @@ EXPORTS
   __win32kstub_NtRIMSetTestModeStatus
   __win32kstub_NtRIMUnregisterForInput
   __win32kstub_NtRIMUpdateInputObserverRegistration
-  __win32kstub_NtSetCompositionSurfaceAnalogExclusive
   __win32kstub_NtSetCompositionSurfaceBufferUsage
   __win32kstub_NtSetCompositionSurfaceDirectFlipState
   __win32kstub_NtSetCompositionSurfaceIndependentFlipInfo
-  __win32kstub_NtSetCompositionSurfaceStatistics
   __win32kstub_NtSetCursorInputSpace
   __win32kstub_NtSetPointerDeviceInputSpace
   __win32kstub_NtSetShellCursorState
-  __win32kstub_NtTokenManagerConfirmOutstandingAnalogToken
   __win32kstub_NtTokenManagerCreateCompositionTokenHandle
   __win32kstub_NtTokenManagerCreateFlipObjectReturnTokenHandle
   __win32kstub_NtTokenManagerCreateFlipObjectTokenHandle
-  __win32kstub_NtTokenManagerGetAnalogExclusiveSurfaceUpdates
-  __win32kstub_NtTokenManagerGetAnalogExclusiveTokenEvent
   __win32kstub_NtTokenManagerOpenSectionAndEvents
   __win32kstub_NtTokenManagerThread
   __win32kstub_NtUnBindCompositionSurface
@@ -836,6 +838,7 @@ EXPORTS
   __win32kstub_NtUserConfirmResizeCommit
   __win32kstub_NtUserConsoleControl
   __win32kstub_NtUserConvertMemHandle
+  __win32kstub_NtUserConvertPrimaryPointerToMouseDrag
   __win32kstub_NtUserConvertToInterceptWindow
   __win32kstub_NtUserCopyAcceleratorTable
   __win32kstub_NtUserCountClipboardFormats
@@ -931,6 +934,8 @@ EXPORTS
   __win32kstub_NtUserEndMenu
   __win32kstub_NtUserEndPaint
   __win32kstub_NtUserEnsureDpiDepSysMetCacheForPlateau
+  __win32kstub_NtUserEnsureDpiMetricsForDpi
+  __win32kstub_NtUserEnsureDpiServerInfoForDpi
   __win32kstub_NtUserEnterMoveSizeLoop
   __win32kstub_NtUserEnumClipboardFormats
   __win32kstub_NtUserEnumDisplayDevices
@@ -947,7 +952,6 @@ EXPORTS
   __win32kstub_NtUserFrostCrashedWindow
   __win32kstub_NtUserFunctionalizeDisplayConfig
   __win32kstub_NtUserGetActiveProcessesDpis
-  __win32kstub_NtUserGetAltTabInfo
   __win32kstub_NtUserGetAncestor
   __win32kstub_NtUserGetAppImeLevel
   __win32kstub_NtUserGetAsyncKeyState
@@ -981,7 +985,6 @@ EXPORTS
   __win32kstub_NtUserGetDCEx
   __win32kstub_NtUserGetDCompositionHwndBitmap
   __win32kstub_NtUserGetDesktopID
-  __win32kstub_NtUserGetDesktopVisualTransform
   __win32kstub_NtUserGetDeviceChangeInfo
   __win32kstub_NtUserGetDisplayAutoRotationPreferences
   __win32kstub_NtUserGetDisplayAutoRotationPreferencesByProcessId
@@ -1012,11 +1015,13 @@ EXPORTS
   __win32kstub_NtUserGetInteractiveControlDeviceInfo
   __win32kstub_NtUserGetInteractiveControlInfo
   __win32kstub_NtUserGetInteractiveCtrlSupportedWaveforms
+  __win32kstub_NtUserGetKeyboardInputThreadId
   __win32kstub_NtUserGetKeyboardLayout
   __win32kstub_NtUserGetKeyboardLayoutList
   __win32kstub_NtUserGetKeyboardLayoutName
   __win32kstub_NtUserGetKeyboardState
   __win32kstub_NtUserGetKeyboardType
+  __win32kstub_NtUserGetKeyEventInfo
   __win32kstub_NtUserGetKeyNameText
   __win32kstub_NtUserGetKeyState
   __win32kstub_NtUserGetLatestInputMessageData
@@ -1071,7 +1076,6 @@ EXPORTS
   __win32kstub_NtUserGetSendMessageReceiver
   __win32kstub_NtUserGetSharedWindowData
   __win32kstub_NtUserGetSysMenuOffset
-  __win32kstub_NtUserGetSystemContentRects
   __win32kstub_NtUserGetSystemDpiForProcess
   __win32kstub_NtUserGetSystemMenu
   __win32kstub_NtUserGetThreadDesktop
@@ -1101,6 +1105,7 @@ EXPORTS
   __win32kstub_NtUserGetWinStationInfo
   __win32kstub_NtUserGetWOWClass
   __win32kstub_NtUserGhostWindowFromHungWindow
+  __win32kstub_NtUserGrantJobUIRestrictionException
   __win32kstub_NtUserHandleDelegatedInput
   __win32kstub_NtUserHandleSystemThreadCreationFailure
   __win32kstub_NtUserHardErrorControl
@@ -1210,7 +1215,6 @@ EXPORTS
   __win32kstub_NtUserProcessInkFeedbackCommand
   __win32kstub_NtUserPromoteMouseInPointer
   __win32kstub_NtUserPromotePointer
-  __win32kstub_NtUserPromotePrimaryPointerToDrag
   __win32kstub_NtUserQueryBSDRWindow
   __win32kstub_NtUserQueryDisplayConfig
   __win32kstub_NtUserQueryInformationThread
@@ -1283,6 +1287,7 @@ EXPORTS
   __win32kstub_NtUserRemoveVisualIdentifier
   __win32kstub_NtUserReplyMessage
   __win32kstub_NtUserReportInertia
+  __win32kstub_NtUserRequestLowLatencyProfile
   __win32kstub_NtUserResetDblClk
   __win32kstub_NtUserResolveDesktopForWOW
   __win32kstub_NtUserRestoreWindowDpiChanges
@@ -1323,7 +1328,6 @@ EXPORTS
   __win32kstub_NtUserSetCursorIconDataEx
   __win32kstub_NtUserSetCursorPos
   __win32kstub_NtUserSetDesktopColorTransform
-  __win32kstub_NtUserSetDesktopVisualInputSink
   __win32kstub_NtUserSetDialogControlDpiChangeBehavior
   __win32kstub_NtUserSetDialogPointer
   __win32kstub_NtUserSetDialogSystemMenu
@@ -1347,6 +1351,7 @@ EXPORTS
   __win32kstub_NtUserSetInteractiveControlFocus
   __win32kstub_NtUserSetInteractiveCtrlRotationAngle
   __win32kstub_NtUserSetInternalWindowPos
+  __win32kstub_NtUserSetJobUILimits
   __win32kstub_NtUserSetKeyboardState
   __win32kstub_NtUserSetLayeredWindowAttributes
   __win32kstub_NtUserSetMagnificationDesktopMagnifierOffsetsDWMUpdated
@@ -1383,7 +1388,6 @@ EXPORTS
   __win32kstub_NtUserSetShellWindowEx
   __win32kstub_NtUserSetSysColors
   __win32kstub_NtUserSetSysMenu
-  __win32kstub_NtUserSetSystemContentRects
   __win32kstub_NtUserSetSystemCursor
   __win32kstub_NtUserSetSystemMenu
   __win32kstub_NtUserSetSystemTimer
@@ -1479,7 +1483,6 @@ EXPORTS
   __win32kstub_NtUserUpdatePerUserImmEnabling
   __win32kstub_NtUserUpdatePerUserSystemParameters
   __win32kstub_NtUserUpdateWindow
-  __win32kstub_NtUserUpdateWindowInputSinkHints
   __win32kstub_NtUserUpdateWindows
   __win32kstub_NtUserUpdateWindowTrackingInfo
   __win32kstub_NtUserUserHandleGrantAccess
@@ -1698,7 +1701,11 @@ EXPORTS
   HT_Get8BPPFormatPalette
   HT_Get8BPPMaskPalette
   InitializeGraphicsInfrastructure
+  KfGetJobIdentity
+  KfGetJobProvidingUILimit
+  KfGetProcessEffectiveUILimits
   KfIsProcessDeepFrozen
+  KfSetJobUILimits
   longjmp
   PALOBJ_cGetColors
   PATHOBJ_bCloseFigure

@@ -43,6 +43,7 @@ EXPORTS
   PshedIsSystemWheaEnabled
   PshedMarkHiberPhase
   PshedReadErrorRecord
+  PshedReadVendorDefined
   PshedRegisterPlugin
   PshedRetrieveErrorInfo
   PshedSetErrorSourceInfo
@@ -52,3 +53,4 @@ EXPORTS
   PshedTranslatePhysicalAddress
   PshedUnregisterPlugin
   PshedWriteErrorRecord
+  PshedWriteVendorDefined

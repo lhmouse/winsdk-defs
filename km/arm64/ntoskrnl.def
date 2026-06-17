@@ -205,6 +205,7 @@ EXPORTS
   DifFindThreadContextData
   DifGetPluginPerDriverData
   DifObjTrkInsertItem
+  DifObjTrkLookupItem
   DifObjTrkQeuryInvokeDeleteRange
   DifObjTrkRemoveItem
   DifPluginSimplePerfControl
@@ -326,6 +327,7 @@ EXPORTS
   ExFreeAutoExpandPushLock
   ExFreeCacheAwarePushLock
   ExFreeCacheAwareRundownProtection
+  ExFreeFfaInterface
   ExFreePool
   ExFreePool2
   ExFreePoolWithTag
@@ -341,6 +343,7 @@ EXPORTS
   ExGetCurrentProcessorCounts
   ExGetCurrentProcessorCpuUsage
   ExGetExclusiveWaiterCount
+  ExGetFfaInterface
   ExGetFirmwareEnvironmentVariable
   ExGetFirmwareType
   ExGetLicenseTamperState
@@ -375,6 +378,7 @@ EXPORTS
   ExIsFastResourceHeld
   ExIsFastResourceHeldExclusive
   ExIsManufacturingModeEnabled
+  ExIsPreBoot
   ExIsProcessorFeaturePresent
   ExIsResourceAcquiredExclusiveLite
   ExIsResourceAcquiredSharedLite
@@ -731,6 +735,8 @@ EXPORTS
   HvlGetHypervisorVendorId
   HvlGetLpIndexFromApicId
   HvlGetLpIndexFromProcessorIndex
+  HvlGetLpStatsPageByLpIndex
+  HvlGetVpStatsPageByProcessorIndex
   HvlInvokeFastExtendedHypercall
   HvlInvokeHypercall
   HvlIsSchedulerAssistAvailable
@@ -813,6 +819,7 @@ EXPORTS
   IoCheckQuerySetVolumeInformation
   IoCheckQuotaBufferValidity
   IoCheckRedirectionTrustLevel
+  IoCheckRedirectionTrustLevel2
   IoCheckShareAccess
   IoCheckShareAccessEx
   IoCleanupIrp
@@ -894,6 +901,7 @@ EXPORTS
   IoGetBaseFileSystemDeviceObject
   IoGetBootDiskInformation
   IoGetBootDiskInformationLite
+  IoGetBootLayers
   IoGetConfigurationInformation
   IoGetContainerInformation
   IoGetCopyInformationExtension
@@ -913,6 +921,7 @@ EXPORTS
   IoGetDriverDirectory
   IoGetDriverObjectExtension
   IoGetDriverProxyEndpointWrapper
+  IoGetDriverProxyExtensionVersion
   IoGetDriverProxyFeatures
   IoGetFileObjectGenericMapping
   IoGetFsTrackOffsetState
@@ -939,9 +948,11 @@ EXPORTS
   IoGetSilo
   IoGetSiloParameters
   IoGetStackLimits
+  IoGetStackSizeWithoutRedirectionBias
   IoGetSymlinkSupportInformation
   IoGetTopLevelIrp
   IoGetTransactionParameterBlock
+  IoHotSwapDriverProxyEndpoints
   IoIncrementKeepAliveCount
   IoInitializeIrp
   IoInitializeIrpEx
@@ -963,6 +974,7 @@ EXPORTS
   IoMakeAssociatedIrp
   IoMakeAssociatedIrpEx
   IoMapKsrPersistentMemoryEx
+  IoMountBootLayer
   IoOpenDeviceInterfaceRegistryKey
   IoOpenDeviceRegistryKey
   IoOpenDriverRegistryKey
@@ -971,6 +983,7 @@ EXPORTS
   IoPropagateIrpExtension
   IoPropagateIrpExtensionEx
   IoQueryDeviceDescription
+  IoQueryDmaFeatureSupport
   IoQueryFileDosDeviceName
   IoQueryFileInformation
   IoQueryFullDriverPath
@@ -1307,6 +1320,7 @@ EXPORTS
   KeQueryUnbiasedInterruptTimePrecise
   KeRaiseUserException
   KeRcuReadLock
+  KeRcuReadLockAtDpcLevel
   KeRcuReadUnlock
   KeRcuSynchronize
   KeReadStateEvent
@@ -1489,6 +1503,7 @@ EXPORTS
   MmGetCacheAttribute
   MmGetCacheAttributeEx
   MmGetMaximumFileSectionSize
+  MmGetModuleRoutineAddress
   MmGetNumberOfPhysicalPages
   MmGetPageBadStatus
   MmGetPhysicalAddress
@@ -1505,9 +1520,11 @@ EXPORTS
   MmIsDriverVerifyingByAddress
   MmIsFileSectionActive
   MmIsIoSpaceActive
+  MmIsKernelAddress
   MmIsNonPagedSystemAddressValid
   MmIsRecursiveIoFault
   MmIsThisAnNtAsSystem
+  MmIsUserAddress
   MmIsVerifierEnabled
   MmLockPagableDataSection
   MmLockPagableImageSection
@@ -1687,6 +1704,7 @@ EXPORTS
   ObCheckCreateObjectAccess
   ObCheckObjectAccess
   ObCloseHandle
+  ObCloseHandleWithResult
   ObCreateObject
   ObCreateObjectType
   ObCreateObjectTypeEx
@@ -1857,6 +1875,7 @@ EXPORTS
   PsDetachSiloFromCurrentThread
   PsDisableImpersonation
   PsEnterPriorityRegion
+  PsEnumProcessThreads
   PsEstablishWin32Callouts
   PsFreeAffinityToken
   PsFreeSiloContextSlot
@@ -1953,6 +1972,7 @@ EXPORTS
   PsIsProtectedProcessLight
   PsIsSystemProcess
   PsIsSystemThread
+  PsIsThreadAttachedToSpecificSilo
   PsIsThreadImpersonating
   PsIsThreadTerminating
   PsIsWin32KFilterAuditEnabled
@@ -2433,6 +2453,7 @@ EXPORTS
   RtlOsDeploymentState
   RtlOwnerAcesPresent
   RtlPcToFileHeader
+  RtlPcToFileImageInfo
   RtlPinAtomInAtomTable
   RtlPrefetchMemoryNonTemporal
   RtlPrefixString
@@ -2790,11 +2811,7 @@ EXPORTS
   vDbgPrintEx
   vDbgPrintExWithPrefix
   VerSetConditionMask
-  VfFailDeviceNode
-  VfFailDriver
-  VfFailSystemBIOS
   VfInsertContext
-  VfIsVerificationEnabled
   VfQueryDeviceContext
   VfQueryDispatchTable
   VfQueryDriverContext
@@ -2987,6 +3004,7 @@ EXPORTS
   ZwLockProductActivationKeys
   ZwLockVirtualMemory
   ZwMakeTemporaryObject
+  ZwManageHotPatch
   ZwManagePartition
   ZwMapViewOfSection
   ZwMapViewOfSectionEx

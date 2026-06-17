@@ -380,6 +380,7 @@ EXPORTS
   NetioPhGetNdLinkLayerOptionAddressContiguous
   NetioPhGetTransportHeaderSize
   NetioPhIsIcmpErrorForIcmpMessage
+  NetioPhParseArpPacket
   NetioPhParseIpv6TlvNdOption
   NetioPhSkipAllIpv6Options
   NetioPhSkipAllIpv6OptionsContiguous
@@ -522,6 +523,7 @@ EXPORTS
   TlDefaultRequestCancel
   TlDefaultRequestCloseEndpoint
   TlDefaultRequestConnect
+  TlDefaultRequestConnectAndSend
   TlDefaultRequestDisconnect
   TlDefaultRequestEndpoint
   TlDefaultRequestIoControl

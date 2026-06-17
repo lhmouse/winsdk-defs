@@ -19,6 +19,7 @@ EXPORTS
   BCryptCloseAlgorithmProvider
   BCryptCreateHash
   BCryptCreateMultiHash
+  BCryptDecapsulate
   BCryptDecrypt
   BCryptDeriveKey
   BCryptDeriveKeyCapi
@@ -28,6 +29,7 @@ EXPORTS
   BCryptDestroySecret
   BCryptDuplicateHash
   BCryptDuplicateKey
+  BCryptEncapsulate
   BCryptEncrypt
   BCryptEnumAlgorithms
   BCryptEnumProviders

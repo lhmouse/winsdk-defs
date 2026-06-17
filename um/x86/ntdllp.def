@@ -564,6 +564,7 @@ EXPORTS
   NtMakeTemporaryObject@4
   NtManageHotPatch@16
   NtManagePartition@20
+  NtManageWobTicket@16
   NtMapCMFModule@24
   NtMapUserPhysicalPages@12
   NtMapUserPhysicalPagesScatter@12
@@ -876,6 +877,7 @@ EXPORTS
   RtlAddAuditAccessAceEx@28
   RtlAddAuditAccessObjectAce@36
   RtlAddCompoundAce@24
+  RtlAddGroupAffinityEx@12
   RtlAddIntegrityLabelToBoundaryDescriptor@8
   RtlAddMandatoryAce@24
   RtlAddProcessTrustLabelAce@24
@@ -895,6 +897,7 @@ EXPORTS
   RtlAllocateMemoryBlockLookaside@12
   RtlAllocateMemoryZone@12
   RtlAllocateWnfSerializationGroup@0
+  RtlAndAffinityEx@12
   RtlAnsiCharToUnicodeChar@4
   RtlAnsiStringToUnicodeSize@4
   RtlAnsiStringToUnicodeString@12
@@ -952,6 +955,7 @@ EXPORTS
   RtlCompareString@12
   RtlCompareUnicodeString@12
   RtlCompareUnicodeStrings@20
+  RtlComplementAffinityEx@8
   RtlCompressBuffer@32
   RtlComputeCrc32@12
   RtlComputeImportTableHash@12
@@ -971,6 +975,7 @@ EXPORTS
   RtlConvertSRWLockExclusiveToShared@4
   RtlConvertToAutoInheritSecurityObject@24
   RtlConvertUlongToLargeInteger@4
+  RtlCopyAffinityEx@8
   RtlCopyBitMap@12
   RtlCopyContext@12
   RtlCopyExtendedContext@12
@@ -982,6 +987,7 @@ EXPORTS
   RtlCopySidAndAttributesArray@28
   RtlCopyString@8
   RtlCopyUnicodeString@8
+  RtlCountSetBitsAffinityEx@4
   RtlCrc32@12
   RtlCrc64@16
   RtlCreateAcl@12
@@ -1150,6 +1156,7 @@ EXPORTS
   RtlFindUnicodeSubstring@12
   RtlFirstEntrySList@4
   RtlFirstFreeAce@8
+  RtlFirstGroupAffinityEx@8
   RtlFlsAlloc@8
   RtlFlsAllocEx@12
   RtlFlsFree@4
@@ -1276,6 +1283,7 @@ EXPORTS
   RtlInitBarrier@12
   RtlInitCodePageTable@8
   RtlInitEnumerationHashTable@8
+  RtlInitializeAffinityEx@4
   RtlInitializeAtomPackage@4
   RtlInitializeBitMap@12
   RtlInitializeConditionVariable@4
@@ -1348,10 +1356,13 @@ EXPORTS
   RtlIsCurrentThread@4
   RtlIsDosDeviceName_U@4
   RtlIsElevatedRid@4
+  RtlIsEmptyAffinityEx@4
   RtlIsEnclaveFeaturePresent@4
+  RtlIsEqualAffinityEx@8
   RtlIsFeatureEnabledForEnterprise@4
   RtlIsGenericTableEmpty@4
   RtlIsGenericTableEmptyAvl@4
+  RtlIsMultipleProcessorAffinityEx@4
   RtlIsMultiSessionSku@0
   RtlIsMultiUsersInSessionSku@0
   RtlIsNameInExpression@16
@@ -1365,7 +1376,9 @@ EXPORTS
   RtlIsPartialPlaceholderFileHandle@8
   RtlIsPartialPlaceholderFileInfo@12
   RtlIsProcessorFeaturePresent@4
+  RtlIsSingleGroupAffinityEx@8
   RtlIsStateSeparationEnabled@0
+  RtlIsSubsetAffinityEx@8
   RtlIsTextUnicode@12
   RtlIsThreadWithinLoaderCallout@0
   RtlIsUntrustedObject@12
@@ -1444,6 +1457,7 @@ EXPORTS
   RtlOemStringToUnicodeString@12
   RtlOemToUnicodeN@20
   RtlOpenCurrentUser@8
+  RtlOrAffinityEx@12
   RtlOsDeploymentState@4
   RtlOverwriteFeatureConfigurationBuffer@16
   RtlOwnerAcesPresent@4
@@ -1509,8 +1523,10 @@ EXPORTS
   RtlQueryEnvironmentVariable@24
   RtlQueryEnvironmentVariable_U@12
   RtlQueryFeatureConfiguration@16
+  RtlQueryFeatureConfigurationBuffer@16
   RtlQueryFeatureConfigurationChangeStamp@0
   RtlQueryFeatureUsageNotificationSubscriptions@8
+  RtlQueryGroupAffinityEx@8
   RtlQueryHeapInformation@20
   RtlQueryImageMitigationPolicy@20
   RtlQueryInformationAcl@16
@@ -1523,6 +1539,9 @@ EXPORTS
   RtlQueryPerformanceCounter@4
   RtlQueryPerformanceFrequency@4
   RtlQueryPointerMapping@8
+  RtlQueryPriorityForWobTicket@8
+  RtlQueryProcessAvailableCpus@16
+  RtlQueryProcessAvailableCpusCount@12
   RtlQueryProcessBackTraceInformation@4
   RtlQueryProcessDebugInformation@12
   RtlQueryProcessHeapInformation@4
@@ -1530,6 +1549,7 @@ EXPORTS
   RtlQueryProcessPlaceholderCompatibilityMode@0
   RtlQueryPropertyStore@8
   RtlQueryProtectedPolicy@8
+  RtlQueryQosForWobTicket@12
   RtlQueryRegistryValues@20
   RtlQueryRegistryValuesEx@20
   RtlQueryRegistryValueWithFallback@28
@@ -1541,6 +1561,7 @@ EXPORTS
   RtlQueryTimeZoneInformation@4
   RtlQueryTokenHostIdAsUlong64@8
   RtlQueryUnbiasedInterruptTime@4
+  RtlQueryUnbiasedInterruptTimePrecise@4
   RtlQueryValidationRunlevel@4
   RtlQueryWnfMetaNotification@20
   RtlQueryWnfStateData@24
@@ -1561,6 +1582,7 @@ EXPORTS
   RtlReAllocateHeap@16
   RtlRealPredecessor@4
   RtlRealSuccessor@4
+  RtlRegisterAvailableCpusChangeNotification@16
   RtlRegisterFeatureConfigurationChangeNotification@16
   RtlRegisterForWnfMetaNotification@24
   RtlRegisterSecureMemoryCacheCallback@4
@@ -1576,6 +1598,7 @@ EXPORTS
   RtlReleaseSRWLockShared@4
   RtlRemoteCall@28
   RtlRemoveEntryHashTable@12
+  RtlRemoveGroupAffinityEx@12
   RtlRemovePointerMapping@8
   RtlRemovePrivileges@12
   RtlRemovePropertyStore@8
@@ -1666,6 +1689,7 @@ EXPORTS
   RtlSidHashLookup@8
   RtlSidIsHigherLevel@12
   RtlSizeHeap@12
+  RtlSizeOfAffinityEx@0
   RtlSleepConditionVariableCS@12
   RtlSleepConditionVariableSRW@16
   RtlSplay@4
@@ -1677,6 +1701,7 @@ EXPORTS
   RtlSubAuthoritySid@8
   RtlSubscribeForFeatureUsageNotification@8
   RtlSubscribeWnfStateChangeNotification@36
+  RtlSubtractAffinityEx@12
   RtlSubtreePredecessor@4
   RtlSubtreeSuccessor@4
   RtlSwitchedVVI@16
@@ -1727,6 +1752,7 @@ EXPORTS
   RtlUnlockMemoryBlockLookaside@4
   RtlUnlockMemoryZone@4
   RtlUnlockModuleSection@4
+  RtlUnregisterAvailableCpusChangeNotification@4
   RtlUnregisterFeatureConfigurationChangeNotification@4
   RtlUnsubscribeFromFeatureUsageNotifications@8
   RtlUnsubscribeWnfNotificationWaitForCompletion@4
@@ -1743,6 +1769,7 @@ EXPORTS
   RtlUpcaseUnicodeToOemN@20
   RtlUpdateClonedCriticalSection@4
   RtlUpdateClonedSRWLock@8
+  RtlUpdateGroupAffinityEx@12
   RtlUpdateTimer@16
   RtlUpperChar@4
   RtlUpperString@8
@@ -1785,6 +1812,7 @@ EXPORTS
   RtlWriteRegistryValue@24
   RtlxAnsiStringToUnicodeSize@4
   RtlxOemStringToUnicodeSize@4
+  RtlXorAffinityEx@12
   RtlXRestore@12
   RtlXSave@12
   RtlxUnicodeStringToAnsiSize@4
@@ -2176,6 +2204,7 @@ EXPORTS
   ZwMakeTemporaryObject@4
   ZwManageHotPatch@16
   ZwManagePartition@20
+  ZwManageWobTicket@16
   ZwMapCMFModule@24
   ZwMapUserPhysicalPages@12
   ZwMapUserPhysicalPagesScatter@12

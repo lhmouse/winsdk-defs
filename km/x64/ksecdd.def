@@ -23,6 +23,7 @@ EXPORTS
   ApplyControlToken
   BCryptCloseAlgorithmProvider
   BCryptCreateHash
+  BCryptDecapsulate
   BCryptDecrypt
   BCryptDeriveKey
   BCryptDeriveKeyCapi
@@ -32,6 +33,7 @@ EXPORTS
   BCryptDestroySecret
   BCryptDuplicateHash
   BCryptDuplicateKey
+  BCryptEncapsulate
   BCryptEncrypt
   BCryptEnumAlgorithms
   BCryptEnumProviders
@@ -58,6 +60,7 @@ EXPORTS
   BCryptVerifySignature
   CompleteAuthToken
   CredMarshalTargetInfo
+  CredUnmarshalTargetInfo
   DeleteSecurityContext
   EnumerateSecurityPackagesW
   ExportSecurityContext
@@ -68,6 +71,7 @@ EXPORTS
   ImportSecurityContextW
   InitializeSecurityContextW
   InitSecurityInterfaceW
+  KSecAllocateContextBuffer
   KSecLocatePackage
   KSecRegisterSecurityProvider
   KSecValidateBuffer
