@@ -249,6 +249,7 @@ EXPORTS
   D3DKMTQueryAdapterInfo@4
   D3DKMTQueryAllocationResidency@4
   D3DKMTQueryClockCalibration@4
+  D3DKMTQueryFeatureInterface@4
   D3DKMTQueryFSEBlock@4
   D3DKMTQueryProcessOfferInfo@4
   D3DKMTQueryProtectedSessionInfoFromNtHandle@4

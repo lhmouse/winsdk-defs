@@ -193,6 +193,7 @@ EXPORTS
   DnsGetZtConfig@12
   DnsGetZtFilterIds@8
   DnsGetZtRules@24
+  DnsGetZtSettings@24
   DnsGetZtTrustedCa@20
   DnsGetZtTrustedServers@24
   DnsGlobals DATA

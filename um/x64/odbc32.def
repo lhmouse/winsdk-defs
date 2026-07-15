@@ -23,7 +23,6 @@ EXPORTS
   CursorLibLockStmt
   CursorLibTransact
   DllBidEntryPoint
-  g_hHeapMalloc DATA
   GetODBCSharedData
   LockHandle
   ODBCGetTryWaitValue

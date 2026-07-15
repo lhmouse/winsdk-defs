@@ -186,6 +186,7 @@ EXPORTS
   DnsGetZtConfig
   DnsGetZtFilterIds
   DnsGetZtRules
+  DnsGetZtSettings
   DnsGetZtTrustedCa
   DnsGetZtTrustedServers
   DnsIp6AddressToReverseNameW
