@@ -120,6 +120,7 @@ EXPORTS
   CreateMenu
   CreatePopupMenu
   CreateSyntheticPointerDevice
+  CreateSyntheticPointerDevice2
   CreateWindowExA
   CreateWindowExW
   CreateWindowInBand
@@ -386,6 +387,8 @@ EXPORTS
   GetPointerFramePenInfoHistory
   GetPointerFrameTouchInfo
   GetPointerFrameTouchInfoHistory
+  GetPointerFrameTouchpadInfo
+  GetPointerFrameTouchpadInfoHistory
   GetPointerInfo
   GetPointerInfoHistory
   GetPointerInputTransform
@@ -393,6 +396,8 @@ EXPORTS
   GetPointerPenInfoHistory
   GetPointerTouchInfo
   GetPointerTouchInfoHistory
+  GetPointerTouchpadInfo
+  GetPointerTouchpadInfoHistory
   GetPointerType
   GetPriorityClipboardFormat
   GetProcessDefaultLayout
@@ -492,6 +497,7 @@ EXPORTS
   InjectPointerInput
   InjectSyntheticPointerInput DATA
   InjectTouchInput
+  InjectTouchpadAction DATA
   InSendMessage
   InSendMessageEx
   InsertMenuA
@@ -648,6 +654,8 @@ EXPORTS
   RegisterShellHookWindow
   RegisterSuspendResumeNotification
   RegisterTouchHitTestingWindow
+  RegisterTouchpadCapableThread DATA
+  RegisterTouchpadCapableWindow DATA
   RegisterTouchWindow
   RegisterWindowArrangementCallout
   RegisterWindowMessageA
@@ -661,6 +669,7 @@ EXPORTS
   RemovePropA
   RemovePropW
   ReplyMessage
+  ReportWindowContentInertia
   ReuseDDElParam
   RIMAddInputObserver
   RIMAreSiblingDevices
@@ -734,6 +743,7 @@ EXPORTS
   SetKeyboardState
   SetLastErrorEx
   SetLayeredWindowAttributes
+  SetMaxTouchpadSensitivity
   SetMenu
   SetMenuContextHelpId
   SetMenuDefaultItem

@@ -286,6 +286,7 @@ EXPORTS
   SHELL32_Printjob_GetPidl
   SHELL32_PurgeSystemIcon
   SHELL32_RefreshOverlayImages
+  SHELL32_RegenerateUserEnvironment
   SHELL32_ResolveLinkInfoW
   SHELL32_SendToMenu_InvokeTargetedCommand
   SHELL32_SendToMenu_VerifyTargetedCommand

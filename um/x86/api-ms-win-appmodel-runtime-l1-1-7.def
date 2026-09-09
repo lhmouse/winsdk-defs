@@ -21,4 +21,6 @@ EXPORTS
   GetPackageDependencyInformation@36
   GetProcessesUsingPackageDependency@20
   GetResolvedPackageFullNameForPackageDependency2@8
+  GetStagedPackageOrigin2@8
+  IsPackageFeatureSupported@4
   TryCreatePackageDependency2@40

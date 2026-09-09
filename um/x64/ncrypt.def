@@ -134,6 +134,7 @@ EXPORTS
   SslEnumCipherSuites
   SslEnumCipherSuitesEx
   SslEnumEccCurves
+  SslEnumGroups
   SslEnumKeyExchangeParameters
   SslEnumProtocolProviders
   SslExpandBinderKey

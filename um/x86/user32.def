@@ -119,6 +119,7 @@ EXPORTS
   CreateMDIWindowW@40
   CreateMenu@0
   CreatePopupMenu@0
+  CreateSyntheticPointerDevice2@4
   CreateSyntheticPointerDevice@12
   CreateWindowExA@48
   CreateWindowExW@48
@@ -384,6 +385,8 @@ EXPORTS
   GetPointerFramePenInfoHistory@16
   GetPointerFrameTouchInfo@12
   GetPointerFrameTouchInfoHistory@16
+  GetPointerFrameTouchpadInfo@12
+  GetPointerFrameTouchpadInfoHistory@16
   GetPointerInfo@8
   GetPointerInfoHistory@12
   GetPointerInputTransform@12
@@ -391,6 +394,8 @@ EXPORTS
   GetPointerPenInfoHistory@12
   GetPointerTouchInfo@8
   GetPointerTouchInfoHistory@12
+  GetPointerTouchpadInfo@8
+  GetPointerTouchpadInfoHistory@12
   GetPointerType@8
   GetPriorityClipboardFormat@8
   GetProcessDefaultLayout@4
@@ -488,6 +493,7 @@ EXPORTS
   InjectPointerInput@12
   InjectSyntheticPointerInput@12
   InjectTouchInput@8
+  InjectTouchpadAction@8
   InSendMessage@0
   InSendMessageEx@4
   InsertMenuA@20
@@ -644,6 +650,8 @@ EXPORTS
   RegisterShellHookWindow@4
   RegisterSuspendResumeNotification@8
   RegisterTouchHitTestingWindow@8
+  RegisterTouchpadCapableThread@4
+  RegisterTouchpadCapableWindow@8
   RegisterTouchWindow@8
   RegisterWindowArrangementCallout@8
   RegisterWindowMessageA@4
@@ -657,6 +665,7 @@ EXPORTS
   RemovePropA@8
   RemovePropW@8
   ReplyMessage@4
+  ReportWindowContentInertia@8
   ReuseDDElParam@20
   RIMAddInputObserver@32
   RIMAreSiblingDevices@12
@@ -728,6 +737,7 @@ EXPORTS
   SetKeyboardState@4
   SetLastErrorEx@8
   SetLayeredWindowAttributes@16
+  SetMaxTouchpadSensitivity@4
   SetMenu@8
   SetMenuContextHelpId@8
   SetMenuDefaultItem@12

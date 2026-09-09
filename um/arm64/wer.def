@@ -132,6 +132,7 @@ EXPORTS
   WerpSetTelemetryAppParams
   WerpSetTelemetryKernelParams
   WerpSetTelemetryServiceParams
+  WerpSetVelocityInformation
   WerpShowUpsellUI
   WerpSubmitReportFromStore
   WerpTraceAuxMemDumpStatistics
