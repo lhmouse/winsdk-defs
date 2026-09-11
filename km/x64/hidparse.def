@@ -21,6 +21,7 @@ EXPORTS
   HidP_GetButtonCaps
   HidP_GetCaps
   HidP_GetCollectionDescription
+  HidP_GetCollectionDescription2
   HidP_GetData
   HidP_GetExtendedAttributes
   HidP_GetLinkCollectionNodes

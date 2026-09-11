@@ -1407,6 +1407,7 @@ EXPORTS
   KeTestAlertThread
   KeTestSpinLock
   KeTryToAcquireGuardedMutex
+  KeTryToAcquireInStackQueuedSpinLockAtDpcLevel
   KeTryToAcquireQueuedSpinLock
   KeTryToAcquireSpinLockAtDpcLevel
   KeUnstackDetachProcess

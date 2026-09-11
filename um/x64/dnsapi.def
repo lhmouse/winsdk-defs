@@ -199,7 +199,6 @@ EXPORTS
   DnsIsNSECType
   DnsIsStatusRcode
   DnsIsStringCountValidForTextType
-  DnsIsZtEnabled
   DnsLogEvent
   DnsMapRcodeToStatus
   DnsModifyRecordsInSet_A

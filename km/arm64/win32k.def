@@ -90,12 +90,14 @@ EXPORTS
   __win32kstub_NtDxgkDDisplayEnum2
   __win32kstub_NtDxgkDestroyDoorbell
   __win32kstub_NtDxgkDestroyTrackedWorkload
+  __win32kstub_NtDxgkDisableProcessDebugBlobCollection
   __win32kstub_NtDxgkDisplayMuxSwitchExecute
   __win32kstub_NtDxgkDisplayMuxSwitchFinish
   __win32kstub_NtDxgkDisplayMuxSwitchPrepare
   __win32kstub_NtDxgkDisplayPortOperation
   __win32kstub_NtDxgkDispMgrOperation
   __win32kstub_NtDxgkDuplicateHandle
+  __win32kstub_NtDxgkEnableProcessDebugBlobCollection
   __win32kstub_NtDxgkEnumAdapters3
   __win32kstub_NtDxgkEnumProcesses
   __win32kstub_NtDxgkGetAvailableTrackedWorkloadIndex
@@ -104,6 +106,7 @@ EXPORTS
   __win32kstub_NtDxgkGetProperties
   __win32kstub_NtDxgkGetTrackedWorkloadStatistics
   __win32kstub_NtDxgkIsFeatureEnabled
+  __win32kstub_NtDxgkMapProcessDebugBlob
   __win32kstub_NtDxgkNotifyWorkSubmission
   __win32kstub_NtDxgkOpenNativeFenceFromNtHandle
   __win32kstub_NtDxgkOutputDuplPresentToHwQueue
@@ -114,6 +117,7 @@ EXPORTS
   __win32kstub_NtDxgkSetProperties
   __win32kstub_NtDxgkSubmitPresentBltToHwQueue
   __win32kstub_NtDxgkSubmitPresentToHwQueue
+  __win32kstub_NtDxgkUnmapProcessDebugBlob
   __win32kstub_NtDxgkUnpinResources
   __win32kstub_NtDxgkUpdateTrackedWorkload
   __win32kstub_NtDxgkVailConnect
@@ -850,6 +854,7 @@ EXPORTS
   __win32kstub_NtUserCreateDesktopEx
   __win32kstub_NtUserCreateEmptyCursorObject
   __win32kstub_NtUserCreateInputContext
+  __win32kstub_NtUserCreateLayoutSyncForHwnd
   __win32kstub_NtUserCreateLocalMemHandle
   __win32kstub_NtUserCreateMenu
   __win32kstub_NtUserCreatePalmRejectionDelayZone
@@ -925,6 +930,7 @@ EXPORTS
   __win32kstub_NtUserEnableSessionForMMCSS
   __win32kstub_NtUserEnableShellWindowManagementBehavior
   __win32kstub_NtUserEnableSoftwareCursorForScreenCapture
+  __win32kstub_NtUserEnableSynchronizedLayout
   __win32kstub_NtUserEnableTouchPad
   __win32kstub_NtUserEnableWindow
   __win32kstub_NtUserEnableWindowGDIScaledDpiMessage
@@ -936,6 +942,7 @@ EXPORTS
   __win32kstub_NtUserEnsureDpiDepSysMetCacheForPlateau
   __win32kstub_NtUserEnsureDpiMetricsForDpi
   __win32kstub_NtUserEnsureDpiServerInfoForDpi
+  __win32kstub_NtUserEnsureOemBitmapInfoForDpi
   __win32kstub_NtUserEnterMoveSizeLoop
   __win32kstub_NtUserEnumClipboardFormats
   __win32kstub_NtUserEnumDisplayDevices
@@ -1124,6 +1131,7 @@ EXPORTS
   __win32kstub_NtUserInitializeGenericHidInjection
   __win32kstub_NtUserInitializeInputDeviceInjection
   __win32kstub_NtUserInitializeTouchInjection
+  __win32kstub_NtUserInitializeUserModeMenus
   __win32kstub_NtUserInitThreadCoreMessagingIocp
   __win32kstub_NtUserInitThreadCoreMessagingIocp2
   __win32kstub_NtUserInjectDeviceInput
@@ -1343,6 +1351,7 @@ EXPORTS
   __win32kstub_NtUserSetForegroundWindowForApplication
   __win32kstub_NtUserSetFullscreenMagnifierOffsetsDWMUpdated
   __win32kstub_NtUserSetGestureConfig
+  __win32kstub_NtUserSetGUISystemInformation
   __win32kstub_NtUserSetImeHotKey
   __win32kstub_NtUserSetImeInfoEx
   __win32kstub_NtUserSetImeOwnerWindow

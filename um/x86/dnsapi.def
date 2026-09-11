@@ -203,7 +203,6 @@ EXPORTS
   DnsIpv6StringToAddress@12
   DnsIsFlatRecord@16
   DnsIsStringCountValidForTextType@8
-  DnsIsZtEnabled@0
   DnsLogEvent@16
   DnsModifyRecordsInSet_A@24
   DnsModifyRecordsInSet_UTF8@24

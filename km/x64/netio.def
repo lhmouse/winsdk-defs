@@ -155,6 +155,7 @@ EXPORTS
   InternalSetIpNetEntry2
   InternalSetTeredoPort
   InternalSetUnicastIpAddressEntry
+  IoctlEnableAuditMode
   IoctlKfdAbortTransaction
   IoctlKfdAddCache
   IoctlKfdAddIndex
@@ -224,7 +225,6 @@ EXPORTS
   KfdIsV6InTransportFastEmpty
   KfdIsV6OutTransportFastEmpty
   KfdNotifyFlowDeletion
-  KfdQueryLayerStats0
   KfdQueueLruCleanupWorkItem
   KfdRegisterCalloutEntry
   KfdRegisterCalloutFilterChangeNotify
