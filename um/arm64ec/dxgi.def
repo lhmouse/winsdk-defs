@@ -16,10 +16,15 @@
 
 LIBRARY "dxgi.dll"
 EXPORTS
+  ?DXGIDumpJournal@@$$hYAXP6AXPEBD@Z@Z
   ?DXGIDumpJournal@@YAXP6AXPEBD@Z@Z DATA
+  ?PIXBeginCapture@@$$hYAJIPEAX@Z
   ?PIXBeginCapture@@YAJIPEAX@Z DATA
+  ?PIXEndCapture@@$$hYAJH@Z
   ?PIXEndCapture@@YAJH@Z DATA
+  ?PIXGetCaptureState@@$$hYAIXZ
   ?PIXGetCaptureState@@YAIXZ DATA
+  ?UpdateHMDEmulationStatus@@$$hYAJ_N@Z
   ?UpdateHMDEmulationStatus@@YAJ_N@Z DATA
   CreateDXGIFactory
   CreateDXGIFactory1

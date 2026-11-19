@@ -187,7 +187,6 @@ EXPORTS
   _o__findnext64i32
   _o__flushall
   _o__fpclass
-  _o__fpclassf
   _o__fputc_nolock
   _o__fputchar
   _o__fputwc_nolock
@@ -530,7 +529,6 @@ EXPORTS
   _o__mktime64
   _o__msize
   _o__nextafter
-  _o__nextafterf
   _o__open_osfhandle
   _o__pclose
   _o__pipe
@@ -554,7 +552,6 @@ EXPORTS
   _o__rmdir
   _o__rmtmp
   _o__scalb
-  _o__scalbf
   _o__searchenv
   _o__searchenv_s
   _o__seh_filter_dll

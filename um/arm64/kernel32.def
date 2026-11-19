@@ -1135,14 +1135,12 @@ EXPORTS
   ResumeThread
   RtlAddFunctionTable
   RtlCaptureContext
-  RtlCaptureContext2
   RtlCaptureStackBackTrace
   RtlCompareMemory
   RtlCopyMemory
   RtlDeleteFunctionTable
   RtlFillMemory
   RtlInstallFunctionTableCallback
-  RtlIsEcCode
   RtlLookupFunctionEntry
   RtlMoveMemory
   RtlPcToFileHeader

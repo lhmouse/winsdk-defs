@@ -278,7 +278,6 @@ EXPORTS
   _finitef
   _flushall
   _fpclass
-  _fpclassf
   _fpieee_flt
   _fpreset
   _fputc_nolock
@@ -317,7 +316,6 @@ EXPORTS
   _get_doserrno
   _get_dstbias
   _get_errno
-  _get_FMA3_enable
   _get_fmode
   _get_heap_handle
   _get_initial_narrow_environment
@@ -458,7 +456,6 @@ EXPORTS
   _ismbstrail
   _ismbstrail_l
   _isnan
-  _isnanf
   _isprint_l
   _ispunct_l
   _isspace_l
@@ -531,7 +528,7 @@ EXPORTS
   _mbbtombc_l
   _mbbtype
   _mbbtype_l
-  _mbcasemap DATA
+  _mbcasemap
   _mbccpy
   _mbccpy_l
   _mbccpy_s
@@ -677,7 +674,6 @@ EXPORTS
   _msize
   _msize_dbg
   _nextafter
-  _nextafterf
   _o____lc_codepage_func
   _o____lc_collate_cp_func
   _o____lc_locale_name_func
@@ -849,7 +845,6 @@ EXPORTS
   _o__findnext64i32
   _o__flushall
   _o__fpclass
-  _o__fpclassf
   _o__fputc_nolock
   _o__fputchar
   _o__fputwc_nolock
@@ -1192,7 +1187,6 @@ EXPORTS
   _o__mktime64
   _o__msize
   _o__nextafter
-  _o__nextafterf
   _o__open_osfhandle
   _o__pclose
   _o__pipe
@@ -1216,7 +1210,6 @@ EXPORTS
   _o__rmdir
   _o__rmtmp
   _o__scalb
-  _o__scalbf
   _o__searchenv
   _o__searchenv_s
   _o__seh_filter_dll
@@ -1772,7 +1765,6 @@ EXPORTS
   _rotr
   _rotr64
   _scalb
-  _scalbf
   _searchenv
   _searchenv_s
   _seh_filter_dll
@@ -1783,7 +1775,6 @@ EXPORTS
   _set_doserrno
   _set_errno
   _set_error_mode
-  _set_FMA3_enable
   _set_fmode
   _set_invalid_parameter_handler
   _set_new_handler
@@ -1966,7 +1957,7 @@ EXPORTS
   _wctime64_s
   _wctomb_l
   _wctomb_s_l
-  _wctype DATA
+  _wctype
   _wdupenv_s
   _wdupenv_s_dbg
   _wexecl
@@ -2330,7 +2321,6 @@ EXPORTS
   mbtowc
   memcpy_s
   memmove_s
-  memset
   modf
   modff
   nan

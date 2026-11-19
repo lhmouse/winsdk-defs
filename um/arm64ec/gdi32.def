@@ -17,16 +17,16 @@
 LIBRARY "gdi32.dll"
 EXPORTS
   AbortDoc
-  AbortPath DATA
+  AbortPath
   AddFontMemResourceEx
   AddFontResourceA
-  AddFontResourceExA DATA
-  AddFontResourceExW DATA
+  AddFontResourceExA
+  AddFontResourceExW
   AddFontResourceW
-  AngleArc DATA
+  AngleArc
   AnimatePalette
   Arc
-  ArcTo DATA
+  ArcTo
   BeginGdiRendering
   BeginPath
   BitBlt
@@ -34,52 +34,52 @@ EXPORTS
   BRUSHOBJ_pvAllocRbrush
   BRUSHOBJ_pvGetRbrush
   BRUSHOBJ_ulGetBrushColor
-  CancelDC DATA
-  CheckColorsInGamut DATA
+  CancelDC
+  CheckColorsInGamut
   ChoosePixelFormat
-  Chord DATA
+  Chord
   CLIPOBJ_bEnum
   CLIPOBJ_cEnumStart
   CLIPOBJ_ppoGetPath
   CloseEnhMetaFile
   CloseFigure
   CloseMetaFile
-  ColorCorrectPalette DATA
-  ColorMatchToTarget DATA
+  ColorCorrectPalette
+  ColorMatchToTarget
   CombineRgn
-  CombineTransform DATA
-  CopyEnhMetaFileA DATA
-  CopyEnhMetaFileW DATA
-  CopyMetaFileA DATA
-  CopyMetaFileW DATA
+  CombineTransform
+  CopyEnhMetaFileA
+  CopyEnhMetaFileW
+  CopyMetaFileA
+  CopyMetaFileW
   CreateBitmap
   CreateBitmapFromDxSurface2
   CreateBitmapIndirect
   CreateBrushIndirect
-  CreateColorSpaceA DATA
+  CreateColorSpaceA
   CreateColorSpaceW
   CreateCompatibleBitmap
   CreateCompatibleDC
   CreateDCA
   CreateDCW
   CreateDIBitmap
-  CreateDIBPatternBrush DATA
+  CreateDIBPatternBrush
   CreateDIBPatternBrushPt
   CreateDIBSection
-  CreateDiscardableBitmap DATA
-  CreateEllipticRgn DATA
+  CreateDiscardableBitmap
+  CreateEllipticRgn
   CreateEllipticRgnIndirect
   CreateEnhMetaFileA
   CreateEnhMetaFileW
   CreateFontA
   CreateFontIndirectA
-  CreateFontIndirectExA DATA
-  CreateFontIndirectExW DATA
+  CreateFontIndirectExA
+  CreateFontIndirectExW
   CreateFontIndirectW
   CreateFontW
   CreateHalftonePalette
   CreateHatchBrush
-  CreateICA DATA
+  CreateICA
   CreateICW
   CreateMetaFileA
   CreateMetaFileW
@@ -92,7 +92,7 @@ EXPORTS
   CreateRectRgn
   CreateRectRgnIndirect
   CreateRoundRectRgn
-  CreateScalableFontResourceA DATA
+  CreateScalableFontResourceA
   CreateScalableFontResourceW
   CreateSolidBrush
   D3DKMTAbandonSwapChain
@@ -333,15 +333,15 @@ EXPORTS
   DeleteEnhMetaFile
   DeleteMetaFile
   DeleteObject
-  DescribePixelFormat DATA
-  DeviceCapabilitiesExA DATA
+  DescribePixelFormat
+  DeviceCapabilitiesExA
   DeviceCapabilitiesExW
   DPtoLP
-  DrawEscape DATA
+  DrawEscape
   Ellipse
-  EnableEUDC DATA
+  EnableEUDC
   EndDoc
-  EndFormPage DATA
+  EndFormPage
   EndGdiRendering
   EndPage
   EndPath
@@ -396,29 +396,29 @@ EXPORTS
   EnumFontFamiliesExA
   EnumFontFamiliesExW
   EnumFontFamiliesW
-  EnumFontsA DATA
+  EnumFontsA
   EnumFontsW
-  EnumICMProfilesA DATA
-  EnumICMProfilesW DATA
+  EnumICMProfilesA
+  EnumICMProfilesW
   EnumMetaFile
   EnumObjects
   EqualRgn
   Escape
-  EudcLoadLinkW DATA
-  EudcUnloadLinkW DATA
+  EudcLoadLinkW
+  EudcUnloadLinkW
   ExcludeClipRect
   ExtCreatePen
   ExtCreateRegion
   ExtEscape
-  ExtFloodFill DATA
+  ExtFloodFill
   ExtSelectClipRgn
   ExtTextOutA
   ExtTextOutW
   FillPath
   FillRgn
-  FixBrushOrgEx DATA
-  FlattenPath DATA
-  FloodFill DATA
+  FixBrushOrgEx
+  FlattenPath
+  FloodFill
   FONTOBJ_cGetAllGlyphHandles
   FONTOBJ_cGetGlyphs
   FONTOBJ_pfdg
@@ -430,104 +430,104 @@ EXPORTS
   FrameRgn
   Gdi32DllInitialize
   GdiAlphaBlend
-  GdiArtificialDecrementDriver DATA
+  GdiArtificialDecrementDriver
   GdiComment
-  GdiDeleteSpoolFileHandle DATA
-  GdiEndDocEMF DATA
-  GdiEndPageEMF DATA
+  GdiDeleteSpoolFileHandle
+  GdiEndDocEMF
+  GdiEndPageEMF
   GdiFlush
-  GdiGetBatchLimit DATA
-  GdiGetDC DATA
-  GdiGetDevmodeForPage DATA
-  GdiGetPageCount DATA
-  GdiGetPageHandle DATA
-  GdiGetSpoolFileHandle DATA
+  GdiGetBatchLimit
+  GdiGetDC
+  GdiGetDevmodeForPage
+  GdiGetPageCount
+  GdiGetPageHandle
+  GdiGetSpoolFileHandle
   GdiGradientFill
-  GdiPlayDCScript DATA
-  GdiPlayEMF DATA
-  GdiPlayJournal DATA
-  GdiPlayPageEMF DATA
-  GdiPlayPrivatePageEMF DATA
-  GdiPlayScript DATA
-  gdiPlaySpoolStream DATA
-  GdiResetDCEMF DATA
-  GdiSetBatchLimit DATA
-  GdiStartDocEMF DATA
-  GdiStartPageEMF DATA
+  GdiPlayDCScript
+  GdiPlayEMF
+  GdiPlayJournal
+  GdiPlayPageEMF
+  GdiPlayPrivatePageEMF
+  GdiPlayScript
+  gdiPlaySpoolStream
+  GdiResetDCEMF
+  GdiSetBatchLimit
+  GdiStartDocEMF
+  GdiStartPageEMF
   GdiTransparentBlt
-  GetArcDirection DATA
-  GetAspectRatioFilterEx DATA
+  GetArcDirection
+  GetAspectRatioFilterEx
   GetBitmapBits
-  GetBitmapDimensionEx DATA
+  GetBitmapDimensionEx
   GetBkColor
   GetBkMode
-  GetBoundsRect DATA
+  GetBoundsRect
   GetBrushOrgEx
-  GetCharABCWidthsA DATA
-  GetCharABCWidthsFloatA DATA
-  GetCharABCWidthsFloatW DATA
-  GetCharABCWidthsI DATA
+  GetCharABCWidthsA
+  GetCharABCWidthsFloatA
+  GetCharABCWidthsFloatW
+  GetCharABCWidthsI
   GetCharABCWidthsW
   GetCharacterPlacementA
   GetCharacterPlacementW
   GetCharWidth32A
-  GetCharWidth32W DATA
+  GetCharWidth32W
   GetCharWidthA
-  GetCharWidthFloatA DATA
-  GetCharWidthFloatW DATA
-  GetCharWidthI DATA
+  GetCharWidthFloatA
+  GetCharWidthFloatW
+  GetCharWidthI
   GetCharWidthW
   GetClipBox
   GetClipRgn
-  GetColorAdjustment DATA
-  GetColorSpace DATA
+  GetColorAdjustment
+  GetColorSpace
   GetCurrentDpiInfo
   GetCurrentObject
   GetCurrentPositionEx
   GetDCBrushColor
   GetDCOrgEx
-  GetDCPenColor DATA
+  GetDCPenColor
   GetDeviceCaps
-  GetDeviceGammaRamp DATA
+  GetDeviceGammaRamp
   GetDIBColorTable
   GetDIBits
   GetEnhMetaFileA
   GetEnhMetaFileBits
   GetEnhMetaFileDescriptionA
-  GetEnhMetaFileDescriptionW DATA
+  GetEnhMetaFileDescriptionW
   GetEnhMetaFileHeader
   GetEnhMetaFilePaletteEntries
-  GetEnhMetaFilePixelFormat DATA
+  GetEnhMetaFilePixelFormat
   GetEnhMetaFileW
-  GetFontAssocStatus DATA
+  GetFontAssocStatus
   GetFontData
   GetFontFileData
   GetFontFileInfo
   GetFontLanguageInfo
   GetFontRealizationInfo
-  GetFontResourceInfoW DATA
+  GetFontResourceInfoW
   GetFontUnicodeRanges
   GetGlyphIndicesA
   GetGlyphIndicesW
   GetGlyphOutline
   GetGlyphOutlineA
   GetGlyphOutlineW
-  GetGraphicsMode DATA
-  GetICMProfileA DATA
-  GetICMProfileW DATA
+  GetGraphicsMode
+  GetICMProfileA
+  GetICMProfileW
   GetKerningPairs
   GetKerningPairsA
   GetKerningPairsW
   GetLayout
-  GetLogColorSpaceA DATA
-  GetLogColorSpaceW DATA
+  GetLogColorSpaceA
+  GetLogColorSpaceW
   GetMapMode
   GetMetaFileA
   GetMetaFileBitsEx
   GetMetaFileW
-  GetMetaRgn DATA
-  GetMiterLimit DATA
-  GetNearestColor DATA
+  GetMetaRgn
+  GetMiterLimit
+  GetNearestColor
   GetNearestPaletteIndex
   GetObjectA
   GetObjectType
@@ -535,21 +535,21 @@ EXPORTS
   GetOutlineTextMetricsA
   GetOutlineTextMetricsW
   GetPaletteEntries
-  GetPath DATA
+  GetPath
   GetPixel
-  GetPixelFormat DATA
-  GetPolyFillMode DATA
+  GetPixelFormat
+  GetPolyFillMode
   GetProcessSessionFonts
   GetRandomRgn
   GetRasterizerCaps
   GetRegionData
-  GetRelAbs DATA
+  GetRelAbs
   GetRgnBox
   GetROP2
   GetStockObject
-  GetStretchBltMode DATA
+  GetStretchBltMode
   GetSystemPaletteEntries
-  GetSystemPaletteUse DATA
+  GetSystemPaletteUse
   GetTextAlign
   GetTextCharacterExtra
   GetTextCharset
@@ -577,20 +577,20 @@ EXPORTS
   HT_Get8BPPMaskPalette
   IntersectClipRect
   InvertRgn
-  LineDDA DATA
+  LineDDA
   LineTo
   LPtoDP
   MaskBlt
-  ModerncoreCreateICW DATA
-  ModerncoreDeleteDC DATA
-  ModerncoreGdiInit DATA
-  ModifyWorldTransform DATA
+  ModerncoreCreateICW
+  ModerncoreDeleteDC
+  ModerncoreGdiInit
+  ModifyWorldTransform
   MoveToEx
-  OffsetClipRgn DATA
+  OffsetClipRgn
   OffsetRgn
   OffsetViewportOrgEx
   OffsetWindowOrgEx
-  PaintRgn DATA
+  PaintRgn
   PatBlt
   PATHOBJ_bEnum
   PATHOBJ_bEnumClipLines
@@ -600,9 +600,9 @@ EXPORTS
   PathToRegion
   Pie
   PlayEnhMetaFile
-  PlayEnhMetaFileRecord DATA
+  PlayEnhMetaFileRecord
   PlayMetaFile
-  PlayMetaFileRecord DATA
+  PlayMetaFileRecord
   PlgBlt
   PolyBezier
   PolyBezierTo
@@ -611,86 +611,86 @@ EXPORTS
   Polyline
   PolylineTo
   PolyPolygon
-  PolyPolyline DATA
-  PolyTextOutA DATA
-  PolyTextOutW DATA
+  PolyPolyline
+  PolyTextOutA
+  PolyTextOutW
   PtInRegion
-  PtVisible DATA
+  PtVisible
   RealizePalette
   Rectangle
   RectInRegion
   RectVisible
   RemoveFontMemResourceEx
   RemoveFontResourceA
-  RemoveFontResourceExA DATA
-  RemoveFontResourceExW DATA
+  RemoveFontResourceExA
+  RemoveFontResourceExW
   RemoveFontResourceW
-  ResetDCA DATA
+  ResetDCA
   ResetDCW
   ResizePalette
   RestoreDC
   RoundRect
   SaveDC
-  ScaleViewportExtEx DATA
-  ScaleWindowExtEx DATA
-  SelectBrushLocal DATA
+  ScaleViewportExtEx
+  ScaleWindowExtEx
+  SelectBrushLocal
   SelectClipPath
   SelectClipRgn
-  SelectFontLocal DATA
+  SelectFontLocal
   SelectObject
   SelectPalette
-  SetAbortProc DATA
-  SetArcDirection DATA
+  SetAbortProc
+  SetArcDirection
   SetBitmapBits
-  SetBitmapDimensionEx DATA
+  SetBitmapDimensionEx
   SetBkColor
   SetBkMode
-  SetBoundsRect DATA
+  SetBoundsRect
   SetBrushOrgEx
-  SetColorAdjustment DATA
+  SetColorAdjustment
   SetColorSpace
   SetDCBrushColor
   SetDCPenColor
-  SetDeviceGammaRamp DATA
+  SetDeviceGammaRamp
   SetDIBColorTable
   SetDIBits
   SetDIBitsToDevice
   SetEnhMetaFileBits
-  SetFontEnumeration DATA
+  SetFontEnumeration
   SetGraphicsMode
   SetICMMode
-  SetICMProfileA DATA
-  SetICMProfileW DATA
+  SetICMProfileA
+  SetICMProfileW
   SetLayout
-  SetMagicColors DATA
+  SetMagicColors
   SetMapMode
-  SetMapperFlags DATA
+  SetMapperFlags
   SetMetaFileBitsEx
   SetMetaRgn
   SetMiterLimit
   SetPaletteEntries
   SetPixel
   SetPixelFormat
-  SetPixelV DATA
+  SetPixelV
   SetPolyFillMode
   SetRectRgn
-  SetRelAbs DATA
+  SetRelAbs
   SetROP2
   SetStretchBltMode
-  SetSystemPaletteUse DATA
+  SetSystemPaletteUse
   SetTextAlign
   SetTextCharacterExtra
   SetTextColor
-  SetTextJustification DATA
+  SetTextJustification
   SetViewportExtEx
   SetViewportOrgEx
   SetWindowExtEx
   SetWindowOrgEx
-  SetWinMetaFileBits DATA
+  SetWinMetaFileBits
   SetWorldTransform
   StartDocA
   StartDocW
-  StartFormPage DATA
+  StartFormPage
   StartPage
   StretchBlt
   StretchDIBits
@@ -707,9 +707,9 @@ EXPORTS
   TranslateCharsetInfo
   UnrealizeObject
   UpdateColors
-  UpdateICMRegKeyA DATA
-  UpdateICMRegKeyW DATA
-  WidenPath DATA
+  UpdateICMRegKeyA
+  UpdateICMRegKeyW
+  WidenPath
   XFORMOBJ_bApplyXform
   XFORMOBJ_iGetXform
   XLATEOBJ_cGetPalette

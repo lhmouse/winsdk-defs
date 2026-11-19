@@ -401,3 +401,4 @@ EXPORTS
   JetUpgradeDatabase
   JetUpgradeDatabaseA
   JetUpgradeDatabaseW
+  rgEDBGGlobals DATA

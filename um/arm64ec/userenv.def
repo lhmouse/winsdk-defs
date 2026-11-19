@@ -16,6 +16,7 @@
 
 LIBRARY "userenv.dll"
 EXPORTS
+  ?RsopLoggingEnabled@@$$hYAHXZ
   ?RsopLoggingEnabled@@YAHXZ DATA
   AreThereVisibleLogoffScripts
   AreThereVisibleShutdownScripts

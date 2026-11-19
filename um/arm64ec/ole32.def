@@ -252,14 +252,14 @@ EXPORTS
   HDC_UserSize64
   HDC_UserUnmarshal
   HDC_UserUnmarshal64
-  HENHMETAFILE_UserFree DATA
-  HENHMETAFILE_UserFree64 DATA
-  HENHMETAFILE_UserMarshal DATA
-  HENHMETAFILE_UserMarshal64 DATA
-  HENHMETAFILE_UserSize DATA
-  HENHMETAFILE_UserSize64 DATA
-  HENHMETAFILE_UserUnmarshal DATA
-  HENHMETAFILE_UserUnmarshal64 DATA
+  HENHMETAFILE_UserFree
+  HENHMETAFILE_UserFree64
+  HENHMETAFILE_UserMarshal
+  HENHMETAFILE_UserMarshal64
+  HENHMETAFILE_UserSize
+  HENHMETAFILE_UserSize64
+  HENHMETAFILE_UserUnmarshal
+  HENHMETAFILE_UserUnmarshal64
   HGLOBAL_UserFree
   HGLOBAL_UserFree64
   HGLOBAL_UserMarshal
@@ -285,22 +285,22 @@ EXPORTS
   HMENU_UserSize64
   HMENU_UserUnmarshal
   HMENU_UserUnmarshal64
-  HMETAFILE_UserFree DATA
-  HMETAFILE_UserFree64 DATA
-  HMETAFILE_UserMarshal DATA
-  HMETAFILE_UserMarshal64 DATA
-  HMETAFILE_UserSize DATA
-  HMETAFILE_UserSize64 DATA
-  HMETAFILE_UserUnmarshal DATA
-  HMETAFILE_UserUnmarshal64 DATA
-  HMETAFILEPICT_UserFree DATA
-  HMETAFILEPICT_UserFree64 DATA
-  HMETAFILEPICT_UserMarshal DATA
-  HMETAFILEPICT_UserMarshal64 DATA
-  HMETAFILEPICT_UserSize DATA
-  HMETAFILEPICT_UserSize64 DATA
-  HMETAFILEPICT_UserUnmarshal DATA
-  HMETAFILEPICT_UserUnmarshal64 DATA
+  HMETAFILE_UserFree
+  HMETAFILE_UserFree64
+  HMETAFILE_UserMarshal
+  HMETAFILE_UserMarshal64
+  HMETAFILE_UserSize
+  HMETAFILE_UserSize64
+  HMETAFILE_UserUnmarshal
+  HMETAFILE_UserUnmarshal64
+  HMETAFILEPICT_UserFree
+  HMETAFILEPICT_UserFree64
+  HMETAFILEPICT_UserMarshal
+  HMETAFILEPICT_UserMarshal64
+  HMETAFILEPICT_UserSize
+  HMETAFILEPICT_UserSize64
+  HMETAFILEPICT_UserUnmarshal
+  HMETAFILEPICT_UserUnmarshal64
   HMONITOR_UserFree
   HMONITOR_UserFree64
   HMONITOR_UserMarshal
@@ -490,14 +490,14 @@ EXPORTS
   SetConvertStg
   SetDocumentBitStg
   SetWOWThunkGlobalPtr
-  SNB_UserFree DATA
-  SNB_UserFree64 DATA
-  SNB_UserMarshal DATA
-  SNB_UserMarshal64 DATA
-  SNB_UserSize DATA
-  SNB_UserSize64 DATA
-  SNB_UserUnmarshal DATA
-  SNB_UserUnmarshal64 DATA
+  SNB_UserFree
+  SNB_UserFree64
+  SNB_UserMarshal
+  SNB_UserMarshal64
+  SNB_UserSize
+  SNB_UserSize64
+  SNB_UserUnmarshal
+  SNB_UserUnmarshal64
   StgConvertPropertyToVariant
   StgConvertVariantToProperty
   StgCreateDocfile

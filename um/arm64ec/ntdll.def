@@ -16,8 +16,8 @@
 
 LIBRARY "ntdll.dll"
 EXPORTS
-  __arm64ec_syscall_ffs DATA
-  __arm64ec_syscall_ffs_size DATA
+  __arm64ec_syscall_ffs
+  __arm64ec_syscall_ffs_size
   AlpcAdjustCompletionListConcurrencyCount
   AlpcFreeCompletionListMessage
   AlpcGetCompletionListLastMessageInformation
@@ -179,9 +179,9 @@ EXPORTS
   LdrVerifyImageMatchesChecksum
   LdrVerifyImageMatchesChecksumEx
   MicrosoftTelemetryAssertTriggeredUM
-  NlsAnsiCodePage DATA
-  NlsMbCodePageTag DATA
-  NlsMbOemCodePageTag DATA
+  NlsAnsiCodePage
+  NlsMbCodePageTag
+  NlsMbOemCodePageTag
   NtAcceptConnectPort
   NtAccessCheck
   NtAccessCheckAndAuditAlarm
@@ -1289,7 +1289,7 @@ EXPORTS
   RtlNormalizeString
   RtlNotifyFeatureToggleUsage
   RtlNotifyFeatureUsage
-  RtlNtdllName DATA
+  RtlNtdllName
   RtlNtPathNameToDosPathName
   RtlNtStatusToDosError
   RtlNtStatusToDosErrorNoTeb
@@ -1864,7 +1864,7 @@ EXPORTS
   ZwCreateEnlistment
   ZwCreateEvent
   ZwCreateEventPair
-  ZwCreateFile DATA
+  ZwCreateFile
   ZwCreateIoCompletion
   ZwCreateIoRing
   ZwCreateIRTimer
@@ -1888,7 +1888,7 @@ EXPORTS
   ZwCreateProfileEx
   ZwCreateRegistryTransaction
   ZwCreateResourceManager
-  ZwCreateSection DATA
+  ZwCreateSection
   ZwCreateSectionEx
   ZwCreateSemaphore
   ZwCreateSymbolicLinkObject
@@ -1992,7 +1992,7 @@ EXPORTS
   ZwMapCMFModule
   ZwMapUserPhysicalPages
   ZwMapUserPhysicalPagesScatter
-  ZwMapViewOfSection DATA
+  ZwMapViewOfSection
   ZwMapViewOfSectionEx
   ZwModifyBootEntry
   ZwModifyDriverEntry
@@ -2006,7 +2006,7 @@ EXPORTS
   ZwOpenEnlistment
   ZwOpenEvent
   ZwOpenEventPair
-  ZwOpenFile DATA
+  ZwOpenFile
   ZwOpenIoCompletion
   ZwOpenJobObject
   ZwOpenKey
@@ -2047,7 +2047,7 @@ EXPORTS
   ZwProtectVirtualMemory
   ZwPssCaptureVaSpaceBulk
   ZwPulseEvent
-  ZwQueryAttributesFile DATA
+  ZwQueryAttributesFile
   ZwQueryAuxiliaryCounterFrequency
   ZwQueryBootEntryOrder
   ZwQueryBootOptions
@@ -2112,7 +2112,7 @@ EXPORTS
   ZwQueueApcThreadEx2
   ZwRaiseException
   ZwRaiseHardError
-  ZwReadFile DATA
+  ZwReadFile
   ZwReadFileScatter
   ZwReadOnlyEnlistment
   ZwReadRequestData
@@ -2227,7 +2227,7 @@ EXPORTS
   ZwTerminateJobObject
   ZwTerminateProcess
   ZwTerminateThread
-  ZwTestAlert DATA
+  ZwTestAlert
   ZwThawRegistry
   ZwThawTransactions
   ZwTraceControl

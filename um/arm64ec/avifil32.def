@@ -86,3 +86,7 @@ EXPORTS
   EditStreamSetName
   EditStreamSetNameA
   EditStreamSetNameW
+  IID_IAVIEditStream DATA PRIVATE
+  IID_IAVIFile DATA PRIVATE
+  IID_IAVIStream DATA PRIVATE
+  IID_IGetFrame DATA PRIVATE

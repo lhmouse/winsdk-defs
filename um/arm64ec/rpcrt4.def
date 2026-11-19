@@ -16,17 +16,32 @@
 
 LIBRARY "rpcrt4.dll"
 EXPORTS
+  ?I_RpcBindingInqCurrentModifiedId@@$$hYAJPEAXPEAU_LUID@@@Z
   ?I_RpcBindingInqCurrentModifiedId@@YAJPEAXPEAU_LUID@@@Z DATA
+  ?I_RpcFixTransferSyntax@@$$hYAXPEAU_RPC_MESSAGE@@@Z
   ?I_RpcFixTransferSyntax@@YAXPEAU_RPC_MESSAGE@@@Z DATA
+  ?I_RpcFwThisIsTheManager@@$$hYAXXZ
   ?I_RpcFwThisIsTheManager@@YAXXZ DATA
+  ?I_RpcInitNdrImports@@$$hYAXPEAPEBU_NDR_CALLBACK_ROUTINES_TABLE@@@Z
   ?I_RpcInitNdrImports@@YAXPEAPEBU_NDR_CALLBACK_ROUTINES_TABLE@@@Z DATA
+  ?I_RpcMgmtQueryDedicatedThreadPool@@$$hYAEXZ
   ?I_RpcMgmtQueryDedicatedThreadPool@@YAEXZ DATA
+  ?I_RpcOpenClientThread@@$$hYAJPEAXKPEAPEAX@Z
   ?I_RpcOpenClientThread@@YAJPEAXKPEAPEAX@Z DATA
+  ?I_RpcServerTurnOnOffKeepalives@@$$hYAJPEAXHKK@Z
   ?I_RpcServerTurnOnOffKeepalives@@YAJPEAXHKK@Z DATA
+  ?NdrFullPointerFree@@$$hYAHPEAU_FULL_PTR_XLAT_TABLES@@PEAX@Z
   ?NdrFullPointerFree@@YAHPEAU_FULL_PTR_XLAT_TABLES@@PEAX@Z DATA
+  ?NdrFullPointerInsertRefId@@$$hYAXPEAU_FULL_PTR_XLAT_TABLES@@KPEAEPEAX@Z
   ?NdrFullPointerInsertRefId@@YAXPEAU_FULL_PTR_XLAT_TABLES@@KPEAEPEAX@Z DATA
+  ?NdrFullPointerQueryPointer@@$$hYAHPEAU_FULL_PTR_XLAT_TABLES@@PEAXPEAEEPEAK@Z
   ?NdrFullPointerQueryPointer@@YAHPEAU_FULL_PTR_XLAT_TABLES@@PEAXPEAEEPEAK@Z DATA
+  ?NdrFullPointerQueryRefId@@$$hYAHPEAU_FULL_PTR_XLAT_TABLES@@KEPEAPEAXPEAPEAE@Z
   ?NdrFullPointerQueryRefId@@YAHPEAU_FULL_PTR_XLAT_TABLES@@KEPEAPEAXPEAPEAE@Z DATA
+  ?pfnFreeRoutines@@3QEBQ6AXPEAU_MIDL_STUB_MESSAGE@@PEAEPEBE@ZEB DATA
+  ?pfnMarshallRoutines@@3QEBQ6APEAEPEAU_MIDL_STUB_MESSAGE@@PEAEPEBE@ZEB DATA
+  ?pfnSizeRoutines@@3QEBQ6AXPEAU_MIDL_STUB_MESSAGE@@PEAEPEBE@ZEB DATA
+  ?pfnUnmarshallRoutines@@3QEBQ6APEAEPEAU_MIDL_STUB_MESSAGE@@PEAPEAEPEBEE@ZEB DATA
   CreateProxyFromTypeInfo
   CreateStubFromTypeInfo
   CStdStubBuffer_AddRef
@@ -345,6 +360,7 @@ EXPORTS
   NdrStubGetBuffer
   NdrStubInitialize
   NdrStubInitializeMarshall
+  NdrTypeFlags DATA
   NdrTypeFree
   NdrTypeMarshall
   NdrTypeSize
@@ -539,6 +555,9 @@ EXPORTS
   RpcStringFreeW
   RpcTestCancel
   RpcUserFree
+  SimpleTypeAlignment DATA
+  SimpleTypeBufferSize DATA
+  SimpleTypeMemorySize DATA
   TowerConstruct
   TowerExplode
   UuidCompare

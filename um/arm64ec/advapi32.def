@@ -494,7 +494,7 @@ EXPORTS
   MSChapSrvChangePassword2
   NotifyBootConfigStatus
   NotifyChangeEventLog
-  NotifyServiceStatusChange DATA
+  NotifyServiceStatusChange
   NotifyServiceStatusChangeA
   NotifyServiceStatusChangeW
   NpGetUserName

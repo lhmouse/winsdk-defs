@@ -114,7 +114,7 @@ EXPORTS
   _wcsupr_s
   _wcsupr_s_l
   _wcsxfrm_l
-  _wctype DATA
+  _wctype
   is_wctype
   isalnum
   isalpha

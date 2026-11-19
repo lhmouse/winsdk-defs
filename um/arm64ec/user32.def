@@ -27,7 +27,7 @@ EXPORTS
   AnyPopup
   AppendMenuA
   AppendMenuW
-  ApplyWindowAction DATA
+  ApplyWindowAction
   AreDpiAwarenessContextsEqual
   ArrangeIconicWindows
   AttachThreadInput
@@ -40,7 +40,7 @@ EXPORTS
   BroadcastSystemMessageExA
   BroadcastSystemMessageExW
   BroadcastSystemMessageW
-  CalculatePopupWindowPosition DATA
+  CalculatePopupWindowPosition
   CallMsgFilter
   CallMsgFilterA
   CallMsgFilterW
@@ -92,7 +92,7 @@ EXPORTS
   CloseWindow
   CloseWindowStation
   ConvertPrimaryPointerToMouseDrag
-  ConvertToInterceptWindow DATA
+  ConvertToInterceptWindow
   CopyAcceleratorTableA
   CopyAcceleratorTableW
   CopyIcon
@@ -176,7 +176,7 @@ EXPORTS
   DestroyCursor
   DestroyIcon
   DestroyMenu
-  DestroySyntheticPointerDevice DATA
+  DestroySyntheticPointerDevice
   DestroyWindow
   DialogBoxIndirectParamA
   DialogBoxIndirectParamW
@@ -196,7 +196,7 @@ EXPORTS
   DlgDirSelectExA
   DlgDirSelectExW
   DragDetect
-  DragObject DATA
+  DragObject
   DrawAnimatedRects
   DrawCaption
   DrawEdge
@@ -219,7 +219,7 @@ EXPORTS
   EmptyClipboard
   EnableMenuItem
   EnableMouseInPointer
-  EnableNonClientDpiScaling DATA
+  EnableNonClientDpiScaling
   EnableScrollBar
   EnableSessionForMMCSS
   EnableShellWindowManagementBehavior
@@ -229,7 +229,7 @@ EXPORTS
   EndMenu
   EndPaint
   EndTask
-  EnterMoveSizeLoop DATA
+  EnterMoveSizeLoop
   EnumChildWindows
   EnumClipboardFormats
   EnumDesktopsA
@@ -275,7 +275,7 @@ EXPORTS
   GetCapture
   GetCaretBlinkTime
   GetCaretPos
-  GetCIMSSM DATA
+  GetCIMSSM
   GetClassInfoA
   GetClassInfoExA
   GetClassInfoExW
@@ -320,7 +320,7 @@ EXPORTS
   GetDpiForSystem
   GetDpiForWindow
   GetDpiFromDpiAwarenessContext
-  GetExtendedPointerDeviceProperty DATA
+  GetExtendedPointerDeviceProperty
   GetFocus
   GetForegroundWindow
   GetGestureConfig
@@ -332,7 +332,7 @@ EXPORTS
   GetIconInfoExA
   GetIconInfoExW
   GetInputDesktop
-  GetInputLocaleInfo DATA
+  GetInputLocaleInfo
   GetInputState
   GetKBCodePage
   GetKeyboardLayout
@@ -347,7 +347,7 @@ EXPORTS
   GetLastActivePopup
   GetLastInputInfo
   GetLayeredWindowAttributes
-  GetListBoxInfo DATA
+  GetListBoxInfo
   GetMenu
   GetMenuBarInfo
   GetMenuCheckMarkDimensions
@@ -369,16 +369,16 @@ EXPORTS
   GetMessageW
   GetMonitorInfoA
   GetMonitorInfoW
-  GetMouseMovePointsEx DATA
+  GetMouseMovePointsEx
   GetNextDlgGroupItem
   GetNextDlgTabItem
   GetOpenClipboardWindow
   GetParent
   GetPhysicalCursorPos
-  GetPointerCursorId DATA
+  GetPointerCursorId
   GetPointerDevice
-  GetPointerDeviceCursors DATA
-  GetPointerDeviceProperties DATA
+  GetPointerDeviceCursors
+  GetPointerDeviceProperties
   GetPointerDeviceRects
   GetPointerDevices
   GetPointerFrameInfo
@@ -412,8 +412,8 @@ EXPORTS
   GetRawInputDeviceInfoA
   GetRawInputDeviceInfoW
   GetRawInputDeviceList
-  GetRawPointerDeviceData DATA
-  GetRegisteredRawInputDevices DATA
+  GetRawPointerDeviceData
+  GetRegisteredRawInputDevices
   GetScrollBarInfo
   GetScrollInfo
   GetScrollPos
@@ -422,7 +422,7 @@ EXPORTS
   GetSubMenu
   GetSysColor
   GetSysColorBrush
-  GetSystemDpiForProcess DATA
+  GetSystemDpiForProcess
   GetSystemMenu
   GetSystemMetrics
   GetSystemMetricsForDpi
@@ -448,7 +448,7 @@ EXPORTS
   GetWindowDisplayAffinity
   GetWindowDpiAwarenessContext
   GetWindowDpiHostingBehavior
-  GetWindowFeedbackSetting DATA
+  GetWindowFeedbackSetting
   GetWindowInfo
   GetWindowLongA
   GetWindowLongPtrA
@@ -476,7 +476,7 @@ EXPORTS
   HideCaret
   HiliteMenuItem
   HungWindowFromGhostWindow
-  ImpersonateDdeClientWindow DATA
+  ImpersonateDdeClientWindow
   IMPGetIMEA
   IMPGetIMEW
   IMPQueryIMEA
@@ -484,7 +484,7 @@ EXPORTS
   IMPSetIMEA
   IMPSetIMEW
   InflateRect
-  InheritWindowMonitor DATA
+  InheritWindowMonitor
   InitializeGenericHidInjection
   InitializeInputDeviceInjection
   InitializePointerDeviceInjection
@@ -495,9 +495,9 @@ EXPORTS
   InjectKeyboardInput
   InjectMouseInput
   InjectPointerInput
-  InjectSyntheticPointerInput DATA
+  InjectSyntheticPointerInput
   InjectTouchInput
-  InjectTouchpadAction DATA
+  InjectTouchpadAction
   InSendMessage
   InSendMessageEx
   InsertMenuA
@@ -530,9 +530,9 @@ EXPORTS
   IsIconic
   IsImmersiveProcess
   IsInDesktopWindowBand
-  IsInterceptWindow DATA
+  IsInterceptWindow
   IsMenu
-  IsMouseInPointerEnabled DATA
+  IsMouseInPointerEnabled
   IsProcessDPIAware
   IsRectEmpty
   IsTouchWindow
@@ -580,7 +580,7 @@ EXPORTS
   MapVirtualKeyExW
   MapVirtualKeyW
   MapWindowPoints
-  MenuItemFromPoint DATA
+  MenuItemFromPoint
   MessageBeep
   MessageBoxA
   MessageBoxExA
@@ -641,7 +641,7 @@ EXPORTS
   RegisterClassW
   RegisterClipboardFormatA
   RegisterClipboardFormatW
-  RegisterCloakedNotification DATA
+  RegisterCloakedNotification
   RegisterDeviceNotificationA
   RegisterDeviceNotificationW
   RegisterForTooltipDismissNotification
@@ -654,8 +654,8 @@ EXPORTS
   RegisterShellHookWindow
   RegisterSuspendResumeNotification
   RegisterTouchHitTestingWindow
-  RegisterTouchpadCapableThread DATA
-  RegisterTouchpadCapableWindow DATA
+  RegisterTouchpadCapableThread
+  RegisterTouchpadCapableWindow
   RegisterTouchWindow
   RegisterWindowArrangementCallout
   RegisterWindowMessageA
@@ -711,7 +711,7 @@ EXPORTS
   SendNotifyMessageW
   SetActiveImmersiveWindow
   SetActiveWindow
-  SetAdditionalForegroundBoostProcesses DATA
+  SetAdditionalForegroundBoostProcesses
   SetCapture
   SetCaretBlinkTime
   SetCaretPos
@@ -728,7 +728,7 @@ EXPORTS
   SetCursorPos
   SetDebugErrorLevel
   SetDeskWallpaper
-  SetDialogControlDpiChangeBehavior DATA
+  SetDialogControlDpiChangeBehavior
   SetDialogDpiChangeBehavior
   SetDisplayAutoRotationPreferences
   SetDisplayConfig
@@ -739,7 +739,7 @@ EXPORTS
   SetFeatureReportResponse
   SetFocus
   SetForegroundWindow
-  SetGestureConfig DATA
+  SetGestureConfig
   SetKeyboardState
   SetLastErrorEx
   SetLayeredWindowAttributes
@@ -759,7 +759,7 @@ EXPORTS
   SetProcessDPIAware
   SetProcessDpiAwarenessContext
   SetProcessDpiAwarenessInternal
-  SetProcessLaunchForegroundPolicy DATA
+  SetProcessLaunchForegroundPolicy
   SetProcessRestrictionExemption
   SetProcessWindowStation
   SetPropA
@@ -782,7 +782,7 @@ EXPORTS
   SetWindowArrangement
   SetWindowContextHelpId
   SetWindowDisplayAffinity
-  SetWindowFeedbackSetting DATA
+  SetWindowFeedbackSetting
   SetWindowLongA
   SetWindowLongPtrA
   SetWindowLongPtrW
@@ -796,21 +796,21 @@ EXPORTS
   SetWindowsHookW
   SetWindowTextA
   SetWindowTextW
-  SetWindowWord DATA
+  SetWindowWord
   SetWinEventHook
-  ShellMigrateWindow DATA
-  ShellSetWindowPos DATA
+  ShellMigrateWindow
+  ShellSetWindowPos
   ShowCaret
   ShowCursor
   ShowOwnedPopups
   ShowScrollBar
-  ShowSystemCursor DATA
+  ShowSystemCursor
   ShowWindow
   ShowWindowAsync
   ShutdownBlockReasonCreate
   ShutdownBlockReasonDestroy
-  ShutdownBlockReasonQuery DATA
-  SkipPointerFrameMessages DATA
+  ShutdownBlockReasonQuery
+  SkipPointerFrameMessages
   SoundSentry
   SubtractRect
   SwapMouseButton
@@ -855,7 +855,7 @@ EXPORTS
   UpdatePerUserSystemParameters
   UpdateWindow
   UpdateWindowTrackingInfo
-  UserHandleGrantAccess DATA
+  UserHandleGrantAccess
   ValidateRect
   ValidateRgn
   VkKeyScanA

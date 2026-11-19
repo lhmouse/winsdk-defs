@@ -114,7 +114,7 @@ EXPORTS
   CcErrorCallbackRoutine
   CcFastCopyRead
   CcFastCopyWrite
-  CcFastMdlReadWait DATA
+  CcFastMdlReadWait
   CcFlushCache
   CcFlushCacheToLsn
   CcGetCachedDirtyPageCountForFile
@@ -179,7 +179,7 @@ EXPORTS
   CmCallbackReleaseKeyObjectIDEx
   CmGetBoundTransaction
   CmGetCallbackVersion
-  CmKeyObjectType DATA
+  CmKeyObjectType
   CmRegisterCallback
   CmRegisterCallbackEx
   CmRegisterMachineHiveLoadedNotification
@@ -268,7 +268,7 @@ EXPORTS
   ExAcquireSpinLockExclusiveAtDpcLevel
   ExAcquireSpinLockShared
   ExAcquireSpinLockSharedAtDpcLevel
-  ExActivationObjectType DATA
+  ExActivationObjectType
   ExAllocateAutoExpandPushLock
   ExAllocateCacheAwarePushLock
   ExAllocateCacheAwareRundownProtection
@@ -291,11 +291,11 @@ EXPORTS
   ExCancelTimer
   ExCleanupAutoExpandPushLock
   ExCleanupRundownProtectionCacheAware
-  ExCompositionObjectType DATA
+  ExCompositionObjectType
   ExConvertExclusiveToSharedLite
   ExConvertFastResourceExclusiveToShared
   ExConvertPushLockExclusiveToShared
-  ExCoreMessagingObjectType DATA
+  ExCoreMessagingObjectType
   ExCreateCallback
   ExCreateDpcEvent
   ExCreatePool
@@ -306,7 +306,7 @@ EXPORTS
   ExDeletePagedLookasideList
   ExDeleteResourceLite
   ExDeleteTimer
-  ExDesktopObjectType DATA
+  ExDesktopObjectType
   ExDestroyPool
   ExDisableResourceBoostLite
   ExDisownFastResource
@@ -318,7 +318,7 @@ EXPORTS
   ExEnterPriorityRegionAndAcquireResourceShared
   ExEnumerateSystemFirmwareTables
   ExEnumHandleTable
-  ExEventObjectType DATA
+  ExEventObjectType
   ExExtendZone
   ExfAcquirePushLockExclusive
   ExfAcquirePushLockShared
@@ -408,7 +408,7 @@ EXPORTS
   ExRaiseException
   ExRaiseHardError
   ExRaiseStatus
-  ExRawInputManagerObjectType DATA
+  ExRawInputManagerObjectType
   ExRcuFreePool
   ExRegisterBootDevice
   ExRegisterCallback
@@ -450,7 +450,7 @@ EXPORTS
   ExRundownCompletedCacheAware
   ExSecurePoolUpdate
   ExSecurePoolValidate
-  ExSemaphoreObjectType DATA
+  ExSemaphoreObjectType
   ExSetFirmwareEnvironmentVariable
   ExSetLicenseTamperState
   ExSetResourceOwnerPointer
@@ -463,7 +463,7 @@ EXPORTS
   ExSystemExceptionFilter
   ExSystemTimeToLocalTime
   ExTimedWaitForUnblockPushLock
-  ExTimerObjectType DATA
+  ExTimerObjectType
   ExTryAcquireAutoExpandPushLockExclusive
   ExTryAcquireAutoExpandPushLockShared
   ExTryAcquireCacheAwarePushLockExclusiveEx
@@ -490,7 +490,7 @@ EXPORTS
   ExWaitForRundownProtectionRelease
   ExWaitForRundownProtectionReleaseCacheAware
   ExWaitForUnblockPushLock
-  ExWindowStationObjectType DATA
+  ExWindowStationObjectType
   FirstEntrySList
   FsRtlAcknowledgeEcp
   FsRtlAcquireEofLock
@@ -619,7 +619,7 @@ EXPORTS
   FsRtlIsSystemPagingFile
   FsRtlIsTotalDeviceFailure
   FsRtlKernelFsControlFile
-  FsRtlLegalAnsiCharacterArray DATA
+  FsRtlLegalAnsiCharacterArray
   FsRtlLogCcFlushError
   FsRtlLookupBaseMcbEntry
   FsRtlLookupLargeMcbEntry
@@ -726,10 +726,10 @@ EXPORTS
   FsRtlUpperOplockFsctrl
   FsRtlValidateReparsePointBuffer
   FsRtlVolumeDeviceToCorrelationId
-  HalDispatchTable DATA
+  HalDispatchTable
   HalExamineMBR
   HalFlushIoBuffers
-  HalPrivateDispatchTable DATA
+  HalPrivateDispatchTable
   HeadlessDispatch
   HvlGetApicIdFromLpIndex
   HvlGetHypervisorVendorId
@@ -774,14 +774,14 @@ EXPORTS
   InbvSetVirtualFrameBuffer
   InbvSolidColorFill
   InitializeSListHead
-  InitSafeBootMode DATA
+  InitSafeBootMode
   InterlockedPushListSList
   IoAcquireCancelSpinLock
   IoAcquireKsrPersistentMemory
   IoAcquireKsrPersistentMemoryEx
   IoAcquireRemoveLockEx
   IoAcquireVpbSpinLock
-  IoAdapterObjectType DATA
+  IoAdapterObjectType
   IoAddBugcheckTriageThread
   IoAdjustStackSizeForRedirection
   IoAllocateAdapterChannel
@@ -828,7 +828,7 @@ EXPORTS
   IoClearFsTrackOffsetState
   IoClearIrpExtraCreateParameter
   IoCompleteRequest
-  IoCompletionObjectType DATA
+  IoCompletionObjectType
   IoComputeRedirectionTrustLevel
   IoConnectInterrupt
   IoConnectInterruptEx
@@ -865,12 +865,12 @@ EXPORTS
   IoDeleteDriver
   IoDeleteSymbolicLink
   IoDetachDevice
-  IoDeviceHandlerObjectSize DATA
-  IoDeviceHandlerObjectType DATA
-  IoDeviceObjectType DATA
+  IoDeviceHandlerObjectSize
+  IoDeviceHandlerObjectType
+  IoDeviceObjectType
   IoDisconnectInterrupt
   IoDisconnectInterruptEx
-  IoDriverObjectType DATA
+  IoDriverObjectType
   IoDriverProxyCreateHotSwappableWorkerThread
   IoDuplicateDependency
   IoEnqueueIrp
@@ -881,7 +881,7 @@ EXPORTS
   IofCallDriver
   IofCompleteRequest
   IofGetDriverProxyWrapperFromEndpoint
-  IoFileObjectType DATA
+  IoFileObjectType
   IoForwardAndCatchIrp
   IoForwardIrpSynchronously
   IoFreeController
@@ -998,10 +998,10 @@ EXPORTS
   IoRaiseHardError
   IoRaiseInformationalHardError
   IoReadDiskSignature
-  IoReadOperationCount DATA
+  IoReadOperationCount
   IoReadPartitionTable
   IoReadPartitionTableEx
-  IoReadTransferCount DATA
+  IoReadTransferCount
   IoRecordIoAttribution
   IoRegisterBootDriverCallback
   IoRegisterBootDriverReinitialization
@@ -1045,7 +1045,7 @@ EXPORTS
   IoResolveDependency
   IoRetrievePriorityInfo
   IoReuseIrp
-  IoRingObjectType DATA
+  IoRingObjectType
   IoSetActivityIdIrp
   IoSetActivityIdThread
   IoSetAdapterCryptoEngineExtension
@@ -1088,7 +1088,7 @@ EXPORTS
   IoStartNextPacket
   IoStartNextPacketByKey
   IoStartPacket
-  IoStatisticsLock DATA
+  IoStatisticsLock
   IoSteerInterrupt
   IoSynchronousCallDriver
   IoSynchronousPageWrite
@@ -1137,10 +1137,10 @@ EXPORTS
   IoWMIWriteEvent
   IoWriteErrorLogEntry
   IoWriteKsrPersistentMemory
-  IoWriteOperationCount DATA
+  IoWriteOperationCount
   IoWritePartitionTable
   IoWritePartitionTableEx
-  IoWriteTransferCount DATA
+  IoWriteTransferCount
   isdigit
   islower
   isprint
@@ -1151,13 +1151,13 @@ EXPORTS
   iswspace
   isxdigit
   KdChangeOption
-  KdDebuggerEnabled DATA
-  KdDebuggerNotPresent DATA
+  KdDebuggerEnabled
+  KdDebuggerNotPresent
   KdDeregisterPowerHandler
   KdDisableDebugger
   KdEnableDebugger
-  KdEnteredDebugger DATA
-  KdEventLoggingEnabled DATA
+  KdEnteredDebugger
+  KdEventLoggingEnabled
   KdPollBreakIn
   KdPowerTransition
   KdRefreshDebuggerNotPresent
@@ -1276,7 +1276,7 @@ EXPORTS
   KeIsWaitListEmpty
   KeLeaveCriticalRegion
   KeLeaveGuardedRegion
-  KeLoaderBlock DATA
+  KeLoaderBlock
   KeNumberProcessors DATA
   KeOrAffinityEx
   KeOrAffinityEx2
@@ -1417,7 +1417,7 @@ EXPORTS
   KeWaitForMutexObject
   KeWaitForSingleObject
   KeYieldExecution
-  KiBugCheckData DATA
+  KiBugCheckData
   KiConnectHalInterrupt
   KiDeliverApc
   KiDispatchInterrupt
@@ -1440,7 +1440,7 @@ EXPORTS
   LdrResFindResourceDirectory
   LdrResSearchResource
   longjmp
-  LpcPortObjectType DATA
+  LpcPortObjectType
   LpcReplyWaitReplyPort
   LpcRequestPort
   LpcRequestWaitReplyPort
@@ -1455,9 +1455,9 @@ EXPORTS
   mbstowcs
   mbtowc
   memchr
-  memcmp
+  memcmp DATA
   memmove_s
-  Mm64BitPhysicalAddress DATA
+  Mm64BitPhysicalAddress
   MmAddPhysicalMemory
   MmAddVerifierSpecialThunks
   MmAddVerifierThunks
@@ -1478,7 +1478,7 @@ EXPORTS
   MmAllocatePagesForMdlEx
   MmAllocatePartitionNodePagesForMdlEx
   MmAreMdlPagesCached
-  MmBadPointer DATA
+  MmBadPointer
   MmBuildMdlForNonPagedPool
   MmCanFileBeTruncated
   MmChangeImageProtection
@@ -1514,7 +1514,7 @@ EXPORTS
   MmGetSectionInformation
   MmGetSystemRoutineAddress
   MmGetVirtualForPhysical
-  MmHighestUserAddress DATA
+  MmHighestUserAddress
   MmIsAddressValid
   MmIsDriverSuspectForVerifier
   MmIsDriverVerifying
@@ -1561,14 +1561,14 @@ EXPORTS
   MmRemovePhysicalMemory
   MmResetDriverPaging
   MmRotatePhysicalView
-  MmSectionObjectType DATA
+  MmSectionObjectType
   MmSecureVirtualMemory
   MmSecureVirtualMemoryEx
   MmSetAddressRangeModified
   MmSetGraphicsPtes
   MmSetPermanentCacheAttribute
   MmSizeOfMdl
-  MmSystemRangeStart DATA
+  MmSystemRangeStart
   MmTrimAllSystemPagableMemory
   MmUnlockPagableImageSection
   MmUnlockPages
@@ -1579,18 +1579,18 @@ EXPORTS
   MmUnmapViewInSystemSpace
   MmUnmapViewOfSection
   MmUnsecureVirtualMemory
-  MmUserProbeAddress DATA
-  NlsAnsiCodePage DATA
-  NlsLeadByteInfo DATA
-  NlsMbCodePageTag DATA
-  NlsMbOemCodePageTag DATA
-  NlsOemCodePage DATA
-  NlsOemLeadByteInfo DATA
+  MmUserProbeAddress
+  NlsAnsiCodePage
+  NlsLeadByteInfo
+  NlsMbCodePageTag
+  NlsMbOemCodePageTag
+  NlsOemCodePage
+  NlsOemLeadByteInfo
   NtAdjustPrivilegesToken
   NtAllocateLocallyUniqueId
   NtAllocateUuids
   NtAllocateVirtualMemory
-  NtBuildNumber DATA
+  NtBuildNumber
   NtClose
   NtCommitComplete
   NtCommitEnlistment
@@ -1620,8 +1620,8 @@ EXPORTS
   NtFsControlFile
   NtGetEnvironmentVariableEx
   NtGetNotificationResourceManager
-  NtGlobalFlag DATA
-  NtImageInfo DATA
+  NtGlobalFlag
+  NtImageInfo
   NtLockFile
   NtMakePermanentObject
   NtMapViewOfSection
@@ -1980,17 +1980,17 @@ EXPORTS
   PsIsWin32KFilterAuditEnabledForProcess
   PsIsWin32KFilterEnabled
   PsIsWin32KFilterEnabledForProcess
-  PsJobType DATA
+  PsJobType
   PsLeavePriorityRegion
-  PsLoadedModuleList DATA
-  PsLoadedModuleResource DATA
+  PsLoadedModuleList
+  PsLoadedModuleResource
   PsLookupProcessByProcessId
   PsLookupProcessThreadByCid
   PsLookupThreadByThreadId
   PsMakeSiloContextPermanent
-  psMUITest DATA
-  PsPartitionType DATA
-  PsProcessType DATA
+  psMUITest
+  PsPartitionType
+  PsProcessType
   PsQueryCurrentApiSetSchema
   PsQueryProcessAttributesByToken
   PsQueryProcessAvailableCpus
@@ -2050,18 +2050,18 @@ EXPORTS
   PsSetThreadHardErrorsAreDisabled
   PsSetThreadProperty
   PsSetThreadWin32Thread
-  PsSiloContextNonPagedType DATA
-  PsSiloContextPagedType DATA
+  PsSiloContextNonPagedType
+  PsSiloContextPagedType
   PsStartSiloMonitor
   PsSuspendProcess
   PsTerminateServerSilo
   PsTerminateSystemThread
-  PsThreadType DATA
+  PsThreadType
   PsTlsAlloc
   PsTlsFree
   PsTlsGetValue
   PsTlsSetValue
-  PsUILanguageComitted DATA
+  PsUILanguageComitted
   PsUnEstablishWin32Callouts
   PsUnregisterAvailableCpusChangeNotification
   PsUnregisterSiloMonitor
@@ -2673,7 +2673,7 @@ EXPORTS
   SeGetCachedSigningLevel
   SeGetLinkedToken
   SeGetLogonSessionToken
-  SeILSigningPolicyPtr DATA
+  SeILSigningPolicyPtr
   SeImpersonateClient
   SeImpersonateClientEx
   SeIsParentOfChildAppContainer
@@ -2688,7 +2688,7 @@ EXPORTS
   SeOpenObjectForDeleteAuditAlarmWithTransaction
   SePrivilegeCheck
   SePrivilegeObjectAuditAlarm
-  SePublicDefaultDacl DATA
+  SePublicDefaultDacl
   SeQueryAuthenticationIdToken
   SeQueryInformationToken
   SeQuerySecureBootPlatformManifest
@@ -2717,14 +2717,14 @@ EXPORTS
   SeShouldCheckForAccessRightsFromParent
   SeSinglePrivilegeCheck
   SeSrpAccessCheck
-  SeSystemDefaultDacl DATA
-  SeSystemDefaultSd DATA
+  SeSystemDefaultDacl
+  SeSystemDefaultSd
   SeTokenFromAccessInformation
   SeTokenImpersonationLevel
   SeTokenIsAdmin
   SeTokenIsRestricted
   SeTokenIsWriteRestricted
-  SeTokenObjectType DATA
+  SeTokenObjectType
   SeTokenType
   SeUnlockSubjectContext
   SeUnRegisterAndFreeAccessCheckDebugContext
@@ -2772,7 +2772,7 @@ EXPORTS
   TmDereferenceEnlistmentKey
   TmEnableCallbacks
   TmEndPropagationRequest
-  TmEnlistmentObjectType DATA
+  TmEnlistmentObjectType
   TmFreezeTransactions
   TmGetTransactionId
   TmInitializeTransactionManager
@@ -2793,15 +2793,15 @@ EXPORTS
   TmReferenceEnlistmentKey
   TmRenameTransactionManager
   TmRequestOutcomeEnlistment
-  TmResourceManagerObjectType DATA
+  TmResourceManagerObjectType
   TmRollbackComplete
   TmRollbackEnlistment
   TmRollbackTransaction
   TmSetCurrentTransaction
   TmSinglePhaseReject
   TmThawTransactions
-  TmTransactionManagerObjectType DATA
-  TmTransactionObjectType DATA
+  TmTransactionManagerObjectType
+  TmTransactionObjectType
   tolower
   toupper
   towlower

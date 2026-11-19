@@ -23,7 +23,7 @@ EXPORTS
   CallFileCopyHook
   CDefFolderMenu_Create2
   CDefFolderMenu_MergeMenu
-  CheckEscapesW DATA
+  CheckEscapesW
   CIDLData_CreateFromIDArray
   CommandLineToArgvW
   CreateAutoListParser
@@ -35,29 +35,29 @@ EXPORTS
   CreateStorageItemFromShellItem_FullTrustCaller_UseImplicitFlagsAndPackage
   CreateUniqueName
   DAD_AutoScroll
-  DAD_DragEnterEx DATA
+  DAD_DragEnterEx
   DAD_DragEnterEx2
   DAD_DragLeave
   DAD_DragMove
   DAD_SetDragImage
-  DAD_ShowDragImage DATA
-  DoEnvironmentSubstA DATA
-  DoEnvironmentSubstW DATA
+  DAD_ShowDragImage
+  DoEnvironmentSubstA
+  DoEnvironmentSubstW
   DragAcceptFiles
   DragFinish
-  DragQueryFile DATA
+  DragQueryFile
   DragQueryFileA
-  DragQueryFileAorW DATA
+  DragQueryFileAorW
   DragQueryFileW
   DragQueryPoint
   DriveType
   DuplicateIcon
-  ExtractAssociatedIconA DATA
-  ExtractAssociatedIconExA DATA
-  ExtractAssociatedIconExW DATA
+  ExtractAssociatedIconA
+  ExtractAssociatedIconExA
+  ExtractAssociatedIconExW
   ExtractAssociatedIconW
   ExtractIconA
-  ExtractIconEx DATA
+  ExtractIconEx
   ExtractIconExA
   ExtractIconExW
   ExtractIconW
@@ -73,8 +73,8 @@ EXPORTS
   ILClone
   ILCloneFirst
   ILCombine
-  ILCreateFromPath DATA
-  ILCreateFromPathA DATA
+  ILCreateFromPath
+  ILCreateFromPathA
   ILCreateFromPathW
   ILFindChild
   ILFindLastID
@@ -88,23 +88,23 @@ EXPORTS
   ILSaveToStream
   InitNetworkAddressControl
   IsElevationRequired
-  IsLFNDrive DATA
-  IsLFNDriveA DATA
+  IsLFNDrive
+  IsLFNDriveA
   IsLFNDriveW
   IsNetDrive
   IsUserAnAdmin
   LinkWindow_RegisterClass
-  OpenRegStream DATA
+  OpenRegStream
   PathCleanupSpec
   PathComparePaths
-  PathGetShortPath DATA
+  PathGetShortPath
   PathIsEqualOrSubFolder
   PathIsExe
-  PathIsSlowA DATA
-  PathIsSlowW DATA
+  PathIsSlowA
+  PathIsSlowW
   PathIsTemporaryW
   PathMakeUniqueName
-  PathQualify DATA
+  PathQualify
   PathResolve
   PathYetAnotherMakeUniqueName
   PickIconDlg
@@ -112,7 +112,7 @@ EXPORTS
   PifMgr_GetProperties
   PifMgr_OpenProperties
   PifMgr_SetProperties
-  ReadCabinetState DATA
+  ReadCabinetState
   RealDriveType
   RegenerateUserEnvironment
   RestartDialog
@@ -120,15 +120,15 @@ EXPORTS
   RunFileDlg
   SaveTopViewSettings
   SetCurrentProcessExplicitAppUserModelID
-  SHAddDefaultPropertiesByExt DATA
+  SHAddDefaultPropertiesByExt
   SHAddFromPropSheetExtArray
   SHAddToRecentDocs
   SHAddToRecentDocsEx
   SHAlloc
   SHAppBarMessage
   SHApplyPropertiesToItem
-  SHAssocEnumHandlers DATA
-  SHAssocEnumHandlersForProtocolByApplication DATA
+  SHAssocEnumHandlers
+  SHAssocEnumHandlersForProtocolByApplication
   SHBindToFolderIDListParent
   SHBindToFolderIDListParentEx
   SHBindToObject
@@ -152,7 +152,7 @@ EXPORTS
   SHCreateDataObject
   SHCreateDefaultContextMenu
   SHCreateDefaultExtractIcon
-  SHCreateDefaultPropertiesOp DATA
+  SHCreateDefaultPropertiesOp
   SHCreateDelegatingTransfer
   SHCreateDirectory
   SHCreateDirectoryExA
@@ -169,7 +169,7 @@ EXPORTS
   SHCreateLinksEx
   SHCreateNotCondition
   SHCreateNotConditionEx
-  SHCreateProcessAsUserW DATA
+  SHCreateProcessAsUserW
   SHCreatePropSheetExtArray
   SHCreateQueryCancelAutoPlayMoniker
   SHCreateRelatedItem
@@ -184,7 +184,7 @@ EXPORTS
   SHCreateShellItemArrayFromShellItem
   SHCreateStdEnumFmtEtc
   SHCreateTransferFallback
-  SHDefExtractIconA DATA
+  SHDefExtractIconA
   SHDefExtractIconW
   SHDestroyPropSheetExtArray
   SHDoDragDrop
@@ -312,8 +312,8 @@ EXPORTS
   SHELL32_SuspendUndo
   SHELL32_TryVirtualDiscImageDriveEject
   SHELL32_VerifySaferTrust
-  Shell_GetCachedImageIndex DATA
-  Shell_GetCachedImageIndexA DATA
+  Shell_GetCachedImageIndex
+  Shell_GetCachedImageIndexA
   Shell_GetCachedImageIndexW
   Shell_GetImageLists
   Shell_MergeMenus
@@ -325,7 +325,7 @@ EXPORTS
   ShellAboutW
   ShellExecCmdLine
   ShellExecuteA
-  ShellExecuteEx DATA
+  ShellExecuteEx
   ShellExecuteExA
   ShellExecuteExW
   ShellExecuteW
@@ -333,7 +333,7 @@ EXPORTS
   SHEmptyRecycleBinA
   SHEmptyRecycleBinW
   SHEnableServiceObject
-  SHEnumerateUnreadMailAccountsW DATA
+  SHEnumerateUnreadMailAccountsW
   SHEvaluateSystemCommandTemplate
   SHExecuteErrorMessageBox
   SHExtCoCreateInstance
@@ -349,14 +349,14 @@ EXPORTS
   SHFree
   SHFreeNameMappings
   SHGetAttributesFromDataObject
-  SHGetDataFromIDListA DATA
+  SHGetDataFromIDListA
   SHGetDataFromIDListW
   SHGetDesktopFolder
-  SHGetDiskFreeSpaceA DATA
-  SHGetDiskFreeSpaceExA DATA
-  SHGetDiskFreeSpaceExW DATA
+  SHGetDiskFreeSpaceA
+  SHGetDiskFreeSpaceExA
+  SHGetDiskFreeSpaceExW
   SHGetDriveMedia
-  SHGetFileInfo DATA
+  SHGetFileInfo
   SHGetFileInfoA
   SHGetFileInfoW
   SHGetFolderLocation
@@ -372,17 +372,17 @@ EXPORTS
   SHGetIDListFromObject
   SHGetImageList
   SHGetInstanceExplorer
-  SHGetItemFromDataObject DATA
+  SHGetItemFromDataObject
   SHGetItemFromObject
   SHGetKnownFolderIDList
   SHGetKnownFolderItem
   SHGetKnownFolderPath
-  SHGetLocalizedName DATA
+  SHGetLocalizedName
   SHGetMalloc
   SHGetNameFromIDList
-  SHGetNewLinkInfoA DATA
-  SHGetNewLinkInfoW DATA
-  SHGetPathFromIDList DATA
+  SHGetNewLinkInfoA
+  SHGetNewLinkInfoW
+  SHGetPathFromIDList
   SHGetPathFromIDListA
   SHGetPathFromIDListEx
   SHGetPathFromIDListW
@@ -390,9 +390,9 @@ EXPORTS
   SHGetPropertyStoreFromIDList
   SHGetPropertyStoreFromParsingName
   SHGetRealIDL
-  SHGetSetFolderCustomSettings DATA
+  SHGetSetFolderCustomSettings
   SHGetSetSettings
-  SHGetSettings DATA
+  SHGetSettings
   SHGetSpecialFolderLocation
   SHGetSpecialFolderPath
   SHGetSpecialFolderPathA
@@ -401,17 +401,17 @@ EXPORTS
   SHGetTemporaryPropertyForItem
   SHGetThreadUndoManager
   SHGetTopViewDescription
-  SHGetUnreadMailCountW DATA
+  SHGetUnreadMailCountW
   SHGetUserDisplayName
   SHHandleUpdateImage
   SHIconIndexFromPIDL
   SHILCreateFromPath
   SHInvokePrinterCommandA
   SHInvokePrinterCommandW
-  SHIsFileAvailableOffline DATA
+  SHIsFileAvailableOffline
   SHLimitInputEdit
   SHLoadInProc
-  SHLoadNonloadedIconOverlayIdentifiers DATA
+  SHLoadNonloadedIconOverlayIdentifiers
   SHLogILFromFSIL
   SHMapPIDLToSystemImageListIndex
   SHMultiFileProperties
@@ -426,21 +426,21 @@ EXPORTS
   SHPropStgCreate
   SHPropStgReadMultiple
   SHPropStgWriteMultiple
-  SHQueryRecycleBinA DATA
-  SHQueryRecycleBinW DATA
+  SHQueryRecycleBinA
+  SHQueryRecycleBinW
   SHQueryUserNotificationState
-  SHRemoveLocalizedName DATA
+  SHRemoveLocalizedName
   SHReplaceFromPropSheetExtArray
   SHResolveLibrary
   SHRestricted
-  SHSetDefaultProperties DATA
+  SHSetDefaultProperties
   SHSetFolderPathA
   SHSetFolderPathW
   SHSetInstanceExplorer
   SHSetKnownFolderPath
   SHSetLocalizedName
   SHSetTemporaryPropertyForItem
-  SHSetUnreadMailCountW DATA
+  SHSetUnreadMailCountW
   SHShellFolderView_Message
   SHShowManageLibraryUI
   SHSimpleIDListFromPath
@@ -448,12 +448,12 @@ EXPORTS
   SHTestTokenMembership
   SHUpdateImageA
   SHUpdateImageW
-  SHValidateUNC DATA
+  SHValidateUNC
   SignalFileOpen
   StateRepoNewMenuCache_EnsureCacheAsync
   StateRepoNewMenuCache_RebuildCacheAsync
-  StgMakeUniqueName DATA
+  StgMakeUniqueName
   UsersLibrariesFolderUI_CreateInstance
   Win32DeleteFile
-  WOWShellExecute DATA
-  WriteCabinetState DATA
+  WOWShellExecute
+  WriteCabinetState

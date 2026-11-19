@@ -16,15 +16,11 @@
 
 LIBRARY "ntdll.dll"
 EXPORTS
-  __arm64ec_syscall_ffs DATA
-  __arm64ec_syscall_ffs_size DATA
   __C_specific_handler
   __chkstk
-  __chkstk_arm64ec
   __isascii
   __iscsym
   __iscsymf
-  __misaligned_access
   __toascii
   _atoi64
   _errno
@@ -45,7 +41,6 @@ EXPORTS
   _makepath_s
   _memccpy
   _memicmp
-  _setjmp
   _setjmpex
   _snprintf
   _snprintf_s
@@ -122,7 +117,6 @@ EXPORTS
   bsearch_s
   ceil
   cos
-  CpuSetCriticalLockHeld
   CsrAllocateCaptureBuffer
   CsrAllocateMessagePointer
   CsrCaptureMessageBuffer
@@ -315,9 +309,9 @@ EXPORTS
   memmove_s
   memset
   MicrosoftTelemetryAssertTriggeredUM
-  NlsAnsiCodePage DATA
-  NlsMbCodePageTag DATA
-  NlsMbOemCodePageTag DATA
+  NlsAnsiCodePage
+  NlsMbCodePageTag
+  NlsMbOemCodePageTag
   NtAcceptConnectPort
   NtAccessCheck
   NtAccessCheckAndAuditAlarm
@@ -818,7 +812,6 @@ EXPORTS
   PfxInsertPrefix
   PfxRemovePrefix
   pow
-  ProcessPendingCrossProcessEmulatorWork
   PssNtCaptureSnapshot
   PssNtDuplicateSnapshot
   PssNtFreeRemoteSnapshot
@@ -908,7 +901,6 @@ EXPORTS
   RtlCapabilityCheck
   RtlCapabilityCheckForSingleSessionSku
   RtlCaptureContext
-  RtlCaptureContext2
   RtlCaptureStackBackTrace
   RtlCharToInteger
   RtlCheckBootStatusIntegrity
@@ -1365,7 +1357,6 @@ EXPORTS
   RtlIsCurrentProcess
   RtlIsCurrentThread
   RtlIsDosDeviceName_U
-  RtlIsEcCode
   RtlIsElevatedRid
   RtlIsEmptyAffinityEx
   RtlIsEnclaveFeaturePresent
@@ -1451,7 +1442,7 @@ EXPORTS
   RtlNormalizeString
   RtlNotifyFeatureToggleUsage
   RtlNotifyFeatureUsage
-  RtlNtdllName DATA
+  RtlNtdllName
   RtlNtPathNameToDosPathName
   RtlNtStatusToDosError
   RtlNtStatusToDosErrorNoTeb
@@ -1515,7 +1506,6 @@ EXPORTS
   RtlPrepareForProcessCloning
   RtlProcessFlsData
   RtlProtectHeap
-  RtlpScpCfgNtdllEcExports DATA
   RtlpScpCfgNtdllExports DATA
   RtlpSetInstallLanguage
   RtlpSetPreferredUILanguages
@@ -1527,9 +1517,6 @@ EXPORTS
   RtlPushFrame
   RtlpVerifyAndCommitUILanguageSettings
   RtlpWaitForCriticalSection
-  RtlpWow64CtxFromAmd64
-  RtlpWow64GetContextOnAmd64
-  RtlpWow64SetContextOnAmd64
   RtlQueryActivationContextApplicationSettings
   RtlQueryAllFeatureConfigurations
   RtlQueryAllInternalFeatureConfigurations
@@ -1864,8 +1851,6 @@ EXPORTS
   RtlxAnsiStringToUnicodeSize
   RtlxOemStringToUnicodeSize
   RtlXorAffinityEx
-  RtlXRestore
-  RtlXSave
   RtlxUnicodeStringToAnsiSize
   RtlxUnicodeStringToOemSize
   RtlZeroHeap

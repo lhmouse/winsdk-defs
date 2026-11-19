@@ -27,7 +27,7 @@ EXPORTS
   AcquireSRWLockExclusive
   AcquireSRWLockShared
   ActivateActCtx
-  ActivatePackageVirtualizationContext DATA
+  ActivatePackageVirtualizationContext
   AddAtomA
   AddAtomW
   AddConsoleAliasA
@@ -190,7 +190,7 @@ EXPORTS
   CreateMutexW
   CreateNamedPipeA
   CreateNamedPipeW
-  CreatePackageVirtualizationContext DATA
+  CreatePackageVirtualizationContext
   CreatePipe
   CreatePrivateNamespaceA
   CreatePrivateNamespaceW
@@ -226,7 +226,7 @@ EXPORTS
   CreateWaitableTimerW
   CtrlRoutine
   DeactivateActCtx
-  DeactivatePackageVirtualizationContext DATA
+  DeactivatePackageVirtualizationContext
   DebugActiveProcess
   DebugActiveProcessStop
   DebugBreak
@@ -269,7 +269,7 @@ EXPORTS
   DosDateTimeToFileTime
   DosPathToSessionPathW
   DuplicateHandle
-  DuplicatePackageVirtualizationContext DATA
+  DuplicatePackageVirtualizationContext
   EnableProcessOptionalXStateFeatures
   EnableThreadProfiling
   EncodePointer
@@ -488,7 +488,7 @@ EXPORTS
   GetCurrentPackageId
   GetCurrentPackageInfo
   GetCurrentPackagePath
-  GetCurrentPackageVirtualizationContext DATA
+  GetCurrentPackageVirtualizationContext
   GetCurrentProcess
   GetCurrentProcessId
   GetCurrentProcessorNumber
@@ -645,7 +645,7 @@ EXPORTS
   GetProcessDefaultCpuSetMasks
   GetProcessDefaultCpuSets
   GetProcessDEPPolicy
-  GetProcessesInVirtualizationContext DATA
+  GetProcessesInVirtualizationContext
   GetProcessGroupAffinity
   GetProcessHandleCount
   GetProcessHeap
@@ -1099,7 +1099,7 @@ EXPORTS
   ReleaseActCtx
   ReleaseMutex
   ReleaseMutexWhenCallbackReturns
-  ReleasePackageVirtualizationContext DATA
+  ReleasePackageVirtualizationContext
   ReleasePseudoConsole
   ReleaseSemaphore
   ReleaseSemaphoreWhenCallbackReturns

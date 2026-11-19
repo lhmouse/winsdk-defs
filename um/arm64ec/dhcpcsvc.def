@@ -43,6 +43,9 @@ EXPORTS
   DhcpGetNotificationStatus
   DhcpGetOriginalSubnetMask
   DhcpGetTraceArray
+  DhcpGlobalIsShuttingDown DATA
+  DhcpGlobalServiceSyncEvent DATA
+  DhcpGlobalTerminateEvent DATA
   DhcpHandlePnPEvent
   DhcpIsEnabled
   DhcpIsMeteredDetected

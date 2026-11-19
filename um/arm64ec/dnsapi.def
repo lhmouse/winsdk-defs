@@ -189,6 +189,7 @@ EXPORTS
   DnsGetZtSettings
   DnsGetZtTrustedCa
   DnsGetZtTrustedServers
+  DnsGlobals DATA
   DnsIp6AddressToReverseNameW
   DnsIp6ReverseNameToAddressW
   DnsIpv6AddressToString

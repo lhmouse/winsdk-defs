@@ -311,9 +311,9 @@ EXPORTS
   memmove_s
   memset
   MicrosoftTelemetryAssertTriggeredUM
-  NlsAnsiCodePage DATA
-  NlsMbCodePageTag DATA
-  NlsMbOemCodePageTag DATA
+  NlsAnsiCodePage
+  NlsMbCodePageTag
+  NlsMbOemCodePageTag
   NtAcceptConnectPort
   NtAccessCheck
   NtAccessCheckAndAuditAlarm
@@ -1446,7 +1446,7 @@ EXPORTS
   RtlNormalizeString
   RtlNotifyFeatureToggleUsage
   RtlNotifyFeatureUsage
-  RtlNtdllName DATA
+  RtlNtdllName
   RtlNtPathNameToDosPathName
   RtlNtStatusToDosError
   RtlNtStatusToDosErrorNoTeb

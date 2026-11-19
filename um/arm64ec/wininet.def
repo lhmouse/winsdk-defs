@@ -260,12 +260,12 @@ EXPORTS
   InternetShowSecurityInfoByURL
   InternetShowSecurityInfoByURLA
   InternetShowSecurityInfoByURLW
-  InternetTimeFromSystemTime DATA
-  InternetTimeFromSystemTimeA DATA
-  InternetTimeFromSystemTimeW DATA
-  InternetTimeToSystemTime DATA
-  InternetTimeToSystemTimeA DATA
-  InternetTimeToSystemTimeW DATA
+  InternetTimeFromSystemTime
+  InternetTimeFromSystemTimeA
+  InternetTimeFromSystemTimeW
+  InternetTimeToSystemTime
+  InternetTimeToSystemTimeA
+  InternetTimeToSystemTimeW
   InternetUnlockRequestFile
   InternetWriteFile
   InternetWriteFileExA

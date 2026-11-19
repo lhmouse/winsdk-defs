@@ -16,8 +16,11 @@
 
 LIBRARY "mscms.dll"
 EXPORTS
+  ?DeviceRenameEvent@@$$hYAHKPEBG0@Z
   ?DeviceRenameEvent@@YAHKPEBG0@Z DATA
+  ?GetCalibrationDataFromProfile@@$$hYAJPEBGPEAUCalibrationData@@H@Z
   ?GetCalibrationDataFromProfile@@YAJPEBGPEAUCalibrationData@@H@Z DATA
+  ?InternalSetAccessibilityColorMatrix@@$$hYAJAEAY144M@Z
   ?InternalSetAccessibilityColorMatrix@@YAJAEAY144M@Z DATA
   AssociateColorProfileWithDeviceA
   AssociateColorProfileWithDeviceW

@@ -57,12 +57,9 @@ EXPORTS
   _finite
   _finitef
   _fpclass
-  _fpclassf
-  _get_FMA3_enable
   _hypot
   _hypotf
   _isnan
-  _isnanf
   _j0
   _j1
   _jn
@@ -83,10 +80,7 @@ EXPORTS
   _logb
   _logbf
   _nextafter
-  _nextafterf
   _scalb
-  _scalbf
-  _set_FMA3_enable
   _y0
   _y1
   _yn

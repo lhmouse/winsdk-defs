@@ -72,8 +72,8 @@ EXPORTS
   HalWheaHandleSea
   HalWheaHandleSei
   HalWheaUpdateCmciPolicy
-  KdComPortInUse DATA
-  KdHvComPortInUse DATA
+  KdComPortInUse
+  KdHvComPortInUse
   KeFlushWriteBuffer
   KeGetCurrentIrql
   KeQueryPerformanceCounter

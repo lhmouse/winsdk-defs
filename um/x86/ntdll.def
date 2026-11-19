@@ -148,11 +148,11 @@ EXPORTS
   LdrLoadEnclaveModule@12
   LdrLockLoaderLock@12
   LdrOpenImageFileOptionsKey@12
-  LdrParentInterlockedPopEntrySList DATA
-  LdrParentRtlInitializeNtUserPfn DATA
-  LdrParentRtlResetNtUserPfn DATA
-  LdrParentRtlRetrieveNtUserPfn DATA
-  LdrpChildNtdll DATA
+  LdrParentInterlockedPopEntrySList
+  LdrParentRtlInitializeNtUserPfn
+  LdrParentRtlResetNtUserPfn
+  LdrParentRtlRetrieveNtUserPfn
+  LdrpChildNtdll
   LdrpResGetMappingSize@16
   LdrpResGetResourceDirectory@20
   LdrProcessRelocationBlock@16
@@ -187,9 +187,9 @@ EXPORTS
   LdrVerifyImageMatchesChecksum@16
   LdrVerifyImageMatchesChecksumEx@8
   MicrosoftTelemetryAssertTriggeredUM@4
-  NlsAnsiCodePage DATA
-  NlsMbCodePageTag DATA
-  NlsMbOemCodePageTag DATA
+  NlsAnsiCodePage
+  NlsMbCodePageTag
+  NlsMbOemCodePageTag
   NtAcceptConnectPort@24
   NtAccessCheck@32
   NtAccessCheckAndAuditAlarm@44

@@ -16,6 +16,7 @@
 
 LIBRARY "propsys.dll"
 EXPORTS
+  ?SHGetPropertyStoreForWindow@@$$hYAJPEAUHWND__@@AEBU_GUID@@PEAPEAX@Z
   ?SHGetPropertyStoreForWindow@@YAJPEAUHWND__@@AEBU_GUID@@PEAPEAX@Z DATA
   ClearPropVariantArray
   ClearVariantArray

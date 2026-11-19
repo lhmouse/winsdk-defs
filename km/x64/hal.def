@@ -94,8 +94,8 @@ EXPORTS
   IoFreeAdapterChannel
   IoFreeMapRegisters
   IoMapTransfer
-  KdComPortInUse DATA
-  KdHvComPortInUse DATA
+  KdComPortInUse
+  KdHvComPortInUse
   KeFlushWriteBuffer
   KeQueryPerformanceCounter
   KeStallExecutionProcessor

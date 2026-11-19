@@ -577,7 +577,7 @@ EXPORTS
   _mbbtombc_l
   _mbbtype
   _mbbtype_l
-  _mbcasemap DATA
+  _mbcasemap
   _mbccpy
   _mbccpy_l
   _mbccpy_s
@@ -2036,7 +2036,7 @@ EXPORTS
   _wctime64_s
   _wctomb_l
   _wctomb_s_l
-  _wctype DATA
+  _wctype
   _wdupenv_s
   _wdupenv_s_dbg
   _wexecl

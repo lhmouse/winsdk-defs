@@ -16,6 +16,7 @@
 
 LIBRARY "d3dcompiler_47.dll"
 EXPORTS
+  ?DebugSetMute@@$$hYAXH@Z
   ?DebugSetMute@@YAXH@Z DATA
   D3DCompile
   D3DCompile2

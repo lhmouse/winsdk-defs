@@ -27,7 +27,7 @@ EXPORTS
   BstrFromVector
   ClearCustData
   CreateDispTypeInfo
-  CreateErrorInfo DATA
+  CreateErrorInfo
   CreateStdDispatch
   CreateTypeLib
   CreateTypeLib2
@@ -38,7 +38,7 @@ EXPORTS
   DosDateTimeToVariantTime
   GetActiveObject
   GetAltMonthNames
-  GetErrorInfo DATA
+  GetErrorInfo
   GetRecordInfoFromGuids
   GetRecordInfoFromTypeInfo
   GetVarConversionLocaleSetting
@@ -110,7 +110,7 @@ EXPORTS
   SafeArraySetRecordInfo
   SafeArrayUnaccessData
   SafeArrayUnlock
-  SetErrorInfo DATA
+  SetErrorInfo
   SetOaNoCache
   SetVarConversionLocaleSetting
   SysAddRefString

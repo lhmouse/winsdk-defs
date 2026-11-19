@@ -16,8 +16,6 @@
 
 LIBRARY "ntdll.dll"
 EXPORTS
-  __arm64ec_syscall_ffs DATA
-  __arm64ec_syscall_ffs_size DATA
   AlpcAdjustCompletionListConcurrencyCount
   AlpcFreeCompletionListMessage
   AlpcGetCompletionListLastMessageInformation
@@ -33,7 +31,6 @@ EXPORTS
   AlpcRundownCompletionList
   AlpcUnregisterCompletionList
   AlpcUnregisterCompletionListWorkerThread
-  CpuSetCriticalLockHeld
   CsrAllocateCaptureBuffer
   CsrAllocateMessagePointer
   CsrCaptureMessageBuffer
@@ -180,9 +177,9 @@ EXPORTS
   LdrVerifyImageMatchesChecksum
   LdrVerifyImageMatchesChecksumEx
   MicrosoftTelemetryAssertTriggeredUM
-  NlsAnsiCodePage DATA
-  NlsMbCodePageTag DATA
-  NlsMbOemCodePageTag DATA
+  NlsAnsiCodePage
+  NlsMbCodePageTag
+  NlsMbOemCodePageTag
   NtAcceptConnectPort
   NtAccessCheck
   NtAccessCheckAndAuditAlarm
@@ -678,7 +675,6 @@ EXPORTS
   PfxInitialize
   PfxInsertPrefix
   PfxRemovePrefix
-  ProcessPendingCrossProcessEmulatorWork
   PssNtCaptureSnapshot
   PssNtDuplicateSnapshot
   PssNtFreeRemoteSnapshot
@@ -760,7 +756,6 @@ EXPORTS
   RtlCapabilityCheck
   RtlCapabilityCheckForSingleSessionSku
   RtlCaptureContext
-  RtlCaptureContext2
   RtlCaptureStackBackTrace
   RtlCharToInteger
   RtlCheckBootStatusIntegrity
@@ -1207,7 +1202,6 @@ EXPORTS
   RtlIsCurrentProcess
   RtlIsCurrentThread
   RtlIsDosDeviceName_U
-  RtlIsEcCode
   RtlIsElevatedRid
   RtlIsEmptyAffinityEx
   RtlIsEnclaveFeaturePresent
@@ -1290,7 +1284,7 @@ EXPORTS
   RtlNormalizeString
   RtlNotifyFeatureToggleUsage
   RtlNotifyFeatureUsage
-  RtlNtdllName DATA
+  RtlNtdllName
   RtlNtPathNameToDosPathName
   RtlNtStatusToDosError
   RtlNtStatusToDosErrorNoTeb
@@ -1681,8 +1675,6 @@ EXPORTS
   RtlxAnsiStringToUnicodeSize
   RtlxOemStringToUnicodeSize
   RtlXorAffinityEx
-  RtlXRestore
-  RtlXSave
   RtlxUnicodeStringToAnsiSize
   RtlxUnicodeStringToOemSize
   RtlZeroMemory

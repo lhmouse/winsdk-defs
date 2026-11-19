@@ -19,7 +19,7 @@ EXPORTS
   __arm64ec_syscall_ffs DATA
   __arm64ec_syscall_ffs_size DATA
   __C_specific_handler
-  __chkstk DATA
+  __chkstk
   __chkstk_arm64ec
   __isascii
   __iscsym
@@ -290,6 +290,7 @@ EXPORTS
   LdrShutdownProcess
   LdrShutdownThread
   LdrStandardizeSystemPath
+  LdrSystemDllInitBlock DATA
   LdrUnloadAlternateResourceModule
   LdrUnloadAlternateResourceModuleEx
   LdrUnloadDll
@@ -1514,6 +1515,8 @@ EXPORTS
   RtlPrepareForProcessCloning
   RtlProcessFlsData
   RtlProtectHeap
+  RtlpScpCfgNtdllEcExports DATA
+  RtlpScpCfgNtdllExports DATA
   RtlpSetInstallLanguage
   RtlpSetPreferredUILanguages
   RtlpSetUserPreferredUILanguages
@@ -2125,7 +2128,7 @@ EXPORTS
   ZwCreateEnlistment
   ZwCreateEvent
   ZwCreateEventPair
-  ZwCreateFile DATA
+  ZwCreateFile
   ZwCreateIoCompletion
   ZwCreateIoRing
   ZwCreateIRTimer
@@ -2149,7 +2152,7 @@ EXPORTS
   ZwCreateProfileEx
   ZwCreateRegistryTransaction
   ZwCreateResourceManager
-  ZwCreateSection DATA
+  ZwCreateSection
   ZwCreateSectionEx
   ZwCreateSemaphore
   ZwCreateSymbolicLinkObject
@@ -2253,7 +2256,7 @@ EXPORTS
   ZwMapCMFModule
   ZwMapUserPhysicalPages
   ZwMapUserPhysicalPagesScatter
-  ZwMapViewOfSection DATA
+  ZwMapViewOfSection
   ZwMapViewOfSectionEx
   ZwModifyBootEntry
   ZwModifyDriverEntry
@@ -2267,7 +2270,7 @@ EXPORTS
   ZwOpenEnlistment
   ZwOpenEvent
   ZwOpenEventPair
-  ZwOpenFile DATA
+  ZwOpenFile
   ZwOpenIoCompletion
   ZwOpenJobObject
   ZwOpenKey
@@ -2308,7 +2311,7 @@ EXPORTS
   ZwProtectVirtualMemory
   ZwPssCaptureVaSpaceBulk
   ZwPulseEvent
-  ZwQueryAttributesFile DATA
+  ZwQueryAttributesFile
   ZwQueryAuxiliaryCounterFrequency
   ZwQueryBootEntryOrder
   ZwQueryBootOptions
@@ -2373,7 +2376,7 @@ EXPORTS
   ZwQueueApcThreadEx2
   ZwRaiseException
   ZwRaiseHardError
-  ZwReadFile DATA
+  ZwReadFile
   ZwReadFileScatter
   ZwReadOnlyEnlistment
   ZwReadRequestData
@@ -2488,7 +2491,7 @@ EXPORTS
   ZwTerminateJobObject
   ZwTerminateProcess
   ZwTerminateThread
-  ZwTestAlert DATA
+  ZwTestAlert
   ZwThawRegistry
   ZwThawTransactions
   ZwTraceControl
