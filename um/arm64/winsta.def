@@ -151,6 +151,7 @@ EXPORTS
   WinStationRedirectLogonError
   WinStationRedirectLogonMessage
   WinStationRedirectLogonStatus
+  WinStationRedirectShellExecute
   WinStationRegisterConsoleNotification
   WinStationRegisterConsoleNotificationEx
   WinStationRegisterConsoleNotificationEx2

@@ -24,6 +24,7 @@ EXPORTS
   WinHttpCloseHandle@4
   WinHttpConnect@16
   WinHttpConnectionDeletePolicyEntries@8
+  WinHttpConnectionDeletePolicyEntriesByAppSid@12
   WinHttpConnectionDeleteProxyInfo@8
   WinHttpConnectionFreeNameList@4
   WinHttpConnectionFreeProxyInfo@4

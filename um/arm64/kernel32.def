@@ -672,7 +672,6 @@ EXPORTS
   GetProfileStringW
   GetQueuedCompletionStatus
   GetQueuedCompletionStatusEx
-  GetRuntimeAttestationReport
   GetShortPathNameA
   GetShortPathNameW
   GetStagedPackagePathByFullName

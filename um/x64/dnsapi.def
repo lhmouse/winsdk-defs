@@ -91,6 +91,7 @@ EXPORTS
   DnsCheckNrptRules
   DnsCleanupTcpConnections
   DnsConnectionDeletePolicyEntries
+  DnsConnectionDeletePolicyEntriesByAppSid
   DnsConnectionDeletePolicyEntriesPrivate
   DnsConnectionDeleteProxyInfo
   DnsConnectionFreeNameList

@@ -99,6 +99,8 @@ EXPORTS
   DnsCheckNrptRules@12
   DnsCleanupTcpConnections@4
   DnsConnectionDeletePolicyEntries@4
+  DnsConnectionDeletePolicyEntriesByAppSid@8
+  DnsConnectionDeletePolicyEntriesPrivate@16
   DnsConnectionDeletePolicyEntriesPrivate@8
   DnsConnectionDeleteProxyInfo@8
   DnsConnectionFreeNameList@4
