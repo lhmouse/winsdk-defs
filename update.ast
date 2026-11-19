@@ -79,6 +79,13 @@ const PRIVATE_DATA_PREFIXES = [
   'CLSID_',
 ];
 
+const DLL_EXTENSIONS = [
+  'dll',
+  'exe',
+  'sys',
+  'ocx',
+];
+
 /////////////////////////////////////////////////////////////////////////////
 
 // Collect LIB files.
@@ -151,11 +158,8 @@ for(each um, arch_libs -> um_arch_libs) {
 
           var dll = std.string.to_lower(std.string.slice(line, index + 4));
           index = std.string.find(dll, '.');
-          if(index == null)
-            continue;
-
-          var ext = std.string.slice(dll, index + 1);
-          if((ext != 'dll') && (ext != 'exe') && (ext != 'sys') && (ext != 'ocx'))
+          if((index == null)
+              || (std.array.find(DLL_EXTENSIONS, std.string.slice(dll, index + 1)) == null))
             continue;
 
           if((dll == 'ntdll.dll')
